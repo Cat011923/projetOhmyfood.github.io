@@ -1,5 +1,8 @@
-.restaurants_photos img {
-    width:375px; 
-    height:275px; 
-  }
-  
+.card img {
+  width: 100%;         /* Remplit toute la largeur de l'élément parent */
+  height: auto;       /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
+  max-width: 375px;   /* Largeur maximale */
+  max-height: 275px;  /* Hauteur maximale */
+  object-fit: cover;   /* Maintient le ratio sans déformer l'image */
+  border-radius: 8px; 
+}

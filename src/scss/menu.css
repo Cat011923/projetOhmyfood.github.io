@@ -1,0 +1,62 @@
+.menu-item {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+  animation: fadeIn 0.5s ease-out;
+  animation-fill-mode: both;
+}
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+.menu-item .checkmark {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #9356dc;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  visibility: hidden;
+}
+.menu-item .checkmark::before {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #ff79da;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu-item:hover .checkmark {
+  visibility: visible;
+  transform: translateX(-100%);
+}
+
+.menu-item-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu-group {
+  animation-delay: 0.2s;
+}
+.menu-group:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.menu-group:nth-child(3) {
+  animation-delay: 0.6s;
+}/*# sourceMappingURL=menu.css.map */

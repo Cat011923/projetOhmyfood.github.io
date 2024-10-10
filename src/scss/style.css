@@ -1,43 +1,43 @@
+@charset "UTF-8";
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
   .column {
     width: 100%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
   }
 }
-
 /* Styles globaux pour le corps du document */
 body {
   margin: 0;
-  padding: 0; 
-  font-family: "Roboto", sans-serif; 
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Styles pour l'en-tête du site */
 .header {
   width: 100%;
-  background-color: #ff5c5c; 
+  background-color: #ff5c5c;
   color: #fff; /* Couleur du texte en blanc */
-  padding: 20px; 
+  padding: 20px;
 }
 
 /* Styles pour le conteneur principal */
 .main-container {
-  max-width: 1440px; 
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px; 
+  padding: 0 20px;
 }
 
 /* Styles pour la section de localisation */
 .localisation {
   background-color: grey;
-  text-align: center; 
+  text-align: center;
   padding: 20px;
 }
 
 /* Styles pour l'emplacement de la localisation */
 .localisation-emplacement {
   color: grey;
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 /* Styles pour les boutons */
@@ -46,21 +46,21 @@ body {
   padding: 10px 20px; /* Espace intérieur du bouton */
   background-color: #ffaf58; /* Couleur de fond du bouton */
   color: #fff; /* Couleur du texte en blanc */
-  text-decoration: none; 
-  border-radius: 5px; 
-  margin-top: 10px; 
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 /* Styles pour la section expliquant le fonctionnement */
 .fonctionnement-service {
-  padding: 20px; 
+  padding: 20px;
 }
 
 /* Styles pour les étapes du service */
 .étapes {
-  display: flex; 
-  justify-content: space-around; 
-  flex-wrap: wrap; 
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 /* Styles pour chaque étape */
@@ -78,23 +78,23 @@ body {
 
 /* Styles pour la section des restaurants */
 .restaurants {
-  padding: 20px; 
+  padding: 20px;
 }
 
 /* Styles pour le conteneur des cartes de restaurant */
 .card-container {
-  display: flex; 
-  justify-content: space-around; 
-  flex-wrap: wrap; 
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 /* Styles pour chaque carte de restaurant */
 .card {
   width: 200px; /* Largeur fixe pour les cartes */
   margin: 10px; /* Marge autour des cartes */
-  text-align: center; 
+  text-align: center;
   border: 1px solid #ccc; /* Bordure grise autour des cartes */
-  border-radius: 5px; 
+  border-radius: 5px;
   overflow: hidden; /* Cache tout débordement de contenu */
 }
 
@@ -110,4 +110,4 @@ body {
   padding: 20px; /* Espace intérieur autour du pied de page */
   text-align: center; /* Centre le texte à l'intérieur du pied de page */
   color: #fff; /* Couleur du texte en blanc */
-}
+}/*# sourceMappingURL=style.css.map */

@@ -5,26 +5,36 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="HandheldFriendly" content="True" />
-		<title>La palette du goût - ohmyfood</title>
+		<title>À la française - ohmyfood</title>
+		
 		 <!--Liens et  animations-->
-		 <link rel="stylesheet" href="src/css/main.css" />
-		 <link rel="stylesheet" href="src/css/animations.css">
-	 
+		    <link rel="stylesheet" href="src/css/main.css" />
+			 <link rel="stylesheet" href="src/css/animations.css">
+			 <link rel="stylesheet" href="src/css/header.css" />
+			 <link rel="stylesheet" href="src/css/loader.css" />
+			 <link rel="stylesheet" href="src/css/buttons.css" />
+			 <link rel="stylesheet" href="src/css/variable.css" />
+			
+				   <!-- Lien vers le fichier de style pour le menu -->
+			<link rel="stylesheet" href="src/css/menu.css"/>
+		   
 		 <!-- Lien vers les icônes Font awesome et feuille de style-->
 		 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-			<!-- Font Awesome CDN -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
-			</head>
+		 <!-- Lien vers les polices Shrikhand et Roboto -->
+		 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">	
+	</head>
 	<body>
 		<header id="header" class="header">
 			<div class="main-container">
 				<div class="header-container">
 					<nav>
-						<ul class=titre-main-container></ul>
+						<ul class="titre-main-container">
 							<li>
 								<a href="index.html"><i class="fas fa-arrow-left back-arrow"></i></a>
 							</li>
-							<li class="main-title-container"><h1 class="main-title">ohmyfood</h1></li>
+							<li class="main-title-container">
+								<h1 class="main-title">ohmyfood</h1>
+							</li>
 						</ul>
 					</nav>
 				</div>
@@ -33,12 +43,12 @@
 		<main>
 			<!--MENU-->
 			<section id="restaurant-menu" class="restaurant-menu">
-				<header class="restaurants_photos"><img src="/restaurants_photos/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat du restaurant 'La palette du goût' à Cité Rouge" /></header>
+				<header class="restaurants_photos"><img src="/assets-images/logo/restaurants_photos/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat du restaurant 'À la française' à Cité Rouge" /></header>
 				<div class="main-container">
 					<div class="restaurant-menu-container">
 						<div class="restaurant-menu-title-container">
 							<h2 class="title restaurant-menu-title">
-								La palette du goût
+								À la française
 								<!--deux coeurs pour les supperposer pour créer l'animation plus tard-->
 								<span class="heart-container">
 									<i class="far fa-heart heart heart--menu"></i>
@@ -52,8 +62,8 @@
 							<div class="card-menu-container">
 								<article class="card card-menu">
 									<div class="card-menu__dish-title-container">
-										<h4 class="card__title card-menu__title">Fricassée d'escargots</h4>
-										<p class="card-menu__subtitle">Au piment d'Espelette </p>
+										<h4 class="card__title card-menu__title">Tartare de poulpe acidulé</h4>
+										<p class="card-menu__subtitle">Aux zestes d'orange</p>
 									</div>
 									<div class="card-menu__dish-price-check-container">
 										<div class="card-menu__dish-price">25€</div>
@@ -62,8 +72,8 @@
 								</article>
 								<article class="card card-menu">
 									<div class="card-menu__dish-title-container">
-										<h4 class="card__title card-menu__title">Foie gras de canard mi-cuit</h4>
-										<p class="card-menu__subtitle">Et ses copeaux de truffe noire</p>
+										<h4 class="card__title card-menu__title">Velouté de légumes d'antan</h4>
+										<p class="card-menu__subtitle">Carotte, panais, topinambour</p>
 									</div>
 									<div class="card-menu__dish-price-check-container">
 										<div class="card-menu__dish-price">35€</div>
@@ -72,8 +82,8 @@
 								</article>
 								<article class="card card-menu">
 									<div class="card-menu__dish-title-container">
-										<h4 class="card__title card-menu__title">Œuf au plat</h4>
-										<p class="card-menu__subtitle">Assaisonné à la truffe sur lit de caviar</p>
+										<h4 class="card__title card-menu__title">Soupe à l'oignon</h4>
+										<p class="card-menu__subtitle">Revisitée</p>
 									</div>
 									<div class="card-menu__dish-price-check-container">
 										<div class="card-menu__dish-price">20€</div>
@@ -88,8 +98,8 @@
 							<div class="card-menu-container">
 								<article class="card card-menu">
 									<div class="card-menu__dish-title-container">
-										<h4 class="card__title card-menu__title">Filet de bœuf aux herbes</h4>
-										<p class="card-menu__subtitle">Accompagné de sa ribambelle de légumes</p>
+										<h4 class="card__title card-menu__title">Coquilles Saint-Jacques</h4>
+										<p class="card-menu__subtitle">Accompagnées d'une purée de panais</p>
 									</div>
 									<div class="card-menu__dish-price-check-container">
 										<div class="card-menu__dish-price">40€</div>
@@ -98,8 +108,8 @@
 								</article>
 								<article class="card card-menu">
 									<div class="card-menu__dish-title-container">
-										<h4 class="card__title card-menu__title">Parmentier de queue de bœuf</h4>
-										<p class="card-menu__subtitle">À la truffe noire sur sa purée de panais</p>
+										<h4 class="card__title card-menu__title">Magret de canard</h4>
+										<p class="card-menu__subtitle">Et parmentier de pommes de terre</p>
 									</div>
 									<div class="card-menu__dish-price-check-container">
 										<div class="card-menu__dish-price">35€</div>
@@ -108,8 +118,8 @@
 								</article>
 								<article class="card card-menu">
 									<div class="card-menu__dish-title-container">
-										<h4 class="card__title card-menu__title">Filet de turbot</h4>
-										<p class="card-menu__subtitle">Aux agrumes</p>
+										<h4 class="card__title card-menu__title">Pigeonneau d’Ille-et-Vilaine</h4>
+										<p class="card-menu__subtitle">Sur son lit de gnocchis aux légumes</p>
 									</div>
 									<div class="card-menu__dish-price-check-container">
 										<div class="card-menu__dish-price">44€</div>
@@ -124,8 +134,8 @@
 							<div class="card-menu-container">
 								<article class="card card-menu">
 									<div class="card-menu__dish-title-container">
-										<h4 class="card__title card-menu__title">Paris-Brest</h4>
-										<p class="card-menu__subtitle">Revisité</p>
+										<h4 class="card__title card-menu__title">Pétales de violettes glacés</h4>
+										<p class="card-menu__subtitle">Et purée de noisettes</p>
 									</div>
 									<div class="card-menu__dish-price-check-container">
 										<div class="card-menu__dish-price">18€</div>
@@ -134,8 +144,8 @@
 								</article>
 								<article class="card card-menu">
 									<div class="card-menu__dish-title-container">
-										<h4 class="card__title card-menu__title">Macaron au chocolat d'exception </h4>
-										<p class="card-menu__subtitle">Et glace à la vanille de Madagascar</p>
+										<h4 class="card__title card-menu__title">Fondant au chocolat</h4>
+										<p class="card-menu__subtitle">Revisité</p>
 									</div>
 									<div class="card-menu__dish-price-check-container">
 										<div class="card-menu__dish-price">22€</div>
@@ -144,8 +154,8 @@
 								</article>
 								<article class="card card-menu">
 									<div class="card-menu__dish-title-container">
-										<h4 class="card__title card-menu__title">Mousse au chocolat </h4>
-										<p class="card-menu__subtitle">Au piment d'Espelette et à la truffe noire</p>
+										<h4 class="card__title card-menu__title">Millefeuille croustillant</h4>
+										<p class="card-menu__subtitle">Myrtilles et pâte d’amande</p>
 									</div>
 									<div class="card-menu__dish-price-check-container">
 										<div class="card-menu__dish-price">23€</div>

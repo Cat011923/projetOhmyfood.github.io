@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.card img {
+  width: 100%; /* Remplit toute la largeur de l'élément parent */
+  height: auto; /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
+  max-width: 375px; /* Largeur maximale */
+  max-height: 275px; /* Hauteur maximale */
+  -o-object-fit: cover;
+     object-fit: cover; /* Maintient le ratio sans déformer l'image */
+  border-radius: 8px;
+}/*# sourceMappingURL=restaurants_photos.css.map */

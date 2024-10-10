@@ -1,0 +1,8 @@
+.button {
+  background-color: #9356DC;
+  color: #FFFFFF;
+}
+.button:hover {
+  background-color: #9356DC;
+  background-color: #ae80e5;
+}/*# sourceMappingURL=variable.css.map */

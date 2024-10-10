@@ -10,7 +10,8 @@
   &:hover {
     transform: translateY(-5px);
   }
-// ajoute une animation d'apparition, lors du survol du curser
+
+  // ajoute une animation d'apparition, lors du survol du curseur
   .checkmark {
     position: absolute;
     top: 50%;
@@ -18,16 +19,16 @@
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-color: $primary-color;
+    background-color: #9356dc;
     border-radius: 50%;
     transition: transform 0.3s;
     visibility: hidden;
-
+    
     &::before {
       content: '\f004'; // Code du cœur pour FontAwesome
       font-family: 'Font Awesome 5 Free';
       font-weight: 900;
-      color: $secondary-color;
+      color: #ff79da;
       position: absolute;
       top: 50%;
       left: 50%;
