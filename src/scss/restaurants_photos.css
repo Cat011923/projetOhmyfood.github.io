@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.card img {
+.restaurants_photos.card img {
   width: 375px; /* Largeur maximale */
   height: 275px; /* Hauteur maximale */
   -o-object-fit: cover;

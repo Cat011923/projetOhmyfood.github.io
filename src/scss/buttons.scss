@@ -1,9 +1,10 @@
 // buttons.scss
-$button-hover-color: lighten(#9356DC, 10%); // Définition de la variable button-hover-color
+@import 'variables'; // Importer les variables
+@import 'mixins'; // Importer les mixins
 
 button {
-  background-color: #9356dc;
-  color: #FF79DA;
+  @include primary-color; // Appliquer la couleur principale
+  @include text-color; // Appliquer la couleur du texte
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -12,29 +13,9 @@ button {
   transition: background-color 0.3s, box-shadow 0.3s;
 
   &:hover {
-    background-color: $button-hover-color;
+    @include button-hover-color(); // Utiliser la mixin button-hover-color
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-}
-
-// Définition des mixins pour chaque couleur
-@mixin primary-color() {
-  background-color: #9356DC; // Couleur principale
-}
-
-@mixin secondary-color() {
-  color: #FF79DA; // Couleur secondaire
-}
-
-@mixin tertiaire-color() {
-  background-color: #99E2D0; // Couleur tertiaire
-}
-@mixin text-color() {
-  color: #FFFFFF; // Couleur du texte
-}
-
-@mixin button-hover-color() {
-  background-color: $button-hover-color; // Utilisation de la variable button-hover-color
 }
 
 .button {

@@ -1,9 +1,34 @@
 // Importation pour les fichiers
-@import "./style"; // Importation des variables
-@import "./variable"; // Importation des variables
-@import "./animations"; // Importation des animations
+@import "./variable"; // Importation de variable
+
+@import "./style"; // Importation du style
+
+@import "./mixins";// Importation des mixins
+
 @import "./buttons"; // Importation des styles de boutons
+
 @import "./loader"; // Importation du loader
+
+@import "./animations"; // Importation des animations
+
 @import "./restaurants_photos"; // Importation des styles des photos des restaurants
+
 @import "./header"; // Importation des styles d'en-tête
+
 @import "./menu"; // Importation de styles de menu
+
+
+
+// Importation des polices de Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
+
+// Utilisation des polices dans le CSS
+body {
+    font-family: 'Roboto', sans-serif; // Applique Roboto comme police principale
+}
+
+h1, h2, h3 {
+    font-family: 'Shrikhand', cursive; // Applique Shrikhand pour les titres
+}
+
+

@@ -1,0 +1,42 @@
+// mixins.scss
+
+// Importation des variables
+@import 'variable'; // Assurez-vous que le chemin d'importation est correct
+
+// Définition des mixins pour chaque couleur
+@mixin primary-color() {
+  background-color: $primary-color;
+}
+
+@mixin secondary-color() {
+  color: $secondary-color;
+}
+
+@mixin tertiary-color() {
+  background-color: $tertiary-color;
+}
+
+@mixin text-color() {
+  color: $text-color;
+}
+
+@mixin button-hover-color() {
+  background-color: lighten($primary-color, 10%); // Couleur de survol du bouton
+  color: $text-color; // Utilise la couleur du texte
+}
+
+// Mixin pour le style des boutons
+@mixin button-style() {
+  @include primary-color; // Applique la couleur principale
+  @include text-color; // Applique la couleur du texte
+  padding: 10px 20px; // Ajoute un padding (ajustez selon vos besoins)
+  border: none; // Pas de bordure
+  border-radius: 5px; // Coins arrondis
+  cursor: pointer; // Curseur en main
+
+  // Effet de survol
+  &:hover {
+    @include button-hover-color; // Applique la couleur de survol
+  }
+}
+

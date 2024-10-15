@@ -1,34 +1,11 @@
-// Définition des mixins pour chaque couleur
-$primary-color: #9356DC; // Couleur principale
+// variable.scss
 
-@mixin primary-color() {
-  background-color: $primary-color;
-}
+// Définition des couleurs principales
+$primary-color: #9356DC;  // Couleur primaire
+$secondary-color: #FF79DA; // Couleur secondaire
+$tertiary-color: #99E2D0;  // Couleur tertiaire
+$text-color: #FFFFFF;      // Couleur du texte (blanc, à adapter si besoin)
 
-@mixin secondary-color() {
-  color: #FF79DA; // Couleur secondaire
-}
-
-@mixin tertiary-color() {
-  background-color: #99E2D0; // Couleur tertiaire
-}
-
-@mixin text-color() {
-  color: #FFFFFF; // Couleur du texte
-}
-
-@mixin button-hover-color() {
-  @include primary-color;
-  background-color: lighten($primary-color, 10%); // Couleur de survol du bouton
-}
-
-.button {
-  @include primary-color; // Applique la couleur principale
-  @include text-color; // Applique la couleur du texte
-  &:hover {
-    @include button-hover-color; // Applique la couleur de survol
-  }
-}
 
 
 

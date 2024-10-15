@@ -10,7 +10,6 @@
     transform: translateY(-5px);
   }
 
-  // Animation du cœur
   .checkmark {
     position: absolute;
     top: 50%;
@@ -18,46 +17,7 @@
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
-    transition: transform 0.4s, visibility 0.4s;
     visibility: hidden;
-
-    &::before, &::after {
-      content: '\f004'; // Icône cœur de FontAwesome
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    // Cœur vide (avant)
-    &::before {
-      color: #ff79da; // Couleur du cœur vide
-    }
-
-    // Cœur plein (après)
-    &::after {
-      color: #ff79da; // Couleur du cœur plein
-      opacity: 0;
-    }
-  }
-
-  // Effet au survol pour afficher le cœur
-  &:hover .checkmark {
-    visibility: visible;
-    transform: translateX(-100%); // Animation de glissement vers la gauche
-  }
-
-  // Animation de remplissage du cœur au survol
-  &:hover .checkmark::before {
-    opacity: 0;
-  }
-
-  &:hover .checkmark::after {
-    opacity: 1;
-    transform: scale(1.2); // Petit zoom pour donner un effet de "pop"
   }
 }
 
@@ -68,27 +28,3 @@
   text-overflow: ellipsis;
 }
 
-// pour gérer les animations des éléments du menu
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-// Délai pour l'animation des plats par groupe
-.menu-group {
-  animation-delay: 0.2s;
-
-  &:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-
-  &:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-}
