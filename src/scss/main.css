@@ -1,4 +1,130 @@
 @charset "UTF-8";
+/* Media query pour les écrans de moins de 768px */
+@media screen and (max-width: 768px) {
+  .column {
+    width: 100%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
+  }
+}
+/* Styles globaux pour le corps du document */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles pour l'en-tête du site */
+.header {
+  width: 375px;
+  height: 63px;
+  background-color: #ffffff;
+  color: #000000; /* Couleur du texte en blanc */
+  padding: 0;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+/* Styles pour le conteneur principal */
+.main-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Styles pour la section de localisation */
+.localisation {
+  background-color: white;
+  color: #000000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin-top: 0px;
+}
+
+/* Styles pour l'emplacement de la localisation */
+.localisation-emplacement {
+  background-color: #D2D6D9;
+  width: 375px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Styles pour les boutons */
+.buttons {
+  display: inline-block; /* Affichage en bloc pour les boutons */
+  padding: 10px 20px; /* Espace intérieur du bouton */
+  background-color: #ffaf58; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte en blanc */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Styles pour la section expliquant le fonctionnement */
+.fonctionnement-service {
+  padding: 20px;
+}
+
+/* Styles pour les étapes du service */
+.étapes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Styles pour chaque étape */
+.étape1, .étape2, .étape3 {
+  width: 30%; /* Chaque étape occupe 30% de la largeur */
+  text-align: center; /* Centre le texte à l'intérieur des étapes */
+  margin: 10px 0; /* Marge en haut et en bas */
+}
+
+/* Styles pour les icônes des étapes */
+.étape1 i, .étape2 i, .étape3 i {
+  font-size: 40px; /* Taille des icônes */
+  color: #ff5c5c; /* Couleur des icônes */
+}
+
+/* Styles pour la section des restaurants */
+.restaurants {
+  padding: 20px;
+}
+
+/* Styles pour le conteneur des cartes de restaurant */
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Styles pour chaque carte de restaurant */
+.card {
+  width: 200px; /* Largeur fixe pour les cartes */
+  margin: 10px; /* Marge autour des cartes */
+  text-align: center;
+  border: 1px solid #ccc; /* Bordure grise autour des cartes */
+  border-radius: 5px; /* Arrondit les bords des cartes */
+  overflow: hidden; /* Cache tout débordement de contenu */
+}
+
+/* Styles pour les images des cartes */
+.card img {
+  width: 100%; /* L'image occupe 100% de la largeur de la carte */
+  height: auto; /* Maintient le rapport d'aspect de l'image */
+}
+
+/* Styles pour le pied de page */
+.footer {
+  background-color: #ccc; /* Couleur de fond du pied de page */
+  padding: 20px; /* Espace intérieur autour du pied de page */
+  text-align: center; /* Centre le texte à l'intérieur du pied de page */
+  color: #fff; /* Couleur du texte en blanc */
+}
+
 .button {
   background-color: #9356DC;
   color: #FFFFFF;
@@ -142,10 +268,8 @@ button:hover {
   }
 }
 .card img {
-  width: 100%; /* Remplit toute la largeur de l'élément parent */
-  height: auto; /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
-  max-width: 375px; /* Largeur maximale */
-  max-height: 275px; /* Hauteur maximale */
+  width: 375px; /* Largeur maximale */
+  height: 275px; /* Hauteur maximale */
   -o-object-fit: cover;
      object-fit: cover; /* Maintient le ratio sans déformer l'image */
   border-radius: 8px;
@@ -170,26 +294,38 @@ button:hover {
   top: 50%;
   right: -20px;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background-color: #9356dc;
-  border-radius: 50%;
-  transition: transform 0.3s;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.4s, visibility 0.4s;
   visibility: hidden;
 }
-.menu-item .checkmark::before {
+.menu-item .checkmark::before, .menu-item .checkmark::after {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: #ff79da;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.menu-item .checkmark::before {
+  color: #ff79da;
+}
+.menu-item .checkmark::after {
+  color: #ff79da;
+  opacity: 0;
 }
 .menu-item:hover .checkmark {
   visibility: visible;
   transform: translateX(-100%);
+}
+.menu-item:hover .checkmark::before {
+  opacity: 0;
+}
+.menu-item:hover .checkmark::after {
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 .menu-item-title {

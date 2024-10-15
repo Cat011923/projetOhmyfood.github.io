@@ -13,26 +13,38 @@
   top: 50%;
   right: -20px;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background-color: #9356dc;
-  border-radius: 50%;
-  transition: transform 0.3s;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.4s, visibility 0.4s;
   visibility: hidden;
 }
-.menu-item .checkmark::before {
+.menu-item .checkmark::before, .menu-item .checkmark::after {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: #ff79da;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.menu-item .checkmark::before {
+  color: #ff79da;
+}
+.menu-item .checkmark::after {
+  color: #ff79da;
+  opacity: 0;
 }
 .menu-item:hover .checkmark {
   visibility: visible;
   transform: translateX(-100%);
+}
+.menu-item:hover .checkmark::before {
+  opacity: 0;
+}
+.menu-item:hover .checkmark::after {
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 .menu-item-title {

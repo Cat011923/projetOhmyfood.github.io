@@ -9,15 +9,19 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
 }
 
 /* Styles pour l'en-tête du site */
 .header {
-  width: 100%;
-  background-color: #ff5c5c;
-  color: #fff; /* Couleur du texte en blanc */
-  padding: 20px;
+  width: 375px;
+  height: 63px;
+  background-color: #ffffff;
+  color: #000000; /* Couleur du texte en blanc */
+  padding: 0;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
 }
 
 /* Styles pour le conteneur principal */
@@ -29,15 +33,24 @@ body {
 
 /* Styles pour la section de localisation */
 .localisation {
-  background-color: grey;
+  background-color: white;
+  color: #000000;
   text-align: center;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin-top: 0px;
 }
 
 /* Styles pour l'emplacement de la localisation */
 .localisation-emplacement {
-  color: grey;
+  background-color: #D2D6D9;
+  width: 375px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
   font-size: 16px;
+  text-align: center;
 }
 
 /* Styles pour les boutons */
@@ -94,7 +107,7 @@ body {
   margin: 10px; /* Marge autour des cartes */
   text-align: center;
   border: 1px solid #ccc; /* Bordure grise autour des cartes */
-  border-radius: 5px;
+  border-radius: 5px; /* Arrondit les bords des cartes */
   overflow: hidden; /* Cache tout débordement de contenu */
 }
 
