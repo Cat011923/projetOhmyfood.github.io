@@ -29,10 +29,10 @@
 @mixin button-style() {
   @include primary-color; // Applique la couleur principale
   @include text-color; // Applique la couleur du texte
-  padding: 10px 20px; // Ajoute un padding (ajustez selon vos besoins)
-  border: none; // Pas de bordure
-  border-radius: 5px; // Coins arrondis
-  cursor: pointer; // Curseur en main
+  padding: 10px 20px;
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
 
   // Effet de survol
   &:hover {
