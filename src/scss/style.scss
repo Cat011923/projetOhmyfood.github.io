@@ -1,182 +1,137 @@
-/* Media query pour les écrans de moins de 768px */ 
+// Import de chaque police de Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+/* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
-  .column {
-    width: 100%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
-  }
+	.column {
+		width: 100%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
+	}
 }
 
 /* Styles globaux pour le corps du document */
-body {
-  margin: 0;
-  padding: 0; 
+body  h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif; // Applique Roboto comme police principale
 }
 
-/* Styles pour l'en-tête du site */
-.header {
-  background-color: #ffffff; 
-  color: #000000; 
-  padding: 0; 
-  font-family: "Shrikhand", sans-serif; 
-  font-style: italic;
-  font-size: 30px;
-  font-weight: 400;
-  display: flex;
-  text-align: center; 
+
+h1 {
+	font-family: "Shrikhand", italic; // Applique Shrikhand pour les titres
+  
+}
+
+li {
+	list-style-type: none;
 }
 
 /* Styles pour le conteneur principal */
 .main-container {
-  max-width: 1440px; 
-  margin: 0 auto;
-  padding: 0 20px; 
- }
-
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
 
 /* Styles pour la section de localisation */
 .localisation {
-  background-color: white;
-  color: #000000;
-  text-align: center; 
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
+	background-color: white;
+	color: #000000;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
 }
 
 /* Styles pour l'emplacement de la localisation */
 .localisation-emplacement {
-  background-color: #f0f0f0;
-  width: 100%;
-  height: 50px;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif; 
+	background-color: #f0f0f0;
+	width: 100%;
+	height: 50px;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
   color: #000000;
-  font-size: 16px; 
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  position: relative;
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	position: relative;
 }
 
 .localisation-emplacement i {
-  width: 12px;
-  height: 16px;
-  margin-top: 15px;
+	width: 12px;
+	height: 16px;
+	margin-top: 15px;
 }
 
 .localisation-emplacement span {
-  margin-left: 10px; 
-  margin-top: 15px;
-  text-align: center; 
+	margin-left: 10px;
+	margin-top: 15px;
+	text-align: center;
 }
 
 /* Styles pour la section expliquant le fonctionnement */
 .container-buttons {
-  display: flex; 
-  justify-content: space-around; 
-  flex-wrap: wrap; 
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 .container-buttons buttons {
-  background-color: #ffffff;
+	background-color: #ffffff;
 }
 /* Ajout des cercles pour les chiffres */
 .circle {
-  display: inline-block; 
-  width: 24px; 
-  height: 24px; 
-  border-radius: 50%; 
-  background-color: #9356DC; 
-  color: white; 
-  text-align: center; 
-  line-height: 24px; /* Modifié pour centrer le texte verticalement */
-  margin-bottom: 10px; 
-}
-
-/* Styles pour les boutons */
-.buttons {
-  display: inline-block; /* Affichage en bloc pour les boutons */
-  padding: 10px 20px; /* Espace intérieur du bouton */
-  color: #fff; 
-  text-decoration: none; 
-  border-radius: 45px; 
-  margin-top: 10px; 
-  background: linear-gradient(90deg, #9356DC 0%, #FD79DA 100%);
-  transition: background-color 0.3s; 
-}
-
-.buttons:hover {
-  background-color: #0056b3; /* Couleur de fond au survol */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Ombre portée au survol */
-}
-
-.buttons span {
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  font-size: 24px;
-  color: #000000;
-}
-
-.buttons i {
-  display: flex;
-  flex-direction: row;
-  font-size: 32px; 
-  color: #000000;
-  margin: 10px 0; 
-}
-
-.buttons p {
-  color: #000000;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  font-size: 16px; 
-  margin: 0; 
-}
-
-/* Styles pour les icônes des étapes */
-.buttons .circle i {
-  font-size: 40px; 
-  color: #9356DC; 
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: #9356dc;
+	color: white;
+	text-align: center;
+	line-height: 24px; /* Modifié pour centrer le texte verticalement */
+	margin-bottom: 10px;
 }
 
 /* Styles pour la section des restaurants */
 .restaurants card {
-  padding: 20px; 
-  border: none;
+	padding: 20px;
+	border: none;
 }
 
 /* Styles pour le conteneur des cartes de restaurant */
-.card-container  card{
-  display: flex; 
-  justify-content: space-around; 
-  flex-wrap: wrap; 
-  border: none;
+.card-container card {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	border: none;
 }
 
 /* Styles pour chaque carte de restaurant */
 .card {
- 
-  margin: 10px; 
-   border-radius: 15px; 
-  overflow: hidden; /* Cache tout débordement de contenu */
+	margin: 10px;
+	border-radius: 15px;
+	overflow: hidden; /* Cache tout débordement de contenu */
 }
 
 /* Styles pour les images des cartes */
 .card img {
-  width: 340px; 
-  height: 251px;
-  border: none;
+	width: 346px;
+	height: 231px;
+	border: none;
 }
 
 /* Styles pour le pied de page */
 .footer {
-  background-color: rgba(53, 53, 53, 1);
-   padding: 20px; 
-   color: #fff; 
-   list-style-type: none;
-   
+	background-color: rgba(53, 53, 53, 1);
+	padding: 20px;
+	color: #fff;
+	// list-style-type: none;
 }
-.footer h3 {
-  color: #fff; 
-  list-style-type: none;
+.footer h3  {
+	color: #fff;
 }
+.footer i  {
+  color: #fff;
+
+}
+
