@@ -45,14 +45,16 @@ button {
 }
 
 // Styles pour le bouton de Explorer
-.buttons-explorer {
-	background: linear-gradient(90deg, #9356dc 0%, #fd79da 100%);
-}
-
-.buttons:hover {
-	background-color: #0056b3; /* Couleur de fond au survol */
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Ombre portée au survol */
-}
+ 
+  .buttons-explorer {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  color: white;
+  }
+    
+  .buttons-explorer:hover {
+  background-color: #8251b1;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+  }
 
 .buttons span {
 	display: flex;
@@ -82,7 +84,7 @@ button {
 // Style  pour le bouton choississez un restaurant
 .buttons-restaurant {
  
-    width: 100%;
+    width: 335px;
     height: 26px;
     border-radius: 20px;
     gap: 20px;
@@ -102,25 +104,25 @@ button {
 
  // Style pour le bouton menu
  .buttons-menu {
-     width: 100%;
-    height: 26px;
-    border-radius: 20px;
-    gap: 20px;
-    display: inline-flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    font-size: 16px;
-    color: #000000;
-    border: 2px solid #e8e8e8;
-    padding: 10px;
-    margin-bottom: 10px;
-    background: #e8e8e8;
+     width: 335px;
+     height: 26px;
+     border-radius: 20px;
+     gap: 20px;
+     display: inline-flex;
+     justify-content: center;
+     flex-direction: row;
+     align-items: center;
+     font-size: 16px;
+     color: #000000;
+     border: 2px solid #e8e8e8;
+     padding: 10px;
+     margin-bottom: 10px;
+     background: #e8e8e8;
   }
    
  // Style pour le bouton degustez
  .buttons-degustez {
-  width: 100%;
+  width: 335px;
   height: 26px;
   border-radius: 20px;
   gap: 20px;
@@ -132,11 +134,68 @@ button {
   color: #000000;
   border: 2px solid #e8e8e8;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   background: #e8e8e8;
 }
+.buttons-degustez  i  {
+  color: rgba(147, 86, 220, 1); 
+  width: 18px;
+  padding: 5px;
+ }
+
 /* Styles pour les icônes des étapes */
-.buttons .circle i {
+.circle {
+  position: absolute;
+  left: 25px;
+}
+
+.buttons-menu .circle span{
+  position: absolute;
+  left: 25px;
 	font-size: 40px;
 	color: #9356dc;
+}
+/* Style de la section du menu */
+.menu-section {
+  display: flex;
+  flex-direction: column;
+   margin: 20px auto;
+  width: 100%;
+}
+
+/* Style des boutons */
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+  flex-wrap: wrap;
+}
+
+/* Style général des boutons */
+.buttons {
+  display: inline-block; 
+  padding: 10px 20px; 
+  color: #fff; 
+  text-decoration: none; 
+  border-radius: 25px; 
+  margin-top: 10px; 
+  transition: background-color 0.3s; /* Transition pour changement de couleur */
+  font-size: 1rem; 
+/* Couleur de fond pour les boutons de fonctionnement */
+.buttons-fonctionnement {
+  background-color:white; 
+}
+
+/* Styles pour les titres et le prix */
+.menu-button strong {
+  font-size: 1.2rem; 
+  color: #fff; 
+}
+
+.menu-button price {
+  color: black; 
+  font-weight: bold; 
+  font-size: 1rem;
+    margin-top: 5px; 
+}
 }

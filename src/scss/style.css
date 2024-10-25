@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
@@ -8,10 +8,26 @@
   }
 }
 /* Styles globaux pour le corps du document */
-body h2, h3 {
+body h2 {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  color: #000000;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  color: #000000;
 }
 
 h1 {
@@ -86,7 +102,7 @@ li {
   background-color: #9356dc;
   color: white;
   text-align: center;
-  line-height: 24px; /* Modifié pour centrer le texte verticalement */
+  line-height: 24px;
   margin-bottom: 10px;
 }
 
@@ -118,17 +134,42 @@ li {
   border: none;
 }
 
+.card h3 {
+  color: #000000;
+}
+
 /* Styles pour le pied de page */
 .footer {
+  width: 375PX;
+  height: 186px;
   background-color: rgb(53, 53, 53);
   padding: 20px;
+  text-align: left;
   color: #fff;
 }
 
 .footer h3 {
-  color: #fff;
+  color: white;
+  text-align: left;
+  font-family: " Shrikhand, ", italic;
+  font-weight: 700;
+  font-size: 18px;
+  width: 137.58px;
+  height: 27px;
+  gap: 0px;
+  line-height: 26.24px;
 }
 
 .footer i {
   color: #fff;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  align-items: left;
+}
+
+.footer a {
+  color: #fff;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */

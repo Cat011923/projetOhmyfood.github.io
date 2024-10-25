@@ -1,5 +1,5 @@
 // Import de chaque police de Google Fonts
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
 /* Media query pour les écrans de moins de 768px */
@@ -10,12 +10,27 @@
 }
 
 /* Styles globaux pour le corps du document */
-body  h2, h3 {
+body  h2
+ {
 	margin: 0;
 	padding: 0;
 	font-family: "Roboto", sans-serif; // Applique Roboto comme police principale
-}
+  font-size: 17px;
+  color:#000000;
+ }
 
+h3 {
+  font-family: "Roboto", sans-serif; // Applique Roboto comme police principale
+  font-weight: 700;
+  font-size: 18px;
+   color:white;
+}
+p {
+  font-family: "Roboto", sans-serif; // Applique Roboto comme police principale
+  font-weight: 300;
+  font-size: 17px;
+   color:#000000;
+}
 
 h1 {
 	font-family: "Shrikhand", italic; // Applique Shrikhand pour les titres
@@ -88,7 +103,7 @@ li {
 	background-color: #9356dc;
 	color: white;
 	text-align: center;
-	line-height: 24px; /* Modifié pour centrer le texte verticalement */
+	line-height: 24px; 
 	margin-bottom: 10px;
 }
 
@@ -119,19 +134,42 @@ li {
 	height: 231px;
 	border: none;
 }
-
+.card h3 {
+  color: #000000;
+}
 /* Styles pour le pied de page */
+
 .footer {
+   width: 375PX;
+  height: 186px;
 	background-color: rgba(53, 53, 53, 1);
 	padding: 20px;
+  text-align: left;
 	color: #fff;
 	// list-style-type: none;
 }
 .footer h3  {
-	color: #fff;
+  color:white;
+  text-align: left;
+  font-family: " Shrikhand, ", italic;
+  font-weight: 700;
+	font-size: 18px;
+  width: 137.58px;
+  height: 27px;
+  gap: 0px;
+ line-height: 26.24px;
+
 }
 .footer i  {
   color: #fff;
-
+  margin-right: 10px;
+  margin-bottom: 15px;
+  align-items: left;
+}
+.footer a  {
+  color: #fff;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  text-align: left;
 }
 

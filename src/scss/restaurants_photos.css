@@ -1,8 +1,5 @@
-@charset "UTF-8";
-.restaurants_photos.card img {
-  width: 375px; /* Largeur maximale */
-  height: 275px; /* Hauteur maximale */
-  -o-object-fit: cover;
-     object-fit: cover; /* Maintient le ratio sans déformer l'image */
+.restaurant-menu-container img {
+  width: 346px;
+  height: 231px;
   border-radius: 8px;
 }/*# sourceMappingURL=restaurants_photos.css.map */
