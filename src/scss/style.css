@@ -172,4 +172,33 @@ li {
   margin-right: 20px;
   margin-bottom: 15px;
   text-align: left;
+}
+
+.footer ul {
+  padding-left: 0px;
+}
+
+.footer li {
+  height: 25px;
+}
+
+.restaurants-photos card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: none;
+}
+
+/* Styles pour chaque carte de restaurant */
+.restaurants-photos card {
+  margin: 10px;
+  border-radius: 15px;
+  overflow: hidden; /* Cache tout débordement de contenu */
+}
+
+/* Styles pour les images des cartes */
+.restaurants-photos img {
+  width: 346px;
+  height: 231px;
+  border: none;
 }/*# sourceMappingURL=style.css.map */

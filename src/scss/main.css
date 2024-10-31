@@ -177,6 +177,14 @@ li {
   text-align: left;
 }
 
+.footer ul {
+  padding-left: 0px;
+}
+
+.footer li {
+  height: 25px;
+}
+
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
   .column {
@@ -348,6 +356,14 @@ li {
   margin-right: 20px;
   margin-bottom: 15px;
   text-align: left;
+}
+
+.footer ul {
+  padding-left: 0px;
+}
+
+.footer li {
+  height: 25px;
 }
 
 button {
@@ -540,6 +556,36 @@ button:hover {
   margin-top: 5px;
 }
 
+/*Style pour les boutons des cartes */
+.buttons-carte section {
+  width: 335px;
+  height: 26px;
+  border-radius: 20px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  color: #000000;
+  border: 2px solid #e8e8e8;
+  padding: 10px;
+  margin-bottom: 40px;
+  background: #e8e8e8;
+}
+
+.buttons-carte {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 10px;
+  transition: background-color 0.3s; /* Transition pour changement de couleur */
+  font-size: 1rem;
+  /* Couleur de fond pour les boutons de fonctionnement */
+}
+
 .loader-section {
   position: fixed;
   top: 0;
@@ -688,10 +734,43 @@ button:hover {
   transform: scale(1.2);
 }
 
-.restaurant-menu-container img {
+/* Media query pour les écrans de moins de 768px */
+@media screen and (max-width: 768px) {
+  .column {
+    width: 100%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
+  }
+}
+/* Styles pour la section des restaurants */
+.card-restaurants {
+  padding: 20px;
+  border: none;
+}
+
+/* Styles pour le conteneur des cartes de restaurant */
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: none;
+}
+
+/* Styles pour chaque carte de restaurant */
+.card {
+  margin: 10px;
+  border-radius: 15px;
+  overflow: hidden; /* Cache tout débordement de contenu */
+}
+
+/* Styles pour les images des cartes */
+.card-restaurants img {
   width: 346px;
   height: 231px;
-  border-radius: 8px;
+  border: none;
+}
+
+/* Style pour les titres dans chaque carte */
+.card h3 {
+  color: #000000;
 }
 
 .header {
