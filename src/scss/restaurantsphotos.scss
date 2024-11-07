@@ -5,13 +5,6 @@
 		width: 100%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
 	}
 }
-/* Styles pour le conteneur des photos de restaurant */
-.main-container-photo .restaurants-photo {
-	display: flex;
-	justify-content: center; /* Center pour un seul élément */
-	flex-wrap: wrap;
-	border: none;
-}
 .restaurants-photo img {
 	width: 346px !important;
 	height: 231px !important;

@@ -1,156 +1,160 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="HandheldFriendly" content="True" />
-		<title>Le délice des sens - ohmyfood</title>
-		<!--Lien vers le fichier principal de style-->
-		<link rel="stylesheet" href="src/scss/main.css" />
-		<link rel="stylesheet" href="src/scss/variable.css" />
-		<link rel="stylesheet" href="src/scss/style.css" />
-		<link rel="stylesheet" href="src/scss/header.css" />
-		<link rel="stylesheet" href="src/scss/loader.css" />
-		<link rel="stylesheet" href="src/scss/buttons.css" />
-		<link rel="stylesheet" href="src/scss/restaurants_photos.css" />
-		<link rel="stylesheet" href="src/scss/menu.css"/>
-		<link rel="stylesheet" href="src/scss/animations.css"/>
-		
-	  
-		 <!-- Lien vers les icônes Font awesome et feuille de style-->
-		 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-	 <!-- Lien vers les polices Shrikhand et Roboto -->
-	 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
-		</head>
-	<body>
-		<header id="header" class="header">
-			<div class="main-container">
-				<div class="header-container">
-					<nav>
-						<ul class=titre-main-container>
-							<li>
-								<a href="index.html"><i class="fas fa-arrow-left back-arrow"></i></a>
-							</li>
-							<li class="main-title-container">
-								<h1 class="main-title">ohmyfood</h1>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
-		<main>
-			<!--MENU-->
-			<section id="restaurant-menu" class="restaurant-menu">
-				<header class="restaurants_photos"><img src="/assets-images/logo/restaurants_photos/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Plat du restaurant 'Le délice des sens' à Cité Rouge" /></header>
-				<div class="main-container">
-					<div class="restaurant-menu-container">
-						<div class="restaurant-menu-title-container">
-							<h2 class="title restaurant-menu-title">
-								Le délice des sens
-								<!--deux coeurs pour les supperposer pour créer l'animation plus tard-->
-								<span class="heart-container">
-									<i class="far fa-heart heart heart--menu"></i>
-									<i class="fas fa-heart heart-full"></i>
-								</span>
-							</h2>
-						</div>
-							<!-- LES ENTREES -->
-<div class="menu-section">
-	<div class="entrées">
-		<h3 class="restaurant-menu__subtitle">Entrées</h3>
-		<div class="card-menu-container">
-    <!-- Boutons pour les Entrées -->
-    <div class="menu-buttons">
-        <button id="btn-entree-1" class="menu-button buttons buttons-fonctionnement">
-            <strong>Tartare de thon</strong><br>
-            <span>Assaisonné au yuzu</span><br>
-            <span class="price">25€</span>
-        </button>
-        <button id="btn-entree-2" class="menu-button buttons buttons-fonctionnement">
-            <strong>Bouchée de homard croustillant</strong><br>
-            <span>Et sa farandole de petits légumes</span><br>
-            <span class="price">35€</span>
-        </button>
-        <button id="btn-entree-3" class="menu-button buttons buttons-fonctionnement">
-            <strong>Poulet rôti aux herbes de provence</strong><br>
-            <span>Et sa crème de truffe</span><br>
-            <span class="price">40€</span>
-        </button>
-    </div>
-</div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <title>Le délice des sens - ohmyfood</title>
+    
+    <!-- Lien vers les fichiers CSS -->
+    <link rel="stylesheet" href="../src/scss/main.css" />
+    <link rel="stylesheet" href="src/scss/variable.css" />
+    <link rel="stylesheet" href="src/scss/style.css" />
+    <link rel="stylesheet" href="src/scss/header.css" />
+    <link rel="stylesheet" href="src/scss/loader.css" />
+    <link rel="stylesheet" href="src/scss/buttons.css" />
+    <link rel="stylesheet" href="src/scss/restaurantsphotos.css" />
+    <link rel="stylesheet" href="src/scss/menu.css"/>
+    <link rel="stylesheet" href="src/scss/animations.css"/>
+    
+    <!-- Lien vers les icônes et polices -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header" class="header">
+        <div class="main-container">
+            <div class="header-container">
+                <nav>
+                    <ul class="titre-main-container">
+                        <li>
+                            <a href="index.html"><i class="fas fa-arrow-left back-arrow"></i></a>
+                        </li>
+                        <li class="main-title-container">
+                            <h1 class="main-title">ohmyfood</h1>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- MENU SECTION -->
+        <section  class="restaurants-photo">
+            <a href ="restaurants/ledelicedessens.html" class="photo">
+                <img src="/assets-images/logo/restaurantsphotos/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Plat du restaurant 'Le délice des sens' à Cité Rouge" />
+            </a>
+           </section>
+            <div class="main-container">
+                <div class="restaurant-menu-container">
+                    <div class="restaurant-menu-title-container">
+                        <h2 class="title restaurant-menu-title">
+                            Le délice des sens
+                            <span class="heart-container">
+                                <i class="far fa-heart heart heart--menu"></i>
+                                <i class="fas fa-heart heart-full"></i>
+                            </span>
+                        </h2>
+                    </div>
+                    
+                    <!-- ENTRÉES -->
+                    <div class="menu-section">
+                        <div class="entrées">
+                            <h3 class="restaurant-menu__subtitle">Entrées</h3>
+                            <div class="card-menu-container">
+                                <div class="menu-buttons">
+                                    <button id="btn-entree-1" class="menu-button buttons buttons-fonctionnement">
+                                        <strong>Tartare de thon</strong><br>
+                                        <span>Assaisonné au yuzu</span><br>
+                                        <span class="price">25€</span>
+                                    </button>
+                                    <button id="btn-entree-2" class="menu-button buttons buttons-fonctionnement">
+                                        <strong>Bouchée de homard croustillant</strong><br>
+                                        <span>Et sa farandole de petits légumes</span><br>
+                                        <span class="price">35€</span>
+                                    </button>
+                                    <button id="btn-entree-3" class="menu-button buttons buttons-fonctionnement">
+                                        <strong>Poulet rôti aux herbes de provence</strong><br>
+                                        <span>Et sa crème de truffe</span><br>
+                                        <span class="price">40€</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- PLATS -->
+                        <div class="plats">
+                            <h3 class="restaurant-menu__subtitle">Plats</h3>
+                            <div class="card-menu-container">
+                                <div class="menu-buttons">
+                                    <button id="btn-plat-1" class="menu-button">
+                                        <strong>Poulet rôti aux herbes de provence</strong><br>
+                                        <span>Et sa crème de truffe</span><br>
+                                        <span>40€</span>
+                                    </button>
+                                    <button id="btn-plat-2" class="menu-button">
+                                        <strong>Langouste rôtie</strong><br>
+                                        <span>Et ses légumes de saison</span><br>
+                                        <span>35€</span>
+                                    </button>
+                                    <button id="btn-plat-3" class="menu-button">
+                                        <strong>Côte de boeuf Angus</strong><br>
+                                        <span>Et sa purée de panais</span><br>
+                                        <span>44€</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
-										
-	<!--LES PLATS-->
-												 
-	<!-- Boutons pour les Plats -->
-	<div class="plats">
-		<h3 class="restaurant-menu__subtitle">Plats</h3>
-		<div class="card-menu-container">
-    <div class="menu-buttons">
-        <button id="btn-plat-1" class="menu-button">
-            <strong>Poulet rôti aux herbes de provence</strong><br>
-            <span>Et sa crème de truffe</span><br>
-            <span>40€</span>
-        </button>
-        <button id="btn-plat-2" class="menu-button">
-            <strong>Langouste rôtie</strong><br>
-            <span>Et ses légumes de saison</span><br>
-            <span>35€</span>
-        </button>
-        <button id="btn-plat-3" class="menu-button">
-            <strong>Côte de boeuf Angus</strong><br>
-            <span>Et sa purée de panais</span><br>
-            <span>44€</span>
-        </button>
-    </div>
-</div>
-<!-- LES DESSERTS -->
+                        <!-- DESSERTS -->
+                        <div class="desserts">
+                            <h3 class="restaurant-menu__subtitle">Desserts</h3>
+                            <div class="card-menu-container">
+                                <div class="menu-buttons">
+                                    <button id="btn-dessert-1" class="menu-button">
+                                        <strong>Farandole desserts</strong><br>
+                                        <span>Du chef</span><br>
+                                        <span>18€</span>
+                                    </button>
+                                    <button id="btn-dessert-2" class="menu-button">
+                                        <strong>Crème brulée</strong><br>
+                                        <span>Revisitée</span><br>
+                                        <span>22€</span>
+                                    </button>
+                                    <button id="btn-dessert-3" class="menu-button">
+                                        <strong>Tiramisu</strong><br>
+                                        <span>A la noisette</span><br>
+                                        <span>23€</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Boutons pour les Desserts -->
-	<div class="desserts">
-		<h3 class="restaurant-menu__subtitle">Desserts</h3>
-		<div class="card-menu-container">
-    <div class="menu-buttons">
-        <button id="btn-dessert-1" class="menu-button">
-            <strong>Farandole desserts</strong><br>
-            <span>Du chef</span><br>
-            <span>18€</span>
-        </button>
-        <button id="btn-dessert-2" class="menu-button">
-            <strong>Crème brulée</strong><br>
-            <span>Revisitée</span><br>
-            <span>22€</span>
-        </button>
-        <button id="btn-dessert-3" class="menu-button">
-            <strong>Tiramisu</strong><br>
-            <span>A la noisette</span><br>
-            <span>23€</span>
-        </button>
-    </div>
-</div>
+                    <!-- BUTTON COMMANDER -->
+                    <div class="order-button-container">
+                        <button class="button order-button">Commander</button>
+                    </div>
+                </div> <!-- Fermeture de .restaurant-menu-container -->
+            </div> <!-- Fermeture de .main-container -->
+        </section>
+    </main>
 
-					<!-- Bouton pour commander-->
-						<div class="order-button-container">
-							<button class="button order-button">Commander</button>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<!-- LE FOOTER-->
-		<footer class="footer">
-			<div class="main-container">
-				<h3>Ohmyfood</h3>
-				<ul>
-					<li><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
-					<li><a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>
-					<li><a href="#">Mentions légales</a></li>
-					<li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
-				</ul>
-			</div>
-		</footer>
-	</body>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="main-container">
+            <h3>Ohmyfood</h3>
+            <ul>
+                <li><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
+                <li><a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
 </html>

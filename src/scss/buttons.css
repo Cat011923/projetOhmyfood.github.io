@@ -4,16 +4,49 @@
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
   .column {
-    width: 100%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
+    width: 30%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
+    padding: 0.9375rem 0;
   }
 }
+@media screen and (min-width: 1200px) {
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1.875rem 0;
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
 /* Styles globaux pour le corps du document */
-body h2 {
-  margin: 0;
+.main-container h1 {
+  background-color: white;
+  width: 351px;
+  height: 64px;
+}
+
+.main-container h2 {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 27.5px;
+  color: #000000;
+}
+
+.main-container p {
+  margin-top: 10px;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 17px;
+  font-size: 19.5px;
   color: #000000;
+}
+
+h1 {
+  font-family: "Shrikhand", italic;
 }
 
 h3 {
@@ -23,15 +56,11 @@ h3 {
   color: white;
 }
 
-p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
+.container-buttons p {
+  font-family: "Roboto";
+  font-weight: bold;
   font-size: 17px;
   color: #000000;
-}
-
-h1 {
-  font-family: "Shrikhand", italic;
 }
 
 li {
@@ -41,8 +70,7 @@ li {
 /* Styles pour le conteneur principal */
 .main-container {
   max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: auto;
 }
 
 /* Styles pour la section de localisation */
@@ -57,9 +85,7 @@ li {
 
 /* Styles pour l'emplacement de la localisation */
 .localisation-emplacement {
-  background-color: #f0f0f0;
   width: 100%;
-  height: 50px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #000000;
@@ -68,6 +94,7 @@ li {
   justify-content: center;
   text-align: center;
   position: relative;
+  background-color: #D3D3D3;
 }
 
 .localisation-emplacement i {
@@ -76,10 +103,16 @@ li {
   margin-top: 15px;
 }
 
-.localisation-emplacement span {
+.localisation-emplacement strong {
   margin-left: 10px;
   margin-top: 15px;
   text-align: center;
+}
+
+.fonctionnement-service .main-container h2 {
+  margin: 0px;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 /* Styles pour la section expliquant le fonctionnement */
@@ -90,7 +123,7 @@ li {
 }
 
 .container-buttons buttons {
-  background-color: #ffffff;
+  background-color: #E0E0E0;
 }
 
 /* Ajout des cercles pour les chiffres */
@@ -139,6 +172,10 @@ li {
 }
 
 /* Styles pour le pied de page */
+.footer-container {
+  width: 100%;
+}
+
 .footer {
   width: 375PX;
   height: 186px;
@@ -198,34 +235,18 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.button {
-  background-color: #9356DC;
-  color: #FFFFFF;
-}
-.button:hover {
-  background-color: #ae80e5;
-  color: #FFFFFF;
-}
-
-/* Styles pour les boutons en géréral */
-.buttons {
-  display: inline-block; /* Affichage en bloc pour les boutons */
-  padding: 10px 20px; /* Espace intérieur du bouton */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 45px;
-  margin-top: 10px;
-  transition: background-color 0.3s;
-}
-
-/* Styles pour les boutons de fonctionnement */
 .buttons-fonctionnement {
+  width: 335px;
+  height: 72.38px;
   background-color: grey;
 }
 
 .buttons-explorer {
+  width: 218px;
+  height: 50px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   color: white;
+  padding: 15.6px;
 }
 
 .buttons-explorer:hover {
@@ -258,9 +279,22 @@ button:hover {
   margin: 0;
 }
 
-.buttons-restaurant {
+.container-buttons {
+  display: flex;
+  flex-direction: column; /* Aligner les boutons verticalement (ou utilisez row pour horizontalement) */
+  gap: 10px;
+  width: 100%; /* S'adapte à la largeur du parent */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Style pour chaque bouton à l'intérieur de .container-buttons */
+.container-buttons .buttons-restaurant,
+.container-buttons .buttons-degustez,
+.container-buttons .buttons-menu {
   width: 335px;
-  height: 26px;
+  height: 72.38px;
   border-radius: 20px;
   gap: 20px;
   display: inline-flex;
@@ -273,60 +307,38 @@ button:hover {
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background: #e8e8e8;
+  background: #F5F5F5;
+  position: relative; /* Pour positionner correctement l'élément ::after */
 }
 
-.buttons-menu {
-  width: 335px;
-  height: 26px;
-  border-radius: 20px;
-  gap: 20px;
-  display: inline-flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  font-size: 16px;
-  color: #000000;
-  border: 2px solid #e8e8e8;
-  padding: 10px;
-  margin-bottom: 10px;
-  background: #e8e8e8;
-}
-
-.buttons-degustez {
-  width: 335px;
-  height: 26px;
-  border-radius: 20px;
-  gap: 20px;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  font-size: 16px;
-  color: #000000;
-  border: 2px solid #e8e8e8;
-  padding: 10px;
-  margin-bottom: 40px;
-  background: #e8e8e8;
-}
-
-.buttons-degustez i {
-  color: rgb(147, 86, 220);
-  width: 18px;
-  padding: 5px;
-}
-
-/* Styles pour les icônes des étapes */
-.circle {
-  position: absolute;
-  left: 25px;
-}
-
-.buttons-menu .circle span {
-  position: absolute;
-  left: 25px;
-  font-size: 40px;
+/* Changement de couleur du texte au survol */
+.container-buttons .buttons-restaurant:hover,
+.container-buttons .buttons-degustez:hover,
+.container-buttons .buttons-menu:hover {
   color: #9356dc;
+}
+
+/* Animation au survol */
+.container-buttons .buttons-restaurant::after,
+.container-buttons .buttons-degustez::after,
+.container-buttons .buttons-menu::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 1rem;
+  background-color: rgba(147, 86, 220, 0.2);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+/* Applique l'animation au survol */
+.container-buttons .buttons-restaurant:hover::after,
+.container-buttons .buttons-degustez:hover::after,
+.container-buttons .buttons-menu:hover::after {
+  opacity: 1;
 }
 
 /* Style de la section du menu */
@@ -335,6 +347,18 @@ button:hover {
   flex-direction: column;
   margin: 20px auto;
   width: 100%;
+}
+
+.card-nouveau {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #99e2d0;
+  color: #278870;
+  font-weight: bold;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.125rem;
+  text-align: center;
 }
 
 /* Style des boutons */
@@ -356,16 +380,19 @@ button:hover {
   transition: background-color 0.3s; /* Transition pour changement de couleur */
   font-size: 1rem;
   /* Couleur de fond pour les boutons de fonctionnement */
-  /* Styles pour les titres et le prix */
 }
-.buttons .buttons-fonctionnement {
+
+.buttons-fonctionnement {
   background-color: white;
 }
-.buttons .menu-button strong {
+
+/* Styles pour les titres et le prix */
+.button-menu strong {
   font-size: 1.2rem;
   color: #fff;
 }
-.buttons .menu-button price {
+
+.button-menu price {
   color: black;
   font-weight: bold;
   font-size: 1rem;
@@ -373,7 +400,7 @@ button:hover {
 }
 
 /*Style pour les boutons des cartes */
-.buttons-carte section {
+.buttons-cartes {
   width: 335px;
   height: 26px;
   border-radius: 20px;

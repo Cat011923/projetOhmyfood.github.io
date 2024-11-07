@@ -4,16 +4,62 @@
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
   .column {
-    width: 100%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
+    width: 30%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
+    padding: 0.9375rem 0;
   }
 }
+@media screen and (min-width: 1200px) {
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1.875rem 0;
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
 /* Styles globaux pour le corps du document */
-body h2 {
-  margin: 0;
+.main-container h1 {
+  background-color: white;
+  width: 351px;
+  height: 64px;
+}
+
+.main-container h2 {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 27.5px;
+  color: #000000;
+}
+
+.main-container-buttons p {
+  margin-top: 10px;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 17px;
+  font-size: 19.5px;
+  margin: 7.8px 0px 27.3px;
   color: #000000;
+}
+
+h1 {
+  font-family: "Shrikhand", italic;
+  width: 390px;
+  height: 34px;
+  margin-bottom: -15px;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 27px;
+  color: #000000;
+  margin-right: 35px;
+  margin-bottom: 35px;
+  text-align: center;
 }
 
 h3 {
@@ -23,15 +69,11 @@ h3 {
   color: white;
 }
 
-p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
+.container-buttons p {
+  font-family: "Roboto";
+  font-weight: bold;
   font-size: 17px;
   color: #000000;
-}
-
-h1 {
-  font-family: "Shrikhand", italic;
 }
 
 li {
@@ -41,8 +83,7 @@ li {
 /* Styles pour le conteneur principal */
 .main-container {
   max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: auto;
 }
 
 /* Styles pour la section de localisation */
@@ -57,8 +98,7 @@ li {
 
 /* Styles pour l'emplacement de la localisation */
 .localisation-emplacement {
-  background-color: #f0f0f0;
-  width: 100%;
+  width: 390px;
   height: 50px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -68,6 +108,7 @@ li {
   justify-content: center;
   text-align: center;
   position: relative;
+  background-color: #D3D3D3;
 }
 
 .localisation-emplacement i {
@@ -76,10 +117,16 @@ li {
   margin-top: 15px;
 }
 
-.localisation-emplacement span {
+.localisation-emplacement strong {
   margin-left: 10px;
   margin-top: 15px;
   text-align: center;
+}
+
+.fonctionnement-service h2 {
+  margin: 0px;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 /* Styles pour la section expliquant le fonctionnement */
@@ -90,7 +137,7 @@ li {
 }
 
 .container-buttons buttons {
-  background-color: #ffffff;
+  background-color: #E0E0E0;
 }
 
 /* Ajout des cercles pour les chiffres */
@@ -139,6 +186,10 @@ li {
 }
 
 /* Styles pour le pied de page */
+.footer-container {
+  width: 100%;
+}
+
 .footer {
   width: 375PX;
   height: 186px;
@@ -180,25 +231,4 @@ li {
 
 .footer li {
   height: 25px;
-}
-
-.restaurants-photos card {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  border: none;
-}
-
-/* Styles pour chaque carte de restaurant */
-.restaurants-photos card {
-  margin: 10px;
-  border-radius: 15px;
-  overflow: hidden; /* Cache tout débordement de contenu */
-}
-
-/* Styles pour les images des cartes */
-.restaurants-photos img {
-  width: 346px;
-  height: 231px;
-  border: none;
 }/*# sourceMappingURL=style.css.map */
