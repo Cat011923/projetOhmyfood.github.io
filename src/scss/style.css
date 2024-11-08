@@ -1,24 +1,26 @@
 @charset "UTF-8";
+/* Import de chaque police de Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* Media query pour les écrans de moins de 768px */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .column {
     width: 30%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
     padding: 0.9375rem 0;
   }
 }
-@media screen and (min-width: 1200px) {
-  .card-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+/* Media query pour les écrans de 1000px à 1400px */
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+  .restaurants {
+    max-width: 100%;
     padding: 1.875rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
-img {
-  width: 100%;
-  height: auto;
+.main-title h1 {
+  width: 375px;
+  height: 63px;
 }
 
 /* Styles globaux pour le corps du document */
@@ -29,10 +31,11 @@ img {
 }
 
 .main-container h2 {
-  margin-top: 30px;
-  margin-bottom: 25px;
-  margin-left: 20px;
-  font-family: "Roboto", sans-serif;
+  width: 275px;
+  height: 31px;
+  top: 448px;
+  left: 20px;
+  font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
   font-size: 27.5px;
   color: #000000;
 }
@@ -40,37 +43,45 @@ img {
 .main-container-buttons p {
   margin-top: 10px;
   padding: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 19.5px;
+  font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
+  font-size: 18px;
+  text-align: center;
   margin: 7.8px 0px 27.3px;
   color: #000000;
 }
 
-h1 {
-  font-family: "Shrikhand", italic;
-  width: 390px;
-  height: 34px;
-  margin-bottom: -15px;
+.main-container-buttons {
+  background-color: #F5F5F5;
 }
 
-h2 {
+h1 {
+  font-family: "Shrikhand", italic; /* Applique Shrikhand pour les titres */
+  width: 197px;
+  height: 36px;
+  top: 14px;
+  left: 89px;
+}
+
+.main-container-buttons h2 {
+  width: 275px;
+  height: 68px;
   font-family: "Roboto", sans-serif;
-  font-size: 27px;
+  font-size: 24px;
+  font-weight: 700;
   color: #000000;
-  margin-right: 35px;
-  margin-bottom: 35px;
-  text-align: center;
+  margin-left: 42px;
+  top: 152px;
 }
 
 h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
   font-weight: 700;
   font-size: 18px;
   color: white;
 }
 
 .container-buttons p {
-  font-family: "Roboto";
+  font-family: "Roboto"; /* Applique Roboto comme police principale */
   font-weight: bold;
   font-size: 17px;
   color: #000000;
@@ -82,7 +93,7 @@ li {
 
 /* Styles pour le conteneur principal */
 .main-container {
-  max-width: 1440px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -93,12 +104,11 @@ li {
   text-align: center;
   display: flex;
   flex-direction: column;
-  max-width: 100%;
 }
 
 /* Styles pour l'emplacement de la localisation */
 .localisation-emplacement {
-  width: 390px;
+  width: 375px;
   height: 50px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -109,6 +119,14 @@ li {
   text-align: center;
   position: relative;
   background-color: #D3D3D3;
+}
+
+.localisation-emplacement p {
+  width: 315px;
+  height: 46px;
+  margin-top: 220px;
+  margin-left: 34px;
+  font-size: 18px;
 }
 
 .localisation-emplacement i {
@@ -123,44 +141,100 @@ li {
   text-align: center;
 }
 
-.fonctionnement-service h2 {
-  margin: 0px;
-  margin-top: 25px;
-  margin-bottom: 20px;
-}
-
 /* Styles pour la section expliquant le fonctionnement */
-.container-buttons {
+.fonctionnement-service h2 {
+  width: 275px;
+  height: 31px;
+  top: 448px;
+  left: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+}
+
+.fonctionnement-service {
+  width: 375px;
+  height: 440px;
+  top: 400px;
+}
+
+.restaurants card {
+  width: 340px;
+  height: 1058px;
+  top: 942px;
+  left: 17px;
+  gap: 18px;
+  background-color: red;
+}
+
+/* Appliquer la taille et le style de base à chaque bouton */
+.buttons-restaurant, .buttons-menu, .buttons-degustez {
+  width: 335px;
+  height: 72.38px;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.container-buttons buttons {
-  background-color: #E0E0E0;
-}
-
-/* Ajout des cercles pour les chiffres */
+/* Style pour les cercles numérotés */
 .circle {
   display: inline-block;
   width: 24px;
   height: 24px;
-  border-radius: 50%;
-  background-color: #9356dc;
+  background-color: #9356dc !important;
   color: white;
-  text-align: center;
-  line-height: 24px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+/* Style des paragraphes */
+p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* Styles des icônes */
+.buttons-restaurant i {
+  width: 13.02px;
+  height: 19.9px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.buttons-menu i {
+  width: 16px;
+  height: 15.92px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.buttons-degustez i {
+  width: 18px;
+  height: 17.91px;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 /* Styles pour la section des restaurants */
-.restaurants card {
+.restaurants .card {
   padding: 20px;
   border: none;
 }
 
 /* Styles pour le conteneur des cartes de restaurant */
-.card-container card {
+.card-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -169,16 +243,21 @@ li {
 
 /* Styles pour chaque carte de restaurant */
 .card {
+  width: 340px;
+  height: 251px;
+  position: relative;
   margin: 10px;
   border-radius: 15px;
-  overflow: hidden; /* Cache tout débordement de contenu */
 }
 
 /* Styles pour les images des cartes */
+/* Cible l'image à l'intérieur de l'article de classe card */
 .card img {
-  width: 346px;
-  height: 231px;
-  border: none;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  height: 11.75rem;
+  width: 100%;
 }
 
 .card h3 {
@@ -186,12 +265,8 @@ li {
 }
 
 /* Styles pour le pied de page */
-.footer-container {
-  width: 100%;
-}
-
 .footer {
-  width: 375PX;
+  width: 375px;
   height: 186px;
   background-color: rgb(53, 53, 53);
   padding: 20px;
@@ -202,27 +277,21 @@ li {
 .footer h3 {
   color: white;
   text-align: left;
-  font-family: " Shrikhand, ", italic;
+  font-family: "Roboto", italic;
   font-weight: 700;
-  font-size: 18px;
-  width: 137.58px;
-  height: 27px;
-  gap: 0px;
-  line-height: 26.24px;
+  font-size: 16px;
 }
 
 .footer i {
   color: #fff;
   margin-right: 10px;
   margin-bottom: 15px;
-  align-items: left;
 }
 
 .footer a {
   color: #fff;
   margin-right: 20px;
   margin-bottom: 15px;
-  text-align: left;
 }
 
 .footer ul {

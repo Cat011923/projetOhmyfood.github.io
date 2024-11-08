@@ -19,13 +19,6 @@ button {
 	}
 }
 
-//Styles pour les boutons de fonctionnement 
-.buttons-fonctionnement {
-  width: 335px;
-  height: 72.38px;
-	background-color: grey;
-
-}
 
 // Styles pour le bouton de Explorer
  
@@ -35,6 +28,8 @@ button {
    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
    color: white;
    padding: 15.6px;
+    font-family: "Roboto";
+    font-size: 16px;
  
   }
     
@@ -68,48 +63,33 @@ button {
 	margin: 0;
 }
 
-//* Conteneur des boutons  restaurant menu dégustez*/
-
-.container-buttons {
-  display: flex;
-  flex-direction: column; /* Aligner les boutons verticalement (ou utilisez row pour horizontalement) */
-  gap: 10px;
-  width: 100%; /* S'adapte à la largeur du parent */
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-/* Style pour chaque bouton à l'intérieur de .container-buttons */
+//Style pour chaque bouton à l'intérieur de .container-buttons 
 .container-buttons .buttons-restaurant,
 .container-buttons .buttons-degustez,
 .container-buttons .buttons-menu {
-  width: 335px;
-  height: 72.38px;
-  border-radius: 20px;
-  gap: 20px;
-  display: inline-flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  font-size: 16px;
-  color: #000000;
-  border: 2px solid #e8e8e8;
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background:#F5F5F5 ;
-  position: relative; /* Pour positionner correctement l'élément ::after */
+  
+   border-radius: 20px;
+   display: inline-flex;
+   justify-content: center;
+   flex-direction: row;
+   align-items: center;
+   font-size: 16px;
+   color: #000000;
+   border: 2px solid #e8e8e8;
+   margin-top: 10px;
+   margin-bottom: 10px;
+    background:#F5F5F5 ;
+  position: relative; //Pour positionner correctement l'élément ::after 
 }
 
-/* Changement de couleur du texte au survol */
+// Changement de couleur du texte au survol 
 .container-buttons .buttons-restaurant:hover,
 .container-buttons .buttons-degustez:hover,
 .container-buttons .buttons-menu:hover {
   color: #9356dc;
 }
 
-/* Animation au survol */
+//Animation au survol 
 .container-buttons .buttons-restaurant::after,
 .container-buttons .buttons-degustez::after,
 .container-buttons .buttons-menu::after {
@@ -125,21 +105,15 @@ button {
   transition: opacity 300ms ease-in-out;
 }
 
-/* Applique l'animation au survol */
+// Applique l'animation au survol 
 .container-buttons .buttons-restaurant:hover::after,
 .container-buttons .buttons-degustez:hover::after,
 .container-buttons .buttons-menu:hover::after {
   opacity: 1;
 }
 
-// pour les cartes des restaurants//
-/* Style de la section du menu */
-.menu-section {
-  display: flex;
-  flex-direction: column;
-   margin: 20px auto;
-  width: 100%;
-}
+//Style pour les badges nouveau
+
 .card-nouveau {
    position: absolute;
    top: 1rem;
@@ -152,8 +126,7 @@ button {
    text-align: center;
 }
 
-
-/* Style des boutons */
+// Style des boutons 
 .menu-buttons {
   display: flex;
   justify-content: center;
@@ -161,7 +134,7 @@ button {
   flex-wrap: wrap;
 }
 
-/* Style général des boutons */
+//Style général des boutons 
 .buttons {
   display: inline-block; 
   padding: 10px 20px; 
@@ -169,15 +142,16 @@ button {
   text-decoration: none; 
   border-radius: 25px; 
   margin-top: 10px; 
-  transition: background-color 0.3s; /* Transition pour changement de couleur */
+  transition: background-color 0.3s; //Transition pour changement de couleur 
   font-size: 1rem; 
-/* Couleur de fond pour les boutons de fonctionnement */
+// Couleur de fond pour les boutons de fonctionnement 
  }
+
 .buttons-fonctionnement {
   background-color:white; 
 }
 
-/* Styles pour les titres et le prix */
+// Styles pour les titres et le prix 
 .button-menu strong {
   font-size: 1.2rem; 
   color: #fff; 
@@ -190,7 +164,7 @@ button {
     margin-top: 5px; 
 }
 
-/*Style pour les boutons des cartes */
+//Style pour les boutons des cartes 
 .buttons-cartes   {
   width: 335px;
   height: 26px;
@@ -207,6 +181,7 @@ button {
   margin-bottom: 40px;
   background: #e8e8e8;
   }
+
   .buttons-carte {
     display: inline-block; 
     padding: 10px 20px; 
@@ -214,9 +189,9 @@ button {
     text-decoration: none; 
     border-radius: 25px; 
     margin-top: 10px; 
-    transition: background-color 0.3s; /* Transition pour changement de couleur */
+    transition: background-color 0.3s; // Transition pour changement de couleur 
     font-size: 1rem; 
-  /* Couleur de fond pour les boutons de fonctionnement */
+  //Couleur de fond pour les boutons de fonctionnement 
 }
 
 
