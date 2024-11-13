@@ -1,12 +1,4 @@
-/* Animation de remplissage du coeur */
-@keyframes anim-heart {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+
   /* Animation de rotation du cercle du loader */
   @keyframes rotation {
     0% {
@@ -93,28 +85,56 @@
     animation-delay: 0.6s;
   }
 }
-// Animation de remplissage du cœur au survol
-.menu-item .checkmark {
-  transition: transform 0.4s, visibility 0.4s;
 
-  &::before, &::after {
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
 
-  // Effet au survol pour afficher le cœur
-  .menu-item:hover & {
-    visibility: visible;
-    transform: translateX(-100%);
-  }
+/* animations pour le coeur */
+/* Container for each restaurant card */
+.card {
+  position: relative; /* Enable positioning for heart icon placement */
+  display: inline-block;
+  width: 100%; /* Adjust as necessary for your layout */
+  overflow: hidden;
+}
 
-  // Cœur vide disparaît
-  .menu-item:hover &::before {
-    opacity: 0;
-  }
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-  // Cœur plein apparaît avec effet zoom
-  .menu-item:hover &::after {
-    opacity: 1;
-    transform: scale(1.2);
-  }
+.heart-container {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed for positioning */
+  right: 10px; /* Adjust as needed for positioning */
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.5rem; /* Adjust size as needed */
+}
+
+.heart {
+  font-size: 1.5rem; /* Heart icon size */
+  color: #fff; /* Default color for empty heart */
+  transition: opacity 300ms ease-in-out;
+}
+
+.heart--card {
+  color: #fff; /* Default color for empty heart */
+  opacity: 1; /* Visible by default */
+}
+
+.heart-full {
+  color: #ff79da; /* Filled heart color */
+  background: linear-gradient(30deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 300ms ease-in-out;
+}
+
+.heart-container:hover .heart--card {
+  opacity: 0; /* Hide the empty heart on hover */
+}
+
+.heart-container:hover .heart-full {
+  opacity: 1; /* Show the filled heart on hover */
 }

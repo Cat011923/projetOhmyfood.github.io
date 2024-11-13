@@ -6,8 +6,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .column {
-    width: 30%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
-    padding: 0.9375rem 0;
+    width: 32%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
+    padding: 0;
   }
 }
 /* Media query pour les écrans de 1000px à 1400px */
@@ -22,9 +22,9 @@
 }
 body {
   box-sizing: border-box;
-  margin: 0;
   background-color: #fff;
-  width: 375px;
+  width: auto;
+  height: auto;
 }
 
 img {
@@ -35,6 +35,7 @@ img {
 .main-title h1 {
   width: 197px;
   height: 36px;
+  box-sizing: border-box;
 }
 
 /* Styles globaux pour le corps du document */
@@ -42,13 +43,14 @@ img {
   background-color: white;
   width: 375px;
   height: 63px;
+  box-sizing: border-box;
 }
 
 .main-container h2 {
   width: 275px;
   height: 31px;
   top: 448px;
-  left: 20px;
+  margin-left: 20px;
   font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
   font-size: 27.5px;
   color: #000000;
@@ -72,6 +74,7 @@ img {
 
 .main-container-buttons {
   background-color: #F5F5F5;
+  margin-top: 15px;
 }
 
 h1 {
@@ -80,6 +83,7 @@ h1 {
   height: 36px;
   top: 14px;
   left: 89px;
+  margin-bottom: 0;
 }
 
 .main-container-buttons h2 {
@@ -90,7 +94,8 @@ h1 {
   font-weight: 700;
   color: #000000;
   margin-left: 42px;
-  top: 152px;
+  margin-top: 0;
+  box-sizing: border-box;
 }
 
 h3 {
@@ -133,11 +138,15 @@ li {
   flex-direction: column;
 }
 
+.localisation-emplacement {
+  background-color: #eaeaea;
+  padding: 1rem 0;
+}
+
 /* Styles pour l'emplacement de la localisation */
 .localisation-emplacement section {
   width: 375px;
   height: 50px;
-  top: -35px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #000000;
@@ -152,8 +161,6 @@ li {
 .localisation-emplacement p {
   width: 315px;
   height: 46px;
-  margin-top: 220px;
-  margin-left: 34px;
   font-size: 18px;
 }
 
@@ -166,6 +173,7 @@ li {
 .localisation-emplacement strong {
   margin-left: 10px;
   margin-top: 15px;
+  margin-left: 34px;
   text-align: center;
 }
 
@@ -187,7 +195,6 @@ li {
   top: 942px;
   left: 17px;
   gap: 18px;
-  background-color: red;
 }
 
 /* Appliquer la taille et le style de base à chaque bouton */
@@ -239,12 +246,20 @@ p {
   padding: 0 1rem;
 }
 
+.buttons-restaurant:hover i {
+  color: #9356dc;
+}
+
 .buttons-menu i {
   width: 16px;
   height: 15.92px;
   color: #333;
   margin-bottom: 5px;
   padding: 0 1rem;
+}
+
+.buttons-menu:hover i {
+  color: #9356dc;
 }
 
 .buttons-degustez i {
@@ -255,10 +270,8 @@ p {
   padding: 0 1rem;
 }
 
-/* Styles pour la section des restaurants */
-.restaurants .card {
-  padding: 20px;
-  border: none;
+.buttons-degustez:hover i {
+  color: #9356dc;
 }
 
 /* Styles pour le conteneur des cartes de restaurant */
@@ -269,27 +282,61 @@ p {
   border: none;
 }
 
+/*Style pour les badges nouveau*/
+.card-nouveau {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: #99e2d0;
+  color: #278870;
+  font-weight: bold;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.125rem;
+  text-align: center;
+  width: 80px;
+  height: 29px;
+}
+
 /* Styles pour chaque carte de restaurant */
 .card {
+  display: block;
+  margin: auto;
   width: 340px;
   height: 251px;
   position: relative;
-  margin: 10px;
   border-radius: 15px;
+  top: -17px;
 }
 
 /* Styles pour les images des cartes */
 /* Cible l'image à l'intérieur de l'article de classe card */
 .card img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 1rem 1rem 0 0;
   height: 11.75rem;
   width: 100%;
 }
 
+.card article {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .card h3 {
   color: #000000;
+  width: 267px;
+  margin-top: 10px; /* Ajustement de l'espacement supérieur */
+  margin-bottom: 5px; /* Espacement entre le h3 et le p */
+  opacity: 1; /* Rendre le titre visible */
+}
+
+.card p {
+  width: 247px;
+  margin-top: 0; /* Supprime l'espacement supérieur par défaut */
+  margin-bottom: 35px; /* Espacement en bas de l'élément */
+  opacity: 1; /* Rendre le paragraphe visible */
+  display: block;
 }
 
 /* Styles pour le pied de page */
@@ -334,8 +381,8 @@ p {
 /* Media query pour les écrans de moins de 768px */
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .column {
-    width: 30%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
-    padding: 0.9375rem 0;
+    width: 32%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
+    padding: 0;
   }
 }
 /* Media query pour les écrans de 1000px à 1400px */
@@ -350,9 +397,9 @@ p {
 }
 body {
   box-sizing: border-box;
-  margin: 0;
   background-color: #fff;
-  width: 375px;
+  width: auto;
+  height: auto;
 }
 
 img {
@@ -363,6 +410,7 @@ img {
 .main-title h1 {
   width: 197px;
   height: 36px;
+  box-sizing: border-box;
 }
 
 /* Styles globaux pour le corps du document */
@@ -370,13 +418,14 @@ img {
   background-color: white;
   width: 375px;
   height: 63px;
+  box-sizing: border-box;
 }
 
 .main-container h2 {
   width: 275px;
   height: 31px;
   top: 448px;
-  left: 20px;
+  margin-left: 20px;
   font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
   font-size: 27.5px;
   color: #000000;
@@ -400,6 +449,7 @@ img {
 
 .main-container-buttons {
   background-color: #F5F5F5;
+  margin-top: 15px;
 }
 
 h1 {
@@ -408,6 +458,7 @@ h1 {
   height: 36px;
   top: 14px;
   left: 89px;
+  margin-bottom: 0;
 }
 
 .main-container-buttons h2 {
@@ -418,7 +469,8 @@ h1 {
   font-weight: 700;
   color: #000000;
   margin-left: 42px;
-  top: 152px;
+  margin-top: 0;
+  box-sizing: border-box;
 }
 
 h3 {
@@ -461,11 +513,15 @@ li {
   flex-direction: column;
 }
 
+.localisation-emplacement {
+  background-color: #eaeaea;
+  padding: 1rem 0;
+}
+
 /* Styles pour l'emplacement de la localisation */
 .localisation-emplacement section {
   width: 375px;
   height: 50px;
-  top: -35px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #000000;
@@ -480,8 +536,6 @@ li {
 .localisation-emplacement p {
   width: 315px;
   height: 46px;
-  margin-top: 220px;
-  margin-left: 34px;
   font-size: 18px;
 }
 
@@ -494,6 +548,7 @@ li {
 .localisation-emplacement strong {
   margin-left: 10px;
   margin-top: 15px;
+  margin-left: 34px;
   text-align: center;
 }
 
@@ -515,7 +570,6 @@ li {
   top: 942px;
   left: 17px;
   gap: 18px;
-  background-color: red;
 }
 
 /* Appliquer la taille et le style de base à chaque bouton */
@@ -567,12 +621,20 @@ p {
   padding: 0 1rem;
 }
 
+.buttons-restaurant:hover i {
+  color: #9356dc;
+}
+
 .buttons-menu i {
   width: 16px;
   height: 15.92px;
   color: #333;
   margin-bottom: 5px;
   padding: 0 1rem;
+}
+
+.buttons-menu:hover i {
+  color: #9356dc;
 }
 
 .buttons-degustez i {
@@ -583,10 +645,8 @@ p {
   padding: 0 1rem;
 }
 
-/* Styles pour la section des restaurants */
-.restaurants .card {
-  padding: 20px;
-  border: none;
+.buttons-degustez:hover i {
+  color: #9356dc;
 }
 
 /* Styles pour le conteneur des cartes de restaurant */
@@ -597,27 +657,61 @@ p {
   border: none;
 }
 
+/*Style pour les badges nouveau*/
+.card-nouveau {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: #99e2d0;
+  color: #278870;
+  font-weight: bold;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.125rem;
+  text-align: center;
+  width: 80px;
+  height: 29px;
+}
+
 /* Styles pour chaque carte de restaurant */
 .card {
+  display: block;
+  margin: auto;
   width: 340px;
   height: 251px;
   position: relative;
-  margin: 10px;
   border-radius: 15px;
+  top: -17px;
 }
 
 /* Styles pour les images des cartes */
 /* Cible l'image à l'intérieur de l'article de classe card */
 .card img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 1rem 1rem 0 0;
   height: 11.75rem;
   width: 100%;
 }
 
+.card article {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .card h3 {
   color: #000000;
+  width: 267px;
+  margin-top: 10px; /* Ajustement de l'espacement supérieur */
+  margin-bottom: 5px; /* Espacement entre le h3 et le p */
+  opacity: 1; /* Rendre le titre visible */
+}
+
+.card p {
+  width: 247px;
+  margin-top: 0; /* Supprime l'espacement supérieur par défaut */
+  margin-bottom: 35px; /* Espacement en bas de l'élément */
+  opacity: 1; /* Rendre le paragraphe visible */
+  display: block;
 }
 
 /* Styles pour le pied de page */
@@ -660,7 +754,9 @@ p {
 
 button {
   background-color: #9356DC;
+  /* Appliquer la couleur principale*/
   color: #FFFFFF;
+  /* Appliquer la couleur du texte*/
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -756,18 +852,6 @@ button:hover {
 .container-buttons .buttons-degustez:hover::after,
 .container-buttons .buttons-menu:hover::after {
   opacity: 1;
-}
-
-.card-nouveau {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: #99e2d0;
-  color: #278870;
-  font-weight: bold;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.125rem;
-  text-align: center;
 }
 
 .menu-buttons {
@@ -962,22 +1046,54 @@ button:hover {
   animation-delay: 0.6s;
 }
 
+/* animations.css */
+/* Animation de remplissage du cœur au survol */
 .menu-item .checkmark {
+  position: absolute;
+  top: 10px; /* Ajuste selon le positionnement souhaité */
+  right: 10px; /* Ajuste selon le positionnement souhaité */
+  font-size: 24px; /* Taille du cœur */
+  color: red; /* Couleur du cœur plein */
+  cursor: pointer;
   transition: transform 0.4s, visibility 0.4s;
+  visibility: hidden; /* Caché par défaut */
 }
-.menu-item .checkmark::before, .menu-item .checkmark::after {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+
+/* Positionnement relatif pour le parent pour que l'élément absolu soit bien placé */
+.card {
+  position: relative; /* Permet de positionner l'élément relatif à la carte */
 }
-.menu-item:hover .menu-item .checkmark {
-  visibility: visible;
-  transform: translateX(-100%);
+
+.menu-item {
+  position: absolute; /* Position absolue par rapport à l'élément parent (.card) */
+  top: 10px; /* Ajuste la position verticale (distance du haut de l'image) */
+  right: 10px; /* Ajuste la position horizontale (distance du côté droit de l'image) */
+  z-index: 10; /* Assure que l'icône du cœur soit au-dessus de l'image */
 }
-.menu-item:hover .menu-item .checkmark::before {
-  opacity: 0;
+
+.checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.menu-item:hover .menu-item .checkmark::after {
-  opacity: 1;
-  transform: scale(1.2);
+
+.heart, .heart-full {
+  font-size: 24px; /* Ajuste la taille de l'icône du cœur */
+  color: white; /* Change la couleur selon ton design */
+  cursor: pointer; /* Permet à l'utilisateur de cliquer sur l'icône si nécessaire */
+}
+
+.heart-full {
+  color: red; /* Changer la couleur quand le cœur est "plein" */
+  display: none; /* Cacher le cœur plein par défaut */
+}
+
+.menu-item:hover .heart {
+  display: none; /* Cacher le cœur vide quand l'utilisateur survole l'élément */
+}
+
+.menu-item:hover .heart-full {
+  display: inline-block; /* Afficher le cœur plein lors du survol */
 }
 
 /* Media query pour les écrans de moins de 768px */

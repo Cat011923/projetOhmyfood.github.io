@@ -4,8 +4,8 @@
 /* Media query pour les écrans de moins de 768px */
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .column {
-    width: 30%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
-    padding: 0.9375rem 0;
+    width: 32%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
+    padding: 0;
   }
 }
 /* Media query pour les écrans de 1000px à 1400px */
@@ -72,6 +72,7 @@ img {
 
 .main-container-buttons {
   background-color: #F5F5F5;
+  margin-top: 15px;
 }
 
 h1 {
@@ -80,6 +81,7 @@ h1 {
   height: 36px;
   top: 14px;
   left: 89px;
+  margin-bottom: 0;
 }
 
 .main-container-buttons h2 {
@@ -90,7 +92,7 @@ h1 {
   font-weight: 700;
   color: #000000;
   margin-left: 42px;
-  top: 152px;
+  margin-top: 0;
   box-sizing: border-box;
 }
 
@@ -134,11 +136,15 @@ li {
   flex-direction: column;
 }
 
+.localisation-emplacement {
+  background-color: #eaeaea;
+  padding: 1rem 0;
+}
+
 /* Styles pour l'emplacement de la localisation */
 .localisation-emplacement section {
   width: 375px;
   height: 50px;
-  top: -35px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #000000;
@@ -153,8 +159,6 @@ li {
 .localisation-emplacement p {
   width: 315px;
   height: 46px;
-  margin-top: 220px;
-  margin-left: 34px;
   font-size: 18px;
 }
 
@@ -167,6 +171,7 @@ li {
 .localisation-emplacement strong {
   margin-left: 10px;
   margin-top: 15px;
+  margin-left: 34px;
   text-align: center;
 }
 
@@ -239,12 +244,20 @@ p {
   padding: 0 1rem;
 }
 
+.buttons-restaurant:hover i {
+  color: #9356dc;
+}
+
 .buttons-menu i {
   width: 16px;
   height: 15.92px;
   color: #333;
   margin-bottom: 5px;
   padding: 0 1rem;
+}
+
+.buttons-menu:hover i {
+  color: #9356dc;
 }
 
 .buttons-degustez i {
@@ -255,10 +268,8 @@ p {
   padding: 0 1rem;
 }
 
-/* Styles pour la section des restaurants */
-.restaurants .card {
-  padding: 20px;
-  border: none;
+.buttons-degustez:hover i {
+  color: #9356dc;
 }
 
 /* Styles pour le conteneur des cartes de restaurant */
@@ -269,6 +280,7 @@ p {
   border: none;
 }
 
+/*Style pour les badges nouveau*/
 .card-nouveau {
   position: absolute;
   top: 2rem;
@@ -285,25 +297,44 @@ p {
 
 /* Styles pour chaque carte de restaurant */
 .card {
+  display: block;
+  margin: auto;
   width: 340px;
   height: 251px;
   position: relative;
-  margin: 10px;
   border-radius: 15px;
+  top: -17px;
 }
 
 /* Styles pour les images des cartes */
 /* Cible l'image à l'intérieur de l'article de classe card */
 .card img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 1rem 1rem 0 0;
   height: 11.75rem;
   width: 100%;
 }
 
+.card article {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .card h3 {
   color: #000000;
+  width: 267px;
+  margin-top: 10px; /* Ajustement de l'espacement supérieur */
+  margin-bottom: 5px; /* Espacement entre le h3 et le p */
+  opacity: 1; /* Rendre le titre visible */
+}
+
+.card p {
+  width: 247px;
+  margin-top: 0; /* Supprime l'espacement supérieur par défaut */
+  margin-bottom: 35px; /* Espacement en bas de l'élément */
+  opacity: 1; /* Rendre le paragraphe visible */
+  display: block;
 }
 
 /* Styles pour le pied de page */

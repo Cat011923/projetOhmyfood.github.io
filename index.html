@@ -5,131 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
    
-     <!--Lien vers le fichier principal de style-->
-     <link rel="stylesheet" href="src/scss/main.css" />
-     <link rel="stylesheet" href="src/scss/variable.css" />
-     <link rel="stylesheet" href="src/scss/style.css" />
-     <link rel="stylesheet" href="src/scss/header.css" />
-     <link rel="stylesheet" href="src/scss/loader.css" />
-     <link rel="stylesheet" href="src/scss/buttons.css" />
-     <link rel="stylesheet" href="src/scss/restaurantsphotos.css" />
-     <link rel="stylesheet" href="src/scss/menu.css"/>
-     <link rel="stylesheet" href="src/scss/animations.css"/>
-     
-  
-    <!-- Lien vers les icônes Font awesome et feuille de style-->
+    <!-- Lien vers le fichier principal de style -->
+    <link rel="stylesheet" href="src/scss/main.css">
+    <link rel="stylesheet" href="src/scss/variable.css">
+    <link rel="stylesheet" href="src/scss/style.css">
+    <link rel="stylesheet" href="src/scss/header.css">
+    <link rel="stylesheet" href="src/scss/loader.css">
+    <link rel="stylesheet" href="src/scss/buttons.css">
+    <link rel="stylesheet" href="src/scss/restaurantsphotos.css">
+    <link rel="stylesheet" href="src/scss/menu.css">
+    <link rel="stylesheet" href="src/scss/animations.css">
+    
+    <!-- Lien vers les icônes Font awesome et feuille de style -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-   
 
+    
     <!-- Lien vers les polices Shrikhand et Roboto -->
-       <link href="https://fonts.googleapis.com/css2?family=Roboto:weight@400;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:weight@400;700&family=Shrikhand&display=swap" rel="stylesheet">
   
-
-    <!-- Icône du site et Manifest (fichier d'application web)-->
+    <!-- Icône du site et Manifest (fichier d'application web) -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
     <link rel="manifest" href="assets/img/favicon/manifest.json">
     <meta name="theme-color" content="#ffffff">
-      </head>
+</head>
 <body>
-      <!-- En-tête du site avec le titre principal -->
-     <header  class="header">
+    <!-- En-tête du site avec le titre principal -->
+    <header class="header">
         <div class="main-container">
             <h1 class="main-title">Ohmyfood</h1>
         </div>
     </header>
+
     <main>
         <!-- Section du loader (animation de chargement) -->
         <section class="loader-section">
             <div class="loader"></div>
         </section>
 
-  <!-- Section utilisation de l'emplacement -->
-  <section class="localisation">
-    <div class="localisation-emplacement">
-        <i class="fas fa-map-marker-alt"></i>
-        <strong>Paris, Belleville</strong>
-    </div>
-    <div class="main-container-buttons">
-        <h2>Réservez le menu qui vous convient</h2>
-        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button class="buttons-explorer">Explorer nos restaurants</button>
-    </div>
-</section>
+        <!-- Section utilisation de l'emplacement -->
+        <section class="localisation">
+            <div class="localisation-emplacement">
+                <i class="fas fa-map-marker-alt"></i>
+                <strong>Paris, Belleville</strong>
+            </div>
+            <div class="main-container-buttons">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <button class="buttons-explorer">Explorer nos restaurants</button>
+            </div>
+        </section>
 
         <!-- Section expliquant comment fonctionne le service -->
         <section class="fonctionnement-service">
             <div class="main-container">
                 <h2>Fonctionnement</h2>
-              </div>
-  <!-- Ajout des trois boutons -->
- 
-  <div class="container-buttons">
-    <div class="buttons-restaurant">
-        <span class="circle">1</span>
-        <i class="fas fa-mobile-alt"></i>
-        <p>Choisissez un restaurant</p>
-    </div>
-    <div class="buttons-menu">
-        <span class="circle">2</span>
-        <i class="fas fa-list-ul"></i>
-        <p>Composez votre menu</p>
-    </div>
-    <div class="buttons-degustez">
-        <span class="circle">3</span>
-        <i class="fas fa-store"></i>
-        <p>Dégustez au restaurant</p>
-    </div>
-</div>
-         </section>
-         <section class="fonctionnement-service-restaurant">
+            </div>
+            
+            <!-- Ajout des trois boutons -->
+            <div class="container-buttons">
+                <div class="buttons-restaurant">
+                    <span class="circle">1</span>
+                    <i class="fas fa-mobile-alt"></i>
+                    <p>Choisissez un restaurant</p>
+                </div>
+                <div class="buttons-menu">
+                    <span class="circle">2</span>
+                    <i class="fas fa-list-ul"></i>
+                    <p>Composez votre menu</p>
+                </div>
+                <div class="buttons-degustez">
+                    <span class="circle">3</span>
+                    <i class="fas fa-store"></i>
+                    <p>Dégustez au restaurant</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fonctionnement-service-restaurant">
             <div class="main-container">
                 <h2>Restaurants</h2>
-              </div>
- <!-- Section affichant la liste des restaurants avec les cartes -->
-      
-                  <!-- carte restaurant La palette du goût -->
+            </div>
 
-                  <section class="restaurants">
-                    <article class="card">
-                        <span class="card-nouveau">Nouveau</span> <!-- Badge "Nouveau" ici -->
-                        <a href="restaurants/La palette du gout.html">
-                            <img src="/assets-images/logo/restaurantsphotos/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat 'Le délice des sens'">
-                        </a>
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
-                    </article>
-                </section>
-                
-         <!-- carte restaurant La note enchantée -->
-<article class="card">
-    <span class="card-nouveau">Nouveau</span> <!-- Badge "Nouveau" ici -->
-    <a href="restaurants/Lanoteenchantee.html">
-        <img src="/assets-images/logo/restaurantsphotos/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Plat 'La note enchantée'">
-    </a>
-    <h3>La note enchantée</h3>
-    <p>Charonne</p>
-</article>
+            <!-- Section affichant la liste des restaurants avec les cartes -->
+            <section class="restaurants">
+                <!-- carte restaurant La palette du goût -->
+                <article class="card">
+                    <span class="card-nouveau">Nouveau</span>
+                    <a href="restaurants/La-palette-du-gout.html">
+                        <img src="/assets-images/logo/restaurantsphotos/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat 'Le délice des sens'">
+                    </a>
+            
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+            
+                    <!-- Animation du cœur -->
+                         <div class="heart-container">
+            <i class="far fa-heart heart heart--card"></i>
+           <i class="fas fa-heart heart-full"></i>
+        </div>
+                </article>
+            </section>
+            
+                <!-- carte restaurant La note enchantée -->
+                <article class="card">
+                    <span class="card-nouveau">Nouveau</span>
+                    <a href="restaurants/Lanoteenchantee.html">
+                        <img src="/assets-images/logo/restaurantsphotos/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Plat 'La note enchantée'">
+                    </a>
+                    <h3>La note enchantée</h3>
+                    <p>Charonne</p>
+                      <!-- Animation du cœur -->
+                      <div class="heart-container">
+                        <i class="far fa-heart heart heart--menu"></i>
+                        <i class="fas fa-heart heart-full"></i>
+                    </div>
+                </article>
 
-<!-- carte restaurant À la française -->
-<article class="card">
-    <a href="restaurants/Alafrançaise.html">
-        <img src="/assets-images/logo/restaurantsphotos/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Plat 'À la française'">
-    </a>
-    <h3>À la française</h3>
-    <p>Cité Rouge</p>
-</article>
+                <!-- carte restaurant À la française -->
+                <article class="card">
+                    <a href="restaurants/Alafrançaise.html">
+                        <img src="/assets-images/logo/restaurantsphotos/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Plat 'À la française'">
+                    </a>
+                    <h3>À la française</h3>
+                    <p>Cité Rouge</p>
+                    <!-- Animation du cœur -->
+                    <div class="heart-container">
+                        <i class="far fa-heart heart heart--menu"></i>
+                        <i class="fas fa-heart heart-full"></i>
+                    </div>
+                </article>
 
-<!-- carte restaurant Le délice des sens -->
-<article class="card">
-    <a href="restaurants/Ledélicedessens.html">
-        <img src="/assets-images/logo/restaurantsphotos/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Plat 'Le délice des sens'">
-    </a>
-    <h3>Le délice des sens</h3>
-    <p>Folie-Méricourt</p>
-</article>
+                <!-- carte restaurant Le délice des sens -->
+                <article class="card">
+                    <a href="restaurants/Ledélicedessens.html">
+                        <img src="/assets-images/logo/restaurantsphotos/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Plat 'Le délice des sens'">
+                    </a>
+                    <h3>Le délice des sens</h3>
+                    <p>Folie-Méricourt</p>
+                    <!-- Animation du cœur -->
+                    <div class="heart-container">
+                        <i class="far fa-heart heart heart--menu"></i>
+                        <i class="fas fa-heart heart-full"></i>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </main>
 
-               <!-- Footer icônes avec des liens vers d'autres sections et contacts -->
+    <!-- Footer -->
     <footer class="footer-container">
         <div class="footer">
             <h3>Ohmyfood</h3>
@@ -141,6 +165,6 @@
             </ul>
         </div>
     </footer>
-</body>
-</html>       
 
+</body>
+</html>

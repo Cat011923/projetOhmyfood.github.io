@@ -1,13 +1,12 @@
-/* Animation de remplissage du coeur */
-@keyframes anim-heart {
+/* Animation de rotation du cercle du loader */
+@-webkit-keyframes rotation {
   0% {
-    transform: scale(0);
+    transform: rotate(0deg);
   }
   100% {
-    transform: scale(1);
+    transform: rotate(360deg);
   }
 }
-/* Animation de rotation du cercle du loader */
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -17,6 +16,26 @@
   }
 }
 /* Animation d'apparition du loader */
+@-webkit-keyframes anim-loader {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    width: 100vw;
+    height: 100vh;
+  }
+  100% {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+  }
+}
 @keyframes anim-loader {
   0% {
     opacity: 1;
@@ -38,6 +57,18 @@
   }
 }
 /* Animation d'apparition du menu */
+@-webkit-keyframes card-hide {
+  0% {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  1% {
+    transform: translateX(3000px);
+  }
+  100% {
+    transform: translateX(3000px);
+  }
+}
 @keyframes card-hide {
   0% {
     transform: translateX(0px);
@@ -48,6 +79,25 @@
   }
   100% {
     transform: translateX(3000px);
+  }
+}
+@-webkit-keyframes card-anim {
+  0% {
+    transform: translateX(3000px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.5;
+  }
+  99% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 @keyframes card-anim {
@@ -69,6 +119,16 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -80,29 +140,67 @@
   }
 }
 .menu-group {
-  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 .menu-group:nth-child(2) {
-  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 .menu-group:nth-child(3) {
-  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
-.menu-item .checkmark {
-  transition: transform 0.4s, visibility 0.4s;
+/* animations pour le coeur */
+/* Container for each restaurant card */
+.card {
+  position: relative; /* Enable positioning for heart icon placement */
+  display: inline-block;
+  width: 100%; /* Adjust as necessary for your layout */
+  overflow: hidden;
 }
-.menu-item .checkmark::before, .menu-item .checkmark::after {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
-.menu-item:hover .menu-item .checkmark {
-  visibility: visible;
-  transform: translateX(-100%);
+
+.heart-container {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed for positioning */
+  right: 10px; /* Adjust as needed for positioning */
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.5rem; /* Adjust size as needed */
 }
-.menu-item:hover .menu-item .checkmark::before {
-  opacity: 0;
+
+.heart {
+  font-size: 1.5rem; /* Heart icon size */
+  color: #fff; /* Default color for empty heart */
+  transition: opacity 300ms ease-in-out;
 }
-.menu-item:hover .menu-item .checkmark::after {
-  opacity: 1;
-  transform: scale(1.2);
-}/*# sourceMappingURL=animations.css.map */
+
+.heart--card {
+  color: #fff; /* Default color for empty heart */
+  opacity: 1; /* Visible by default */
+}
+
+.heart-full {
+  color: #ff79da; /* Filled heart color */
+  background: linear-gradient(30deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 300ms ease-in-out;
+}
+
+.heart-container:hover .heart--card {
+  opacity: 0; /* Hide the empty heart on hover */
+}
+
+.heart-container:hover .heart-full {
+  opacity: 1; /* Show the filled heart on hover */
+}
+/*# sourceMappingURL=animations.css.map */
