@@ -18,36 +18,56 @@
     justify-content: space-between;
   }
 }
+body {
+  box-sizing: border-box;
+  background-color: #fff;
+  width: auto;
+  height: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 .main-title h1 {
-  width: 375px;
-  height: 63px;
+  width: 197px;
+  height: 36px;
+  box-sizing: border-box;
 }
 
 /* Styles globaux pour le corps du document */
 .main-container h1 {
   background-color: white;
-  width: 351px;
-  height: 64px;
+  width: 375px;
+  height: 63px;
+  box-sizing: border-box;
 }
 
 .main-container h2 {
   width: 275px;
   height: 31px;
   top: 448px;
-  left: 20px;
+  margin-left: 20px;
   font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
   font-size: 27.5px;
   color: #000000;
 }
 
 .main-container-buttons p {
-  margin-top: 10px;
-  padding: 0;
-  font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
+  width: 315px;
+  height: 46px;
+  font-weight: 300;
+  margin: 0.5rem auto 1.75rem auto; /* Centrer le paragraphe lui-même */
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
-  text-align: center;
-  margin: 7.8px 0px 27.3px;
+  line-height: 21.09px;
   color: #000000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* S'assure que les dimensions prennent en compte padding et border */
 }
 
 .main-container-buttons {
@@ -60,6 +80,7 @@ h1 {
   height: 36px;
   top: 14px;
   left: 89px;
+  margin-bottom: 0;
 }
 
 .main-container-buttons h2 {
@@ -70,7 +91,8 @@ h1 {
   font-weight: 700;
   color: #000000;
   margin-left: 42px;
-  top: 152px;
+  margin-top: 0;
+  box-sizing: border-box;
 }
 
 h3 {
@@ -80,10 +102,17 @@ h3 {
   color: white;
 }
 
+.container-buttons {
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
+  padding: 1.625rem 0 1.5rem;
+}
+
 .container-buttons p {
   font-family: "Roboto"; /* Applique Roboto comme police principale */
   font-weight: bold;
   font-size: 17px;
+  text-align: center;
   color: #000000;
 }
 
@@ -107,9 +136,10 @@ li {
 }
 
 /* Styles pour l'emplacement de la localisation */
-.localisation-emplacement {
+.localisation-emplacement section {
   width: 375px;
   height: 50px;
+  top: -35px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #000000;
@@ -153,19 +183,12 @@ li {
   line-height: 28.13px;
 }
 
-.fonctionnement-service {
-  width: 375px;
-  height: 440px;
-  top: 400px;
-}
-
 .restaurants card {
   width: 340px;
   height: 1058px;
   top: 942px;
   left: 17px;
   gap: 18px;
-  background-color: red;
 }
 
 /* Appliquer la taille et le style de base à chaque bouton */
@@ -189,6 +212,9 @@ li {
   display: inline-block;
   width: 24px;
   height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  left: 1rem;
   background-color: #9356dc !important;
   color: white;
   font-size: 16px;
@@ -211,6 +237,7 @@ p {
   height: 19.9px;
   color: #333;
   margin-bottom: 5px;
+  padding: 0 1rem;
 }
 
 .buttons-menu i {
@@ -218,6 +245,7 @@ p {
   height: 15.92px;
   color: #333;
   margin-bottom: 5px;
+  padding: 0 1rem;
 }
 
 .buttons-degustez i {
@@ -225,12 +253,7 @@ p {
   height: 17.91px;
   color: #333;
   margin-bottom: 5px;
-}
-
-/* Styles pour la section des restaurants */
-.restaurants .card {
-  padding: 20px;
-  border: none;
+  padding: 0 1rem;
 }
 
 /* Styles pour le conteneur des cartes de restaurant */
@@ -239,29 +262,69 @@ p {
   justify-content: space-around;
   flex-wrap: wrap;
   border: none;
+  width: Fixed 340px px;
+  height: Hug 1, 58px px;
+  top: 942px;
+  left: 17px;
+  gap: 18px;
+  opacity: 0px;
+}
+
+/*Style pour les badges nouveau*/
+.card-nouveau {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: #99e2d0;
+  color: #278870;
+  font-weight: bold;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.125rem;
+  text-align: center;
+  width: 80px;
+  height: 29px;
 }
 
 /* Styles pour chaque carte de restaurant */
 .card {
+  display: block;
+  margin: auto;
   width: 340px;
   height: 251px;
   position: relative;
-  margin: 10px;
   border-radius: 15px;
+  top: -17px;
 }
 
 /* Styles pour les images des cartes */
 /* Cible l'image à l'intérieur de l'article de classe card */
 .card img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 1rem 1rem 0 0;
   height: 11.75rem;
   width: 100%;
 }
 
+.card article {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .card h3 {
   color: #000000;
+  width: 267px;
+  margin-top: 10px; /* Ajustement de l'espacement supérieur */
+  margin-bottom: 5px; /* Espacement entre le h3 et le p */
+  opacity: 1; /* Rendre le titre visible */
+}
+
+.card p {
+  width: 247px;
+  margin-top: 0; /* Supprime l'espacement supérieur par défaut */
+  margin-bottom: 35px; /* Espacement en bas de l'élément */
+  opacity: 1; /* Rendre le paragraphe visible */
+  display: block;
 }
 
 /* Styles pour le pied de page */

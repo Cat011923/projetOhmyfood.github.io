@@ -20,16 +20,28 @@
     justify-content: space-between;
   }
 }
-.main-title h1 {
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #fff;
   width: 375px;
-  height: 63px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.main-title h1 {
+  width: 197px;
+  height: 36px;
 }
 
 /* Styles globaux pour le corps du document */
 .main-container h1 {
   background-color: white;
-  width: 351px;
-  height: 64px;
+  width: 375px;
+  height: 63px;
 }
 
 .main-container h2 {
@@ -43,13 +55,19 @@
 }
 
 .main-container-buttons p {
-  margin-top: 10px;
-  padding: 0;
-  font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
+  width: 315px;
+  height: 46px;
+  font-weight: 300;
+  margin: 0.5rem auto 1.75rem auto; /* Centrer le paragraphe lui-même */
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
-  text-align: center;
-  margin: 7.8px 0px 27.3px;
+  line-height: 21.09px;
   color: #000000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* S'assure que les dimensions prennent en compte padding et border */
 }
 
 .main-container-buttons {
@@ -82,10 +100,17 @@ h3 {
   color: white;
 }
 
+.container-buttons {
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
+  padding: 1.625rem 0 1.5rem;
+}
+
 .container-buttons p {
   font-family: "Roboto"; /* Applique Roboto comme police principale */
   font-weight: bold;
   font-size: 17px;
+  text-align: center;
   color: #000000;
 }
 
@@ -109,9 +134,10 @@ li {
 }
 
 /* Styles pour l'emplacement de la localisation */
-.localisation-emplacement {
+.localisation-emplacement section {
   width: 375px;
   height: 50px;
+  top: -35px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #000000;
@@ -155,12 +181,6 @@ li {
   line-height: 28.13px;
 }
 
-.fonctionnement-service {
-  width: 375px;
-  height: 440px;
-  top: 400px;
-}
-
 .restaurants card {
   width: 340px;
   height: 1058px;
@@ -191,6 +211,9 @@ li {
   display: inline-block;
   width: 24px;
   height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  left: 1rem;
   background-color: #9356dc !important;
   color: white;
   font-size: 16px;
@@ -213,6 +236,7 @@ p {
   height: 19.9px;
   color: #333;
   margin-bottom: 5px;
+  padding: 0 1rem;
 }
 
 .buttons-menu i {
@@ -220,6 +244,7 @@ p {
   height: 15.92px;
   color: #333;
   margin-bottom: 5px;
+  padding: 0 1rem;
 }
 
 .buttons-degustez i {
@@ -227,6 +252,7 @@ p {
   height: 17.91px;
   color: #333;
   margin-bottom: 5px;
+  padding: 0 1rem;
 }
 
 /* Styles pour la section des restaurants */
@@ -322,16 +348,28 @@ p {
     justify-content: space-between;
   }
 }
-.main-title h1 {
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #fff;
   width: 375px;
-  height: 63px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.main-title h1 {
+  width: 197px;
+  height: 36px;
 }
 
 /* Styles globaux pour le corps du document */
 .main-container h1 {
   background-color: white;
-  width: 351px;
-  height: 64px;
+  width: 375px;
+  height: 63px;
 }
 
 .main-container h2 {
@@ -345,13 +383,19 @@ p {
 }
 
 .main-container-buttons p {
-  margin-top: 10px;
-  padding: 0;
-  font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
+  width: 315px;
+  height: 46px;
+  font-weight: 300;
+  margin: 0.5rem auto 1.75rem auto; /* Centrer le paragraphe lui-même */
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
-  text-align: center;
-  margin: 7.8px 0px 27.3px;
+  line-height: 21.09px;
   color: #000000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* S'assure que les dimensions prennent en compte padding et border */
 }
 
 .main-container-buttons {
@@ -384,10 +428,17 @@ h3 {
   color: white;
 }
 
+.container-buttons {
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
+  padding: 1.625rem 0 1.5rem;
+}
+
 .container-buttons p {
   font-family: "Roboto"; /* Applique Roboto comme police principale */
   font-weight: bold;
   font-size: 17px;
+  text-align: center;
   color: #000000;
 }
 
@@ -411,9 +462,10 @@ li {
 }
 
 /* Styles pour l'emplacement de la localisation */
-.localisation-emplacement {
+.localisation-emplacement section {
   width: 375px;
   height: 50px;
+  top: -35px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #000000;
@@ -457,12 +509,6 @@ li {
   line-height: 28.13px;
 }
 
-.fonctionnement-service {
-  width: 375px;
-  height: 440px;
-  top: 400px;
-}
-
 .restaurants card {
   width: 340px;
   height: 1058px;
@@ -493,6 +539,9 @@ li {
   display: inline-block;
   width: 24px;
   height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  left: 1rem;
   background-color: #9356dc !important;
   color: white;
   font-size: 16px;
@@ -515,6 +564,7 @@ p {
   height: 19.9px;
   color: #333;
   margin-bottom: 5px;
+  padding: 0 1rem;
 }
 
 .buttons-menu i {
@@ -522,6 +572,7 @@ p {
   height: 15.92px;
   color: #333;
   margin-bottom: 5px;
+  padding: 0 1rem;
 }
 
 .buttons-degustez i {
@@ -529,6 +580,7 @@ p {
   height: 17.91px;
   color: #333;
   margin-bottom: 5px;
+  padding: 0 1rem;
 }
 
 /* Styles pour la section des restaurants */
