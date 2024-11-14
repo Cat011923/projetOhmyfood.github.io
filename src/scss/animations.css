@@ -1,12 +1,5 @@
+@charset "UTF-8";
 /* Animation de rotation du cercle du loader */
-@-webkit-keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -16,26 +9,6 @@
   }
 }
 /* Animation d'apparition du loader */
-@-webkit-keyframes anim-loader {
-  0% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  99% {
-    width: 100vw;
-    height: 100vh;
-  }
-  100% {
-    opacity: 0;
-    width: 0px;
-    height: 0px;
-  }
-}
 @keyframes anim-loader {
   0% {
     opacity: 1;
@@ -56,19 +29,7 @@
     height: 0px;
   }
 }
-/* Animation d'apparition du menu */
-@-webkit-keyframes card-hide {
-  0% {
-    transform: translateX(0px);
-    opacity: 0;
-  }
-  1% {
-    transform: translateX(3000px);
-  }
-  100% {
-    transform: translateX(3000px);
-  }
-}
+/* Animation d'apparition du menu (pour masquer le menu au début et l'afficher progressivement) */
 @keyframes card-hide {
   0% {
     transform: translateX(0px);
@@ -79,25 +40,6 @@
   }
   100% {
     transform: translateX(3000px);
-  }
-}
-@-webkit-keyframes card-anim {
-  0% {
-    transform: translateX(3000px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  95% {
-    opacity: 0.5;
-  }
-  99% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
   }
 }
 @keyframes card-anim {
@@ -119,16 +61,7 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* Animation d'apparition progressive des éléments du menu */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -139,68 +72,114 @@
     transform: translateY(0);
   }
 }
-.menu-group {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+/* Animation des boutons du menu (Entrées, Plats, Desserts) */
+.menu-button {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
 }
-.menu-group:nth-child(2) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+
+/* Délai d'animation pour les plats */
+.menu-button:nth-child(1) {
+  animation-delay: 0.2s;
 }
-.menu-group:nth-child(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+
+.menu-button:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.menu-button:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Animation pour les boutons du menu au survol (hover effect) */
+.menu-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Animation pour le coeur au-dessus du titre */
+.heart-container {
+  display: inline-block;
+  animation: heart-beat 1s infinite alternate;
+}
+
+@keyframes heart-beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Effet de transition sur le bouton Commander */
+.order-button {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+.order-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
 /* animations pour le coeur */
-/* Container for each restaurant card */
-.card {
-  position: relative; /* Enable positioning for heart icon placement */
-  display: inline-block;
-  width: 100%; /* Adjust as necessary for your layout */
-  overflow: hidden;
+@keyframes heart-beat {
+  0% {
+    transform: scale(1); /* Taille originale */
+  }
+  50% {
+    transform: scale(1.2); /* Augmentation de la taille à 120% */
+  }
+  100% {
+    transform: scale(1); /* Retour à la taille originale */
+  }
 }
-
-.card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 .heart-container {
-  position: absolute;
-  bottom: 10px; /* Adjust as needed for positioning */
-  right: 10px; /* Adjust as needed for positioning */
-  cursor: pointer;
   display: inline-block;
-  font-size: 1.5rem; /* Adjust size as needed */
+  animation: heart-beat 1s 1 alternate;
 }
 
 .heart {
-  font-size: 1.5rem; /* Heart icon size */
-  color: #fff; /* Default color for empty heart */
-  transition: opacity 300ms ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .heart--card {
-  color: #fff; /* Default color for empty heart */
-  opacity: 1; /* Visible by default */
+  -webkit-text-stroke: 0.05rem #fff;
+}
+
+.heart--menu {
+  -webkit-text-stroke: 0.05rem #f6f6f6;
+}
+
+.heart:hover {
+  background: linear-gradient(30deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0;
+}
+
+.heart:hover + .heart-full {
+  transform: scale(1);
 }
 
 .heart-full {
-  color: #ff79da; /* Filled heart color */
+  position: absolute;
+  top: 0;
+  right: 0;
   background: linear-gradient(30deg, #ff79da, #9356dc);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0; /* Hidden by default */
-  transition: opacity 300ms ease-in-out;
-}
-
-.heart-container:hover .heart--card {
-  opacity: 0; /* Hide the empty heart on hover */
-}
-
-.heart-container:hover .heart-full {
-  opacity: 1; /* Show the filled heart on hover */
-}
-/*# sourceMappingURL=animations.css.map */
+          background-clip: text;
+  color: transparent;
+  transform: scale(0);
+  transition: transform 300ms ease-in-out;
+}/*# sourceMappingURL=animations.css.map */

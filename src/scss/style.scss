@@ -11,24 +11,91 @@
 
 /* Media query pour les écrans de 1000px à 1400px */
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
-    .restaurants {
+    
+    /* Section principale du menu */
+    .restaurant-menu {
         max-width: 100%;
         padding: 1.875rem 0;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Conteneur pour chaque section (Entrées, Plats, Desserts) */
+    .menu-section {
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        width: 100%;
+        max-width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    /* Les conteneurs de cartes de menu (entrées, plats, desserts) */
+    .card-menu-container {
+        width: 48%; /* pour que deux sections tiennent dans une ligne */
+        margin-bottom: 1.5rem;
+    }
+
+    /* Style des boutons de chaque plat dans la carte */
+    .menu-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Espace entre les boutons */
+    }
+
+    .menu-button {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Images des sections */
+    .restaurantsphotos img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    /* Titres de section */
+    .restaurant-menu__subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+        color: #333;
+    }
+
+    /* Conteneur pour le titre et le coeur */
+    .restaurant-menu-title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    /* Icônes de coeur */
+    .heart-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .heart {
+        font-size: 1.5rem;
+        color: #ccc;
+        margin-left: 0.5rem;
+    }
+    
+    .heart-full {
+     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);;
     }
 }
-body {
-     box-sizing: border-box;
-     background-color: #fff;
-	 width: auto;
-	 height: auto;
-}
-img {
-    width: 100%;
-    height: auto;
-}
+
+
 
 .main-title h1 {
 	width: 197px;
@@ -185,13 +252,12 @@ li {
 }
 
 .restaurants card {
-	width: 340px;
-	height: 1058px;
-	top: 942px;
-	left: 17px;
+	width: 340px;  background-color: red;
+	height: 251px;
 	gap: 18px;
 	
 }
+
 /* Appliquer la taille et le style de base à chaque bouton */
 .buttons-restaurant, .buttons-menu, .buttons-degustez {
 	width: 335px;
@@ -269,13 +335,6 @@ p {
 	color: #9356dc
 }
 
-/* Styles pour le conteneur des cartes de restaurant */
-.card-container {
-	 display: flex;
-	 justify-content: space-around;
- 	 flex-wrap: wrap;
-	 border: none;
-}
 
 /*Style pour les badges nouveau*/
 
@@ -294,11 +353,10 @@ p {
  }
 /* Styles pour chaque carte de restaurant */
 .card {
-	 display: block;
-	 margin: auto;
+	 display:flex;
+	 flex-direction: column;
 	 width: 340px;
 	 height: 251px;
-	 position: relative;
 	 border-radius: 15px;
 	 top:-17px;
 }
@@ -336,12 +394,11 @@ p {
 
 /* Styles pour le pied de page */
 .footer {
-	width: 375px;
-	height: 186px;
-	background-color: rgba(53, 53, 53, 1);
-	padding: 20px;
-	text-align: left;
-	color: #fff;
+	 width: 375px;
+	 height: 186px;
+	 background-color: rgba(53, 53, 53, 1);
+     text-align: left;
+	 color: #fff;
 }
 
 .footer h3 {
@@ -360,8 +417,7 @@ p {
 
 .footer a {
 	color: #fff;
-	margin-right: 20px;
-	margin-bottom: 15px;
+	
 }
 
 .footer ul {

@@ -12,26 +12,78 @@
 }
 /* Media query pour les écrans de 1000px à 1400px */
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
-  .restaurants {
+  /* Section principale du menu */
+  .restaurant-menu {
     max-width: 100%;
     padding: 1.875rem 0;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Conteneur pour chaque section (Entrées, Plats, Desserts) */
+  .menu-section {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
+    max-width: 90%;
+    margin-bottom: 2rem;
+  }
+  /* Les conteneurs de cartes de menu (entrées, plats, desserts) */
+  .card-menu-container {
+    width: 48%; /* pour que deux sections tiennent dans une ligne */
+    margin-bottom: 1.5rem;
+  }
+  /* Style des boutons de chaque plat dans la carte */
+  .menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espace entre les boutons */
+  }
+  .menu-button {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Images des sections */
+  .restaurantsphotos img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  /* Titres de section */
+  .restaurant-menu__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+  /* Conteneur pour le titre et le coeur */
+  .restaurant-menu-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  /* Icônes de coeur */
+  .heart-container {
+    display: flex;
+    align-items: center;
+  }
+  .heart {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-left: 0.5rem;
+  }
+  .heart-full {
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   }
 }
-body {
-  box-sizing: border-box;
-  background-color: #fff;
-  width: auto;
-  height: auto;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
 .main-title h1 {
   width: 197px;
   height: 36px;
@@ -191,9 +243,8 @@ li {
 
 .restaurants card {
   width: 340px;
-  height: 1058px;
-  top: 942px;
-  left: 17px;
+  background-color: red;
+  height: 251px;
   gap: 18px;
 }
 
@@ -274,14 +325,6 @@ p {
   color: #9356dc;
 }
 
-/* Styles pour le conteneur des cartes de restaurant */
-.card-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  border: none;
-}
-
 /*Style pour les badges nouveau*/
 .card-nouveau {
   position: absolute;
@@ -299,11 +342,10 @@ p {
 
 /* Styles pour chaque carte de restaurant */
 .card {
-  display: block;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
   width: 340px;
   height: 251px;
-  position: relative;
   border-radius: 15px;
   top: -17px;
 }
@@ -344,7 +386,6 @@ p {
   width: 375px;
   height: 186px;
   background-color: rgb(53, 53, 53);
-  padding: 20px;
   text-align: left;
   color: #fff;
 }
@@ -365,8 +406,6 @@ p {
 
 .footer a {
   color: #fff;
-  margin-right: 20px;
-  margin-bottom: 15px;
 }
 
 .footer ul {
@@ -387,26 +426,78 @@ p {
 }
 /* Media query pour les écrans de 1000px à 1400px */
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
-  .restaurants {
+  /* Section principale du menu */
+  .restaurant-menu {
     max-width: 100%;
     padding: 1.875rem 0;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Conteneur pour chaque section (Entrées, Plats, Desserts) */
+  .menu-section {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
+    max-width: 90%;
+    margin-bottom: 2rem;
+  }
+  /* Les conteneurs de cartes de menu (entrées, plats, desserts) */
+  .card-menu-container {
+    width: 48%; /* pour que deux sections tiennent dans une ligne */
+    margin-bottom: 1.5rem;
+  }
+  /* Style des boutons de chaque plat dans la carte */
+  .menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espace entre les boutons */
+  }
+  .menu-button {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Images des sections */
+  .restaurantsphotos img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  /* Titres de section */
+  .restaurant-menu__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+  /* Conteneur pour le titre et le coeur */
+  .restaurant-menu-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  /* Icônes de coeur */
+  .heart-container {
+    display: flex;
+    align-items: center;
+  }
+  .heart {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-left: 0.5rem;
+  }
+  .heart-full {
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   }
 }
-body {
-  box-sizing: border-box;
-  background-color: #fff;
-  width: auto;
-  height: auto;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
 .main-title h1 {
   width: 197px;
   height: 36px;
@@ -566,9 +657,8 @@ li {
 
 .restaurants card {
   width: 340px;
-  height: 1058px;
-  top: 942px;
-  left: 17px;
+  background-color: red;
+  height: 251px;
   gap: 18px;
 }
 
@@ -649,14 +739,6 @@ p {
   color: #9356dc;
 }
 
-/* Styles pour le conteneur des cartes de restaurant */
-.card-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  border: none;
-}
-
 /*Style pour les badges nouveau*/
 .card-nouveau {
   position: absolute;
@@ -674,11 +756,10 @@ p {
 
 /* Styles pour chaque carte de restaurant */
 .card {
-  display: block;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
   width: 340px;
   height: 251px;
-  position: relative;
   border-radius: 15px;
   top: -17px;
 }
@@ -719,7 +800,6 @@ p {
   width: 375px;
   height: 186px;
   background-color: rgb(53, 53, 53);
-  padding: 20px;
   text-align: left;
   color: #fff;
 }
@@ -740,8 +820,6 @@ p {
 
 .footer a {
   color: #fff;
-  margin-right: 20px;
-  margin-bottom: 15px;
 }
 
 .footer ul {
@@ -955,15 +1033,6 @@ button:hover {
     visibility: hidden;
   }
 }
-/* Animation de remplissage du coeur */
-@keyframes anim-heart {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /* Animation de rotation du cercle du loader */
 @keyframes rotation {
   0% {
@@ -994,7 +1063,7 @@ button:hover {
     height: 0px;
   }
 }
-/* Animation d'apparition du menu */
+/* Animation d'apparition du menu (pour masquer le menu au début et l'afficher progressivement) */
 @keyframes card-hide {
   0% {
     transform: translateX(0px);
@@ -1026,6 +1095,7 @@ button:hover {
     opacity: 1;
   }
 }
+/* Animation d'apparition progressive des éléments du menu */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -1036,64 +1106,104 @@ button:hover {
     transform: translateY(0);
   }
 }
-.menu-group {
+/* Animation des boutons du menu (Entrées, Plats, Desserts) */
+.menu-button {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Délai d'animation pour les plats */
+.menu-button:nth-child(1) {
   animation-delay: 0.2s;
 }
-.menu-group:nth-child(2) {
+
+.menu-button:nth-child(2) {
   animation-delay: 0.4s;
 }
-.menu-group:nth-child(3) {
+
+.menu-button:nth-child(3) {
   animation-delay: 0.6s;
 }
 
-/* animations.css */
-/* Animation de remplissage du cœur au survol */
-.menu-item .checkmark {
+/* Animation pour les boutons du menu au survol (hover effect) */
+.menu-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Animation pour le coeur au-dessus du titre */
+.heart-container {
+  display: inline-block;
+  animation: heart-beat 1s infinite alternate;
+}
+
+@keyframes heart-beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Effet de transition sur le bouton Commander */
+.order-button {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+.order-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* animations pour le coeur */
+.heart {
   position: absolute;
-  top: 10px; /* Ajuste selon le positionnement souhaité */
-  right: 10px; /* Ajuste selon le positionnement souhaité */
-  font-size: 24px; /* Taille du cœur */
-  color: red; /* Couleur du cœur plein */
+  top: 0;
+  right: 0;
   cursor: pointer;
-  transition: transform 0.4s, visibility 0.4s;
-  visibility: hidden; /* Caché par défaut */
+  z-index: 1;
 }
 
-/* Positionnement relatif pour le parent pour que l'élément absolu soit bien placé */
-.card {
-  position: relative; /* Permet de positionner l'élément relatif à la carte */
+.heart-container {
+  position: relative;
 }
 
-.menu-item {
-  position: absolute; /* Position absolue par rapport à l'élément parent (.card) */
-  top: 10px; /* Ajuste la position verticale (distance du haut de l'image) */
-  right: 10px; /* Ajuste la position horizontale (distance du côté droit de l'image) */
-  z-index: 10; /* Assure que l'icône du cœur soit au-dessus de l'image */
+.heart--card {
+  -webkit-text-stroke: 0.05rem #fff;
 }
 
-.checkmark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.heart--menu {
+  -webkit-text-stroke: 0.05rem #f6f6f6;
 }
 
-.heart, .heart-full {
-  font-size: 24px; /* Ajuste la taille de l'icône du cœur */
-  color: white; /* Change la couleur selon ton design */
-  cursor: pointer; /* Permet à l'utilisateur de cliquer sur l'icône si nécessaire */
+.heart:hover {
+  background: linear-gradient(30deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0;
+}
+
+.heart:hover + .heart-full {
+  transform: scale(1);
 }
 
 .heart-full {
-  color: red; /* Changer la couleur quand le cœur est "plein" */
-  display: none; /* Cacher le cœur plein par défaut */
-}
-
-.menu-item:hover .heart {
-  display: none; /* Cacher le cœur vide quand l'utilisateur survole l'élément */
-}
-
-.menu-item:hover .heart-full {
-  display: inline-block; /* Afficher le cœur plein lors du survol */
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(30deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  transform: scale(0);
+  transition: transform 300ms ease-in-out;
 }
 
 /* Media query pour les écrans de moins de 768px */
