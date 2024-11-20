@@ -20,19 +20,36 @@ button {
   // Styles pour le bouton de Explorer
  
   .buttons-explorer {
-    width: 218px;
-    height: 50px;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    color: white;
-    padding: 15.6px;
-     font-family: "Roboto";
-     font-size: 16px;
+   
+    background: -webkit-linear-gradient(280deg, #ff79da, #9356dc);
+    background: -o-linear-gradient(280deg, #ff79da, #9356dc);
+    background: linear-gradient(170deg, #ff79da, #9356dc);
+    border: none;
+    outline: none;
+    font-size: 100%;
+    -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    -webkit-transition: opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
+    -o-transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out, -webkit-transform 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out
+}
   
    }
      
    .buttons-explorer:hover {
-   background-color: #8251b1;
-   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    background-color: #8251b1;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    opacity: 0.8;
+    -webkit-transform: translateY(-0.1rem);
+    -ms-transform: translateY(-0.1rem);
+    transform: translateY(-0.1rem);
+    -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0 #5e5e5e;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0 #5e5e5e
    }
  
  .buttons span {
@@ -60,36 +77,36 @@ button {
    margin: 0;
  }
  
- //Style pour chaque bouton à l'intérieur de .container-buttons 
+ //Style pour chaque bouton à l'intérieur de container-buttons 
  .container-buttons .buttons-restaurant,
  .container-buttons .buttons-degustez,
  .container-buttons .buttons-menu {
    
-    border-radius: 20px;
-    display: inline-flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    font-size: 16px;
-    color: #000000;
-    border: 2px solid #e8e8e8;
-    margin-top: 10px;
-    margin-bottom: 10px;
+     border-radius: 20px;
+     display: inline-flex;
+     justify-content: center;
+     flex-direction: row;
+     align-items: center;
+     font-size: 16px;
+     color: #000000;
+     border: 2px solid #e8e8e8;
+     margin-top: 10px;
+     margin-bottom: 10px;
      background:#F5F5F5 ;
-   position: relative; //Pour positionner correctement l'élément ::after 
+     position: relative; //Pour positionner correctement l'élément ::after 
  }
  
- // Changement de couleur du texte au survol 
- .container-buttons .buttons-restaurant:hover,
- .container-buttons .buttons-degustez:hover,
- .container-buttons .buttons-menu:hover {
+  // Changement de couleur du texte au survol 
+   .container-buttons .buttons-restaurant:hover,
+   .container-buttons .buttons-degustez:hover,
+   .container-buttons .buttons-menu:hover {
    color: #9356dc;
  }
  
- //Animation au survol 
- .container-buttons .buttons-restaurant::after,
- .container-buttons .buttons-degustez::after,
- .container-buttons .buttons-menu::after {
+  //Animation au survol 
+  .container-buttons .buttons-restaurant::after,
+  .container-buttons .buttons-degustez::after,
+  .container-buttons .buttons-menu::after {
    content: "";
    position: absolute;
    top: 0;
@@ -146,7 +163,8 @@ button {
    font-size: 1rem;
      margin-top: 5px; 
  }
+
  
- }
+ 
 
 

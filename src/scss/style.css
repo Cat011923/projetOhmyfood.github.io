@@ -6,18 +6,16 @@
   /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
 }
 /* Media query pour les écrans de moins de 768px */
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .column {
-    width: 32%; /* Pour les petits écrans, les colonnes occupent toute la largeur */
-    padding: 0;
-  }
+@media screen and (max-width: 768px) {
   /* Section principale du menu */
-  .restaurant-menu {
-    max-width: 100%;
-    padding: 1.875rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .restaurant-menu__subtitle {
+    border-bottom: 3px solid #99e2d0;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 3px solid #99e2d0;
+    width: 3rem;
+    margin: 1rem 0;
+    padding-bottom: 0.5rem;
   }
   /* Conteneur pour chaque section (Entrées, Plats, Desserts) */
   .menu-section {
@@ -30,312 +28,423 @@
   }
   /* Les conteneurs de cartes de menu (entrées, plats, desserts) */
   .card-menu-container {
-    width: 48%; /* Pour que deux sections respectent dans une ligne */
+    width: 100%; /* Pour que deux sections respectent dans une ligne */
     margin-bottom: 1.5rem;
   }
-  /* Style des boutons de chaque plat dans la carte */
-  .menu-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* Espace entre les boutons */
+  .entrees {
+    animation: menu-appear 1000ms 0ms both ease-in-out;
   }
-  .menu-button {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
+  .plats {
+    animation: menu-appear 1000ms 0ms both ease-in-out;
   }
-  /* Images des sections */
-  .restaurantsphotos img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+  .desserts {
+    animation: menu-appear 1000ms 0ms both ease-in-out;
   }
-  /* Titres de section */
-  .restaurant-menu__subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: #333;
-  }
-  /* Conteneur pour le titre et le cœur */
-  .restaurant-menu-title-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  /* Icônes de cœur */
-  .menu-item.heart-animation {
-    display: flex;
-    align-items: center;
-  }
-  .heart {
-    font-size: 1.5rem;
-    color: #ccc;
-    margin-left: 0.5rem;
-  }
-  .heart-full {
-    color: transparent; /* Nécessaire pour que la couleur de texte ne s'affiche pas */
-    background: linear-gradient(193.33deg, #9356DC 11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-  }
-  .main-title h1 {
-    width: 197px;
-    height: 36px;
-    box-sizing: border-box;
-  }
-  /* Styles globaux pour le corps du document */
-  .main-container h1 {
-    background-color: white;
-    width: 375px;
-    height: 63px;
-    box-sizing: border-box;
-  }
-  .main-container h2 {
-    width: 275px;
-    height: 31px;
-    font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
-    font-size: 27.5px;
-    color: #000000;
-  }
-  .main-container-buttons p {
-    width: 315px;
-    height: 46px;
-    font-weight: 300;
-    margin: 0.5rem auto 1.75rem; /* Centrer le paragraphe lui-même */
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    line-height: 21.09px;
-    color: #000000;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-  }
-  .main-container-buttons {
-    background-color: #F5F5F5;
-    margin-top: 15px;
-  }
-  h1 {
-    font-family: "Shrikhand", italic; /* Applique Shrikhand pour les titres */
-    width: 197px;
-    height: 36px;
-    margin-bottom: 0;
-  }
-  .main-container-buttons h2 {
-    width: 275px;
-    height: 68px;
-    font-family: "Roboto", sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #000000;
-    margin-left: 42px;
-    margin-top: 0;
-    box-sizing: border-box;
-  }
-  h3 {
-    font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
-    font-weight: 700;
-    font-size: 18px;
-    color: white;
-  }
-  .container-buttons {
-    margin-right: 1.25rem;
-    margin-left: 1.25rem;
-    padding: 1.625rem 0 1.5rem;
-  }
-  .container-buttons p {
-    font-family: "Roboto"; /* Applique Roboto comme police principale */
-    font-weight: bold;
-    font-size: 17px;
-    text-align: center;
-    color: #000000;
-  }
-  li {
-    list-style-type: none;
-  }
-  /* Styles pour le conteneur principal */
-  .main-container {
-    max-width: 1400px;
-    margin: auto;
-  }
-  /* Styles pour la section de localisation */
-  .localisation {
-    background-color: white;
-    color: #000000;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .localisation-emplacement {
-    background-color: #eaeaea;
-    padding: 1rem 0;
-  }
-  /* Styles pour l'emplacement de la localisation */
-  .localisation-emplacement section {
-    width: 375px;
-    height: 50px;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    color: #000000;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    background-color: #D3D3D3;
-  }
-  .localisation-emplacement p {
-    width: 315px;
-    height: 46px;
-    font-size: 18px;
-  }
-  .localisation-emplacement i {
-    width: 12px;
-    height: 16px;
-    margin-top: 15px;
-  }
-  .localisation-emplacement strong {
-    margin-left: 34px;
-    text-align: center;
-  }
-  /* Styles pour la section expliquant le fonctionnement */
-  .fonctionnement-service h2 {
-    width: 275px;
-    height: 31px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28.13px;
-  }
-  /* Appliquer la taille et le style de base à chaque bouton */
-  .buttons-restaurant, .buttons-menu, .buttons-degustez {
-    width: 335px;
-    height: 72.38px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  /* Style pour les cercles numérotés */
-  .circle {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    position: absolute;
-    left: 1rem;
-    background-color: #9356dc !important;
-    color: white;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-  }
-  /* Style des paragraphes */
-  p {
-    font-size: 14px;
-    color: #555;
-    margin: 0;
-  }
-  /* Styles des icônes */
-  .buttons-restaurant i,
-  .buttons-menu i,
-  .buttons-degustez i {
-    color: #333;
-    margin-bottom: 5px;
-    padding: 0 1rem;
-  }
-  .buttons-restaurant:hover i,
-  .buttons-menu:hover i,
-  .buttons-degustez:hover i {
-    color: #9356dc;
-  }
-  /* Style pour les badges "nouveau" */
-  .card-nouveau {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    background-color: #99e2d0;
-    color: #278870;
-    font-weight: bold;
-    padding: 0.375rem 0.75rem;
-    border-radius: 0.125rem;
-    text-align: center;
-    width: 80px;
-    height: 29px;
-  }
-  /* Styles pour chaque carte de restaurant */
-  .card {
-    display: flex;
-    flex-direction: column;
-    width: 340px;
-    height: 251px;
-    border-radius: 15px;
-    margin-top: -17px;
-  }
-  /* Styles pour les images des cartes */
-  .card img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 1rem 1rem 0 0;
-    height: 11.75rem;
-    width: 100%;
-  }
-  .card article {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .card h3 {
-    color: #000000;
-    width: 267px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    opacity: 1;
-  }
-  .card p {
-    width: 247px;
-    margin-top: 0;
-    margin-bottom: 35px;
-    opacity: 1;
-    display: block;
-  }
-  /* Styles pour le pied de page */
-  .footer {
-    width: 375px;
-    height: 186px;
-    background-color: rgb(53, 53, 53);
-    text-align: left;
-    color: #fff;
-  }
-  .footer h3 {
-    color: white;
-    text-align: left;
-    font-family: "Roboto", italic;
-    font-weight: 700;
-    font-size: 16px;
-  }
-  .footer i {
-    color: #fff;
-    margin-right: 10px;
-    margin-bottom: 15px;
-  }
-  .footer a {
-    color: #fff;
-  }
-  .footer ul {
-    padding-left: 0px;
-  }
-  .footer li {
-    height: 25px;
-  }
+}
+.card-menu__dish-price-check-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: -4rem;
+  height: 100%;
+  transition: transform 500ms 100ms ease-in-out;
+}
+
+.card-menu__check {
+  background-color: #99e2d0;
+  width: 4rem;
+  border-radius: 0 1rem 1rem 0;
+  position: relative;
+}
+
+.card-menu__check .fa-check {
+  background-color: #fff;
+  border-radius: 50%;
+  color: #99e2d0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0.25rem;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: transform 600ms ease-in-out;
+}
+
+.card-menu:hover .card-menu__dish-title-container {
+  width: 65%;
+}
+
+/* Style des boutons de chaque plat dans la carte */
+.menu-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem; /* Espace entre les boutons */
+}
+
+.menu-button {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Images des sections */
+.restaurantsphotos img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Titres de section */
+.restaurant-menu__subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+/* Conteneur pour le titre et le cœur */
+.restaurant-menu-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.heart {
+  position: absolute;
+  bottom: 0; /* Position en bas */
+  right: 0; /* Position à droite */
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 300ms ease-in-out; /* Ajout d'une animation douce */
+}
+
+.heart-container {
+  position: relative;
+}
+
+.heart--card {
+  -webkit-text-stroke: 0.05rem #fff;
+}
+
+.heart--menu {
+  -webkit-text-stroke: 0.05rem #f6f6f6;
+}
+
+.heart:hover {
+  background: linear-gradient(30deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0;
+}
+
+.heart:hover + .heart-full {
+  transform: scale(1); /* Agrandit le cœur plein */
+}
+
+.heart-full {
+  position: absolute;
+  bottom: 0; /* Aligné au bas */
+  right: 0; /* Aligné à droite */
+  width: 100%; /* S'assure de remplir le conteneur */
+  height: 100%; /* Remplit la zone */
+  background: linear-gradient(30deg, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  transform: scale(0); /* Initialement caché */
+  transition: transform 300ms ease-in-out;
+}
+
+.main-title h1 {
+  width: 197px;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+/* Styles globaux pour le corps du document */
+.main-container h1 {
+  background-color: white;
+  width: 375px;
+  height: 63px;
+  box-sizing: border-box;
+}
+
+.main-container h2 {
+  width: 275px;
+  height: 31px;
+  font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
+  font-size: 27.5px;
+  color: #000000;
+}
+
+.main-container-buttons p {
+  width: 315px;
+  height: 46px;
+  font-weight: 300;
+  margin: 0.5rem auto 1.75rem; /* Centrer le paragraphe lui-même */
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #000000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.main-container-buttons {
+  background-color: #F5F5F5;
+  margin-top: 15px;
+}
+
+h1 {
+  font-family: "Shrikhand", italic; /* Applique Shrikhand pour les titres */
+  width: 197px;
+  height: 36px;
+  margin-bottom: 0;
+}
+
+.main-container-buttons h2 {
+  width: 275px;
+  height: 68px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin-left: 42px;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+}
+
+.container-buttons {
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
+  padding: 1.625rem 0 1.5rem;
+}
+
+.container-buttons p {
+  font-family: "Roboto"; /* Applique Roboto comme police principale */
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  color: #000000;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Styles pour le conteneur principal */
+.main-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Styles pour la section de localisation */
+.localisation {
+  background-color: white;
+  color: #000000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.localisation-emplacement {
+  background-color: #eaeaea;
+  padding: 1rem 0;
+}
+
+/* Styles pour l'emplacement de la localisation */
+.localisation-emplacement section {
+  width: 375px;
+  height: 50px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background-color: #D3D3D3;
+}
+
+.localisation-emplacement p {
+  width: 315px;
+  height: 46px;
+  font-size: 18px;
+}
+
+.localisation-emplacement i {
+  width: 12px;
+  height: 16px;
+  margin-top: 15px;
+}
+
+.localisation-emplacement strong {
+  margin-left: 34px;
+  text-align: center;
+}
+
+/* Styles pour la section expliquant le fonctionnement */
+.fonctionnement-service h2 {
+  width: 275px;
+  height: 31px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+}
+
+/* Appliquer la taille et le style de base à chaque bouton */
+.buttons-restaurant, .buttons-menu, .buttons-degustez {
+  width: 335px;
+  height: 72.38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style pour les cercles numérotés */
+.circle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  left: 1rem;
+  background-color: #9356dc !important;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+/* Style des paragraphes */
+p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* Styles des icônes */
+.buttons-restaurant i,
+.buttons-menu i,
+.buttons-degustez i {
+  color: #333;
+  margin-bottom: 5px;
+  padding: 0 1rem;
+}
+
+.buttons-restaurant:hover i,
+.buttons-menu:hover i,
+.buttons-degustez:hover i {
+  color: #9356dc;
+}
+
+/* Style pour les badges "nouveau" */
+.card-nouveau {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  background-color: #99e2d0;
+  color: #278870;
+  font-weight: bold;
+  border-radius: 0.125rem;
+  width: 80px;
+  height: 29px;
+}
+
+/* Styles pour chaque carte de restaurant */
+.card {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  height: 251px;
+  border-radius: 15px;
+  margin-top: -17px;
+}
+
+/* Styles pour les images des cartes */
+.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  height: 11.75rem;
+  width: 100%;
+}
+
+.card article {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card h3 {
+  color: #000000;
+  width: 267px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  opacity: 1;
+}
+
+.card p {
+  width: 247px;
+  margin-top: 0;
+  margin-bottom: 35px;
+  opacity: 1;
+  display: block;
+}
+
+/* Styles pour le pied de page */
+.footer {
+  width: 375px;
+  height: 186px;
+  background-color: rgb(53, 53, 53);
+  text-align: left;
+  color: #fff;
+}
+
+.footer h3 {
+  color: white;
+  text-align: left;
+  font-family: "Roboto", italic;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.footer i {
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer ul {
+  padding-left: 0px;
+}
+
+.footer li {
+  height: 25px;
 }/*# sourceMappingURL=style.css.map */
