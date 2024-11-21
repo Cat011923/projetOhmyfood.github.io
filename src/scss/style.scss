@@ -12,7 +12,7 @@
    /* Section principale du menu */
  
  .restaurant-menu__subtitle {
- border-bottom: 3px solid #99e2d0;
+   border-bottom: 3px solid #99e2d0;
     font-weight: 300;
     text-transform: uppercase;
     border-bottom: 3px solid #99e2d0;
@@ -20,6 +20,34 @@
     margin: 1rem 0;
     padding-bottom: 0.5rem;
 }
+ 
+ .title-main-container {
+  display: flex;      
+  align-items: center; 
+  justify-content: space-between; 
+  position: relative;  
+}
+
+ .title-main-container li:first-child {
+  position: absolute; 
+  top: 17px;        
+  left: 17px;        
+
+.back-arrow {
+  width: 17.2px;
+  height: 16px;
+  top: 7px;
+  left: 6px;
+  gap: 0px;
+  opacity: 0px;
+  
+}
+
+.main-title-container {
+  margin: 0 auto; /* Centre le titre dans le conteneur. */
+  text-align: center;
+}
+
   /* Conteneur pour chaque section (Entrées, Plats, Desserts) */
   .menu-section {
     display: flex;
@@ -29,7 +57,12 @@
     max-width: 90%;
     margin-bottom: 2rem;
   }
+  .menu-section-entrees .menu-section-plats .menu-section-desserts .price-container strong, span {
+    color: #000000;
+    font-size: 19px; 
+    font-family: "Roboto", sans-serif;
 
+  }
   /* Les conteneurs de cartes de menu (entrées, plats, desserts) */
   .card-menu-container {
     width: 100%; /* Pour que deux sections respectent dans une ligne */
@@ -40,13 +73,13 @@
     animation: menu-appear 1000ms 0ms both ease-in-out;
    
 }
- .plats {
-  -webkit-animation: menu-appear 1000ms 0ms both ease-in-out;
- animation: menu-appear 1000ms 0ms both ease-in-out;
+   .plats {
+   -webkit-animation: menu-appear 1000ms 0ms both ease-in-out;
+   animation: menu-appear 1000ms 0ms both ease-in-out;
 }
- .desserts {
-  -webkit-animation: menu-appear 1000ms 0ms both ease-in-out;
- animation: menu-appear 1000ms 0ms both ease-in-out;
+   .desserts {
+   -webkit-animation: menu-appear 1000ms 0ms both ease-in-out;
+   animation: menu-appear 1000ms 0ms both ease-in-out;
 }
 
 
@@ -114,7 +147,7 @@
 
   /* Images des sections */
   .restaurantsphotos img {
-    width: 100%;
+    width: 100%; 
     height: auto;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -125,8 +158,16 @@
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
     color: #333;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 3px solid #99e2d0;
+    width: 3rem;
+    margin: 1rem 0;
+    padding-bottom: 0.5rem;
   }
-
+  .menu-section-plats strong {
+   color: #000000;
+  }
   /* Conteneur pour le titre et le cœur */
   .restaurant-menu-title-container {
     display: flex;
@@ -135,6 +176,7 @@
     width: 100%;
     margin-bottom: 1rem;
   }
+ 
   .heart {
     position: absolute;
     bottom: 0; /* Position en bas */
@@ -144,30 +186,30 @@
     transition: transform 300ms ease-in-out; /* Ajout d'une animation douce */
 }
 
-.heart-container {
+  .heart-container {
     position: relative;
 }
 
-.heart--card {
+  .heart--card {
     -webkit-text-stroke: 0.05rem #fff;
 }
 
-.heart--menu {
+  .heart--menu {
     -webkit-text-stroke: 0.05rem #f6f6f6;
 }
 
-.heart:hover {
+  .heart:hover {
     background: linear-gradient(30deg, #ff79da, #9356dc);
     background-clip: text;
     color: transparent;
     -webkit-text-stroke: 0;
 }
 
-.heart:hover + .heart-full {
+  .heart:hover + .heart-full {
     transform: scale(1); /* Agrandit le cœur plein */
 }
 
-.heart-full {
+  .heart-full {
     position: absolute;
     bottom: 0; /* Aligné au bas */
     right: 0; /* Aligné à droite */
@@ -180,13 +222,9 @@
     transition: transform 300ms ease-in-out;
 }
 
-
-  .main-title h1 {
-    width: 197px;
-    height: 36px;
-    box-sizing: border-box;
+  .main-title-container h1 {
+    text-align: center; 
   }
-
   /* Styles globaux pour le corps du document */
   .main-container h1 {
     background-color: white;
@@ -198,8 +236,9 @@
   .main-container h2 {
     width: 275px;
     height: 31px;
-    font-family: "Roboto", sans-serif; /* Applique Roboto comme police principale */
-    font-size: 27.5px;
+    font-family: "shrikhand", italic; /* Applique Roboto comme police principale */
+    font-size: 28px;
+    font-weight: 400;
     color: #000000;
   }
 
@@ -393,8 +432,6 @@
      height: 29px;
 }
     
-
-
   /* Styles pour chaque carte de restaurant */
   .card {
     position: relative;
@@ -471,7 +508,4 @@
   .footer li {
     height: 25px;
   }
-
- 
-
- 
+ }
