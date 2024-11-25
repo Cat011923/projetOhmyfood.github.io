@@ -51,24 +51,22 @@
     width: 100%;
     max-width: 90%;
     margin-bottom: 2rem;
-  }
-  .title-main-container li:first-child .menu-section-entrees .menu-section-plats .menu-section-desserts .price-container strong, .title-main-container li:first-child span {
     color: #000000;
     font-size: 19px;
     font-family: "Roboto", sans-serif;
   }
+  .title-main-container li:first-child .menu-section h3,
+  .title-main-container li:first-child .menu-section span strong {
+    color: #000000;
+    font-size: 19px;
+    font-family: "Roboto", sans-serif;
+  }
+  .title-main-container li:first-child .entrees, .title-main-container li:first-child .plats, .title-main-container li:first-child .desserts {
+    animation: menu-appear 1000ms 0ms both ease-in-out;
+  }
   .title-main-container li:first-child .card-menu-container {
     width: 100%; /* Pour que deux sections respectent dans une ligne */
     margin-bottom: 1.5rem;
-  }
-  .title-main-container li:first-child .entrees {
-    animation: menu-appear 1000ms 0ms both ease-in-out;
-  }
-  .title-main-container li:first-child .plats {
-    animation: menu-appear 1000ms 0ms both ease-in-out;
-  }
-  .title-main-container li:first-child .desserts {
-    animation: menu-appear 1000ms 0ms both ease-in-out;
   }
   .card-menu__dish-price-check-container {
     display: flex;
@@ -185,7 +183,6 @@
   }
   .main-title-container h1 {
     text-align: center;
-    background-color: red;
   }
   /* Styles globaux pour le corps du document */
   .main-container h1 {
@@ -485,24 +482,22 @@
     width: 100%;
     max-width: 90%;
     margin-bottom: 2rem;
-  }
-  .title-main-container li:first-child .menu-section-entrees .menu-section-plats .menu-section-desserts .price-container strong, .title-main-container li:first-child span {
     color: #000000;
     font-size: 19px;
     font-family: "Roboto", sans-serif;
   }
+  .title-main-container li:first-child .menu-section h3,
+  .title-main-container li:first-child .menu-section span strong {
+    color: #000000;
+    font-size: 19px;
+    font-family: "Roboto", sans-serif;
+  }
+  .title-main-container li:first-child .entrees, .title-main-container li:first-child .plats, .title-main-container li:first-child .desserts {
+    animation: menu-appear 1000ms 0ms both ease-in-out;
+  }
   .title-main-container li:first-child .card-menu-container {
     width: 100%; /* Pour que deux sections respectent dans une ligne */
     margin-bottom: 1.5rem;
-  }
-  .title-main-container li:first-child .entrees {
-    animation: menu-appear 1000ms 0ms both ease-in-out;
-  }
-  .title-main-container li:first-child .plats {
-    animation: menu-appear 1000ms 0ms both ease-in-out;
-  }
-  .title-main-container li:first-child .desserts {
-    animation: menu-appear 1000ms 0ms both ease-in-out;
   }
   .card-menu__dish-price-check-container {
     display: flex;
@@ -619,7 +614,6 @@
   }
   .main-title-container h1 {
     text-align: center;
-    background-color: red;
   }
   /* Styles globaux pour le corps du document */
   .main-container h1 {

@@ -49,40 +49,36 @@
 }
 
   /* Conteneur pour chaque section (Entrées, Plats, Desserts) */
-  .menu-section {
+  .menu-section  {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     max-width: 90%;
     margin-bottom: 2rem;
-  }
-  .menu-section-entrees .menu-section-plats .menu-section-desserts .price-container strong, span {
     color: #000000;
-    font-size: 19px; 
+    font-size: 19px;
     font-family: "Roboto", sans-serif;
-
   }
-  /* Les conteneurs de cartes de menu (entrées, plats, desserts) */
-  .card-menu-container {
-    width: 100%; /* Pour que deux sections respectent dans une ligne */
-        margin-bottom: 1.5rem;
+  .menu-section h3,
+  .menu-section span strong {
+      color: #000000;
+      font-size: 19px;
+      font-family: "Roboto", sans-serif;
   }
-  .entrees {
-     -webkit-animation: menu-appear 1000ms 0ms both ease-in-out;
+  
+  
+  .entrees, .plats, .desserts {
+    -webkit-animation: menu-appear 1000ms 0ms both ease-in-out;
     animation: menu-appear 1000ms 0ms both ease-in-out;
-   
-}
-   .plats {
-   -webkit-animation: menu-appear 1000ms 0ms both ease-in-out;
-   animation: menu-appear 1000ms 0ms both ease-in-out;
-}
-   .desserts {
-   -webkit-animation: menu-appear 1000ms 0ms both ease-in-out;
-   animation: menu-appear 1000ms 0ms both ease-in-out;
 }
 
-
+  
+/* Les conteneurs de cartes de menu (entrées, plats, desserts) */
+.card-menu-container {
+  width: 100%; /* Pour que deux sections respectent dans une ligne */
+  margin-bottom: 1.5rem;
+}
 }
 .card-menu__dish-price-check-container {
   display: -webkit-box;
