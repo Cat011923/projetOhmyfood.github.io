@@ -9,7 +9,6 @@
 
     <!-- Lien vers les fichiers de style -->
     <link rel="stylesheet" href="../src/scss/main.css" />
-   
     <link rel="stylesheet" href="src/scss/style.css" />
     <link rel="stylesheet" href="src/scss/header.css" />
     <link rel="stylesheet" href="src/scss/loader.css" />
@@ -54,92 +53,93 @@
                             Le délice des sens</h2>
                        
                       <!-- Animation du cœur -->
-						 <div class="heart-container">
-							<i class="far fa-heart heart heart--card"></i>
-							<i class="fas fa-heart heart--menu"></i>
-						</div>
-                    </div>
-                    
-                    <!-- LES ENTRÉES -->
-                    <div class="menu-section-entrees">
-                        <h3 class="restaurant-menu__subtitle">Entrées</h3>
-                        <div class="card-menu-container">
-                            <div class="menu-buttons">
-                                <button id="btn-entree-1" class="menu-button buttons buttons-fonctionnement">
-                                    <strong>Fricassée d'escargots</strong>
-                                    <span>Au piment d'Espelette</span>
-                                    <div class="price-container">25€</div>
-                                    <div class="card-menu__check"><i class="fas fa-check"></i></div>
-                                </button>
-                                <button id="btn-entree-2" class="menu-button buttons buttons-fonctionnement">
-                                    <strong>Foie gras de canard mi-cuit</strong>
-                                    <span>Et ses copeaux de truffe noire</span>
-                                    <div class="price-container">35€</div>
-                                    <div class="card-menu__check"><i class="fas fa-check"></i></div>
-                                </button>
-                                <button id="btn-entree-3" class="menu-button buttons buttons-fonctionnement">
-                                    <strong>Œuf au plat</strong>
-                                    <span>Assaisonné à la truffe sur lit de caviar</span>
-                                    <div class="price-container">20€</div>
-                                        <div class="card-menu__check"><i class="fas fa-check"></i></div>
-                                </button>
-                            </div>
+                         <div class="heart-container">
+                            <i class="far fa-heart heart heart--card"></i>
+                            <i class="fas fa-heart heart--menu"></i>
                         </div>
                     </div>
 
-                    <!-- LES PLATS -->
-                    <div class="menu-section-plats">
-                        <h3 class="restaurant-menu__subtitle">Plats</h3>
-                        <div class="card-menu-container">
-                            <div class="menu-buttons">
-                                <button id="btn-plat-1" class="menu-button">
-                                    <strong>Filet de bœuf aux herbes</strong>
-                                    <span>Accompagné de sa ribambelle de légumes</span>
-                                    <div class="price-container">40€</div>
-                                    <div class="card-menu__check"><i class="fas fa-check"></i></div>
-                                </button>
-                                <button id="btn-plat-2" class="menu-button">
-                                    <strong>Parmentier de queue de bœuf</strong>
-                                    <span>À la truffe noire sur sa purée de panais</span>
-                                    <div class="price-container">35€</div>
-                                    <div class="card-menu__check"><i class="fas fa-check"></i></div>
-                                </button>
-                                <button id="btn-plat-3" class="menu-button">
-                                    <strong>Filet de turbot</strong>
-                                    <span>Aux agrumes</span>
-                                    <div class="price-container">44€</div>
-                                    <div class="card-menu__check"><i class="fas fa-check"></i></div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Section Entrées -->
+      <div class="menu-section">
+        <h2>Entrées</h2>
+        <!-- Entrée 1 -->
+        <button id="btn-entree-1" class="menu-button buttons buttons-fonctionnement" onclick="moveCheck('btn-entree-1')">
+            <strong>Fricassée d'escargots</strong>
+            <span>Au piment d'Espelette</span>
+            <span class="price-container">25€</span>
+            <span class="card-menu__dish-price-check-container">
+                <span class="card-menu__check"><i class="fas fa-check"></i></span>
+            </span>
+        </button>
 
-                    <!-- LES DESSERTS -->
-                    <div class="menu-section desserts">
-                        <h3 class="restaurant-menu__subtitle">Desserts</h3>
-                        <div class="card-menu-container">
-                            <div class="menu-buttons">
-                                <button id="btn-dessert-1" class="menu-button">
-                                    <strong>Paris-Brest</strong>
-                                    <span>Revisité</span>
-                                    <div class="price-container">18€</div>
-                                    <div class="card-menu__check"><i class="fas fa-check"></i></div>
-                                </button>
-                                <button id="btn-dessert-2" class="menu-button">
-                                    <strong>Macaron au chocolat</strong>
-                                    <span>Et glace à la vanille de Madagascar</span>
-                                    <div class="price-container">22€</div>
-                                    <div class="card-menu__check"><i class="fas fa-check"></i></div>
-                                </button>
-                                <button id="btn-dessert-3" class="menu-button">
-                                    <strong>Mousse au chocolat</strong>
-                                    <span>Au piment d'Espelette et à la truffe noire</span>
-                                    <div class="price-container">23€</div>
-                                    <div class="card-menu__check"><i class="fas fa-check"></i></div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Entrée 2 -->
+        <button id="btn-entree-2" class="menu-button buttons buttons-fonctionnement" onclick="moveCheck('btn-entree-2')">
+            <strong>Foie gras de canard mi-cuit</strong>
+            <span>Et ses copeaux de truffe noire</span>
+            <span class="price-container">35€</span>
+            <span class="card-menu__dish-price-check-container">
+                <span class="card-menu__check"><i class="fas fa-check"></i></span>
+            </span>
+        </button>
+
+        <!-- Entrée 3 -->
+        <button id="btn-entree-3" class="menu-button buttons buttons-fonctionnement" onclick="moveCheck('btn-entree-3')">
+            <strong>Œuf au plat</strong>
+            <span>Assaisonné à la truffe sur lit de caviar</span>
+            <span class="price-container">20€</span>
+            <span class="card-menu__dish-price-check-container">
+                <span class="card-menu__check"><i class="fas fa-check"></i></span>
+            </span>
+        </button>
+      </div>
+
+      <!-- Section Plats -->
+      <div class="menu-section">
+        <h2>Plats</h2>
+        <!-- Plat 1 -->
+        <button id="btn-plat-1" class="menu-button buttons buttons-fonctionnement" onclick="moveCheck('btn-plat-1')">
+            <strong>Entrecôte grillée</strong>
+            <span>Avec son beurre maître d'hôtel</span>
+            <span class="price-container">40€</span>
+            <span class="card-menu__dish-price-check-container">
+                <span class="card-menu__check"><i class="fas fa-check"></i></span>
+            </span>
+        </button>
+
+        <!-- Plat 2 -->
+        <button id="btn-plat-2" class="menu-button buttons buttons-fonctionnement" onclick="moveCheck('btn-plat-2')">
+            <strong>Cabillaud rôti</strong>
+            <span>Accompagné d’une purée de patates douces</span>
+            <span class="price-container">35€</span>
+            <span class="card-menu__dish-price-check-container">
+                <span class="card-menu__check"><i class="fas fa-check"></i></span>
+            </span>
+        </button>
+      </div>
+
+      <!-- Section Desserts -->
+      <div class="menu-section">
+        <h2>Desserts</h2>
+        <!-- Dessert 1 -->
+        <button id="btn-dessert-1" class="menu-button buttons buttons-fonctionnement" onclick="moveCheck('btn-dessert-1')">
+            <strong>Crème brûlée</strong>
+            <span>Au caramel croquant</span>
+            <span class="price-container">18€</span>
+            <span class="card-menu__dish-price-check-container">
+                <span class="card-menu__check"><i class="fas fa-check"></i></span>
+            </span>
+        </button>
+
+        <!-- Dessert 2 -->
+        <button id="btn-dessert-2" class="menu-button buttons buttons-fonctionnement" onclick="moveCheck('btn-dessert-2')">
+            <strong>Fondant au chocolat</strong>
+            <span>Cœur coulant et boule de glace vanille</span>
+            <span class="price-container">22€</span>
+            <span class="card-menu__dish-price-check-container">
+                <span class="card-menu__check"><i class="fas fa-check"></i></span>
+            </span>
+        </button>
+      </div>
 
                     <!-- Bouton pour commander -->
                     <div class="order-button-container">
