@@ -4,9 +4,9 @@
 /* Media query pour les écrans de 1000px à 1400px */
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
+  /* Media query pour les écrans de moins de 768px */
 }
-/* Media query pour les écrans de moins de 768px */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1000px) and (max-width: 1400px) and (max-width: 768px) {
   /* Section principale du menu */
   .restaurant-menu__subtitle {
     border-bottom: 3px solid #99e2d0;
@@ -33,11 +33,9 @@
     font-size: 19px;
     font-family: "Roboto", sans-serif;
   }
-  .menu-section h3,
-  .menu-section span strong {
-    color: #000000;
-    font-size: 19px;
-    font-family: "Roboto", sans-serif;
+  .localisation-emplacement i {
+    background-color: #f6f6f6;
+    text-align: center;
   }
   .card-menu-container {
     width: 100%;
@@ -74,7 +72,7 @@
     width: 4rem;
     border-radius: 0 1rem 1rem 0;
     position: relative;
-    opacity: 0; /* Caché par défaut */
+    opacity: 0;
     transition: opacity 300ms ease-in, transform 500ms ease-in-out;
   }
   .card-menu__check .fa-check {
@@ -103,80 +101,75 @@
     border-radius: 8px;
     margin-bottom: 1rem;
   }
-}
-/* Titre de chaque section */
-.restaurant-menu__subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  color: #333;
-  font-weight: 300;
-  text-transform: uppercase;
-  border-bottom: 3px solid #99e2d0;
-  width: 3rem;
-  margin: 1rem 0;
-  padding-bottom: 0.5rem;
-}
-
-/* Styles globaux pour le corps du document */
-.main-container h1 {
-  background-color: white;
-  width: 375px;
-  height: 63px;
-  box-sizing: border-box;
-}
-
-/* Autres styles généraux pour le site */
-.footer {
-  width: 375px;
-  height: 186px;
-  background-color: rgb(53, 53, 53);
-  text-align: left;
-  color: #fff;
-}
-
-/* Conteneur pour chaque carte de restaurant */
-.card {
-  position: relative;
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  width: 340px;
-  height: 251px;
-  border-radius: 15px;
-  margin-top: -17px;
-}
-
-/* Styles pour les images des cartes */
-.card img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 1rem 1rem 0 0;
-  height: 11.75rem;
-  width: 100%;
-}
-
-/* Pied de page */
-.footer h3 {
-  color: white;
-  font-family: "Roboto", italic;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.footer i {
-  color: #fff;
-  margin-right: 10px;
-  margin-bottom: 15px;
-}
-
-.footer a {
-  color: #fff;
-}
-
-.footer ul {
-  padding-left: 0px;
-}
-
-.footer li {
-  height: 25px;
+  /* Titre de chaque section */
+  .restaurant-menu__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 3px solid #99e2d0;
+    width: 3rem;
+    margin: 1rem 0;
+    padding-bottom: 0.5rem;
+  }
+  /* Styles globaux pour le corps du document */
+  .main-container h1 {
+    background-color: white;
+    width: 375px;
+    height: 63px;
+    box-sizing: border-box;
+  }
+  .main-container-buttons h2 {
+    font-size: 175%;
+    letter-spacing: -0.05rem;
+  }
+  /* Conteneur pour chaque carte de restaurant */
+  .card {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 251px;
+    border-radius: 15px;
+    margin-top: -17px;
+  }
+  /* Styles pour les images des cartes */
+  .card img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+    height: 11.75rem;
+    width: 100%;
+  }
+  /* Autres styles généraux pour le site */
+  .footer {
+    width: 375px;
+    height: 186px;
+    background-color: rgb(53, 53, 53);
+    text-align: left;
+    color: #fff;
+    /* Pied de page */
+  }
+  .footer .footer h3 {
+    color: white;
+    font-family: "Roboto", italic;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .footer .footer i {
+    color: #fff;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+  .footer .footer a {
+    color: #fff;
+  }
+  .footer .footer ul {
+    padding-left: 0px;
+  }
+  .footer .footer li {
+    height: 25px;
+  }
 }/*# sourceMappingURL=style.css.map */

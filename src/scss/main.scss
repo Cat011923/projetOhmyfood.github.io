@@ -1,23 +1,14 @@
 // Importation pour les fichiers
-@import "./variable"; // Importation de variable
 
-@import "./style"; // Importation du style
-
-@import "./mixins";// Importation des mixins
-
-@import "./buttons"; // Importation des styles de boutons
-
-@import "./loader"; // Importation du loader
-
-@import "./animations"; // Importation des animations
-
-@import "./restaurantsphotos"; // Importation des styles des photos des restaurants
-
-@import "./header"; // Importation des styles d'en-tête
-
-@import "./menu"; // Importation de styles de menu
-
-
+@import "./variable";             /* Variables globales */
+@import "./style";                /* Styles globaux */
+@import "./mixins";               /* Mixins */
+@import "./buttons";              /* Styles des boutons */
+@import "./loader";               /* Loader */
+@import "./animations";           /* Animations */
+@import "./restaurantsphotos";    /* Styles des photos des restaurants */
+@import "./header";               /* Header */
+@import "./menu";                 /* Menu */
 
 // Importation des polices de Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');

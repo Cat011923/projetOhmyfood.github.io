@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Variables globales */
 /* Import de chaque police de Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
 /* Media query pour les écrans de 1000px à 1400px */
@@ -6,9 +7,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
+  /* Media query pour les écrans de moins de 768px */
 }
-/* Media query pour les écrans de moins de 768px */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1000px) and (max-width: 1400px) and (max-width: 768px) {
   /* Section principale du menu */
   .restaurant-menu__subtitle {
     border-bottom: 3px solid #99e2d0;
@@ -35,11 +36,9 @@
     font-size: 19px;
     font-family: "Roboto", sans-serif;
   }
-  .menu-section h3,
-  .menu-section span strong {
-    color: #000000;
-    font-size: 19px;
-    font-family: "Roboto", sans-serif;
+  .localisation-emplacement i {
+    background-color: #f6f6f6;
+    text-align: center;
   }
   .card-menu-container {
     width: 100%;
@@ -76,7 +75,7 @@
     width: 4rem;
     border-radius: 0 1rem 1rem 0;
     position: relative;
-    opacity: 0; /* Caché par défaut */
+    opacity: 0;
     transition: opacity 300ms ease-in, transform 500ms ease-in-out;
   }
   .card-menu__check .fa-check {
@@ -105,91 +104,87 @@
     border-radius: 8px;
     margin-bottom: 1rem;
   }
+  /* Titre de chaque section */
+  .restaurant-menu__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 3px solid #99e2d0;
+    width: 3rem;
+    margin: 1rem 0;
+    padding-bottom: 0.5rem;
+  }
+  /* Styles globaux pour le corps du document */
+  .main-container h1 {
+    background-color: white;
+    width: 375px;
+    height: 63px;
+    box-sizing: border-box;
+  }
+  .restaurant-menu-title-container h2 {
+    font-size: 175%;
+    letter-spacing: -0.05rem;
+  }
+  /* Conteneur pour chaque carte de restaurant */
+  .card {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 251px;
+    border-radius: 15px;
+    margin-top: -17px;
+  }
+  /* Styles pour les images des cartes */
+  .card img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+    height: 11.75rem;
+    width: 100%;
+  }
+  /* Autres styles généraux pour le site */
+  .footer {
+    width: 375px;
+    height: 186px;
+    background-color: rgb(53, 53, 53);
+    text-align: left;
+    color: #fff;
+    /* Pied de page */
+  }
+  .footer .footer h3 {
+    color: white;
+    font-family: "Roboto", italic;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .footer .footer i {
+    color: #fff;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+  .footer .footer a {
+    color: #fff;
+  }
+  .footer .footer ul {
+    padding-left: 0px;
+  }
+  .footer .footer li {
+    height: 25px;
+  }
 }
-/* Titre de chaque section */
-.restaurant-menu__subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  color: #333;
-  font-weight: 300;
-  text-transform: uppercase;
-  border-bottom: 3px solid #99e2d0;
-  width: 3rem;
-  margin: 1rem 0;
-  padding-bottom: 0.5rem;
-}
-
-/* Styles globaux pour le corps du document */
-.main-container h1 {
-  background-color: white;
-  width: 375px;
-  height: 63px;
-  box-sizing: border-box;
-}
-
-/* Autres styles généraux pour le site */
-.footer {
-  width: 375px;
-  height: 186px;
-  background-color: rgb(53, 53, 53);
-  text-align: left;
-  color: #fff;
-}
-
-/* Conteneur pour chaque carte de restaurant */
-.card {
-  position: relative;
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  width: 340px;
-  height: 251px;
-  border-radius: 15px;
-  margin-top: -17px;
-}
-
-/* Styles pour les images des cartes */
-.card img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 1rem 1rem 0 0;
-  height: 11.75rem;
-  width: 100%;
-}
-
-/* Pied de page */
-.footer h3 {
-  color: white;
-  font-family: "Roboto", italic;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.footer i {
-  color: #fff;
-  margin-right: 10px;
-  margin-bottom: 15px;
-}
-
-.footer a {
-  color: #fff;
-}
-
-.footer ul {
-  padding-left: 0px;
-}
-
-.footer li {
-  height: 25px;
-}
-
+/* Styles globaux */
+/* Mixins */
 /* Import de chaque police de Google Fonts */
 /* Media query pour les écrans de 1000px à 1400px */
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
+  /* Media query pour les écrans de moins de 768px */
 }
-/* Media query pour les écrans de moins de 768px */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1000px) and (max-width: 1400px) and (max-width: 768px) {
   /* Section principale du menu */
   .restaurant-menu__subtitle {
     border-bottom: 3px solid #99e2d0;
@@ -216,11 +211,9 @@
     font-size: 19px;
     font-family: "Roboto", sans-serif;
   }
-  .menu-section h3,
-  .menu-section span strong {
-    color: #000000;
-    font-size: 19px;
-    font-family: "Roboto", sans-serif;
+  .localisation-emplacement i {
+    background-color: #f6f6f6;
+    text-align: center;
   }
   .card-menu-container {
     width: 100%;
@@ -257,7 +250,7 @@
     width: 4rem;
     border-radius: 0 1rem 1rem 0;
     position: relative;
-    opacity: 0; /* Caché par défaut */
+    opacity: 0;
     transition: opacity 300ms ease-in, transform 500ms ease-in-out;
   }
   .card-menu__check .fa-check {
@@ -286,84 +279,78 @@
     border-radius: 8px;
     margin-bottom: 1rem;
   }
+  /* Titre de chaque section */
+  .restaurant-menu__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 3px solid #99e2d0;
+    width: 3rem;
+    margin: 1rem 0;
+    padding-bottom: 0.5rem;
+  }
+  /* Styles globaux pour le corps du document */
+  .main-container h1 {
+    background-color: white;
+    width: 375px;
+    height: 63px;
+    box-sizing: border-box;
+  }
+  .restaurant-menu-title-container h2 {
+    font-size: 175%;
+    letter-spacing: -0.05rem;
+  }
+  /* Conteneur pour chaque carte de restaurant */
+  .card {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 251px;
+    border-radius: 15px;
+    margin-top: -17px;
+  }
+  /* Styles pour les images des cartes */
+  .card img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+    height: 11.75rem;
+    width: 100%;
+  }
+  /* Autres styles généraux pour le site */
+  .footer {
+    width: 375px;
+    height: 186px;
+    background-color: rgb(53, 53, 53);
+    text-align: left;
+    color: #fff;
+    /* Pied de page */
+  }
+  .footer .footer h3 {
+    color: white;
+    font-family: "Roboto", italic;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .footer .footer i {
+    color: #fff;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+  .footer .footer a {
+    color: #fff;
+  }
+  .footer .footer ul {
+    padding-left: 0px;
+  }
+  .footer .footer li {
+    height: 25px;
+  }
 }
-/* Titre de chaque section */
-.restaurant-menu__subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  color: #333;
-  font-weight: 300;
-  text-transform: uppercase;
-  border-bottom: 3px solid #99e2d0;
-  width: 3rem;
-  margin: 1rem 0;
-  padding-bottom: 0.5rem;
-}
-
-/* Styles globaux pour le corps du document */
-.main-container h1 {
-  background-color: white;
-  width: 375px;
-  height: 63px;
-  box-sizing: border-box;
-}
-
-/* Autres styles généraux pour le site */
-.footer {
-  width: 375px;
-  height: 186px;
-  background-color: rgb(53, 53, 53);
-  text-align: left;
-  color: #fff;
-}
-
-/* Conteneur pour chaque carte de restaurant */
-.card {
-  position: relative;
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  width: 340px;
-  height: 251px;
-  border-radius: 15px;
-  margin-top: -17px;
-}
-
-/* Styles pour les images des cartes */
-.card img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 1rem 1rem 0 0;
-  height: 11.75rem;
-  width: 100%;
-}
-
-/* Pied de page */
-.footer h3 {
-  color: white;
-  font-family: "Roboto", italic;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.footer i {
-  color: #fff;
-  margin-right: 10px;
-  margin-bottom: 15px;
-}
-
-.footer a {
-  color: #fff;
-}
-
-.footer ul {
-  padding-left: 0px;
-}
-
-.footer li {
-  height: 25px;
-}
-
 button {
   background-color: #9356DC;
   /* Appliquer la couleur principale*/
@@ -504,26 +491,28 @@ button .buttons-explorer {
   margin-top: 5px;
 }
 
+/* Styles des boutons */
 .loader-section {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #9356DC;
+  background-color: rgba(147, 86, 220, 0.3); /* Fond semi-transparent */
   display: flex;
   justify-content: center;
   align-items: center;
   animation: loaderFadeOut 1s ease-out forwards;
+  z-index: 9999; /* Pour s'assurer que le loader est au-dessus */
 }
 
 .loader-section .loader {
-  border: 8px solid #FF79DA;
-  border-top: 8px solid #9356DC;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
+  border: 16px solid rgba(255, 121, 218, 0.6); /* Bordure externe semi-transparente */
+  border-top: 16px solid #9356DC; /* Bordure supérieure */
+  border-radius: 50%; /* Cercle */
+  width: 350px; /* Taille augmentée */
+  height: 350px;
+  animation: spin 1s linear infinite; /* Animation de rotation */
 }
 
 @keyframes spin {
@@ -543,6 +532,7 @@ button .buttons-explorer {
     visibility: hidden;
   }
 }
+/* Loader */
 /* Animation de rotation du cercle du loader */
 @keyframes rotation {
   0% {
@@ -573,21 +563,99 @@ button .buttons-explorer {
     height: 0px;
   }
 }
+/* Animation d'apparition du menu (pour masquer le menu au début et l'afficher progressivement) */
+@keyframes card-hide {
+  0% {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  1% {
+    transform: translateX(3000px);
+  }
+  100% {
+    transform: translateX(3000px);
+  }
+}
+@keyframes card-anim {
+  0% {
+    transform: translateX(3000px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.5;
+  }
+  99% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+/* Animation d'apparition progressive des éléments du menu */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Animation des boutons du menu (Entrées, Plats, Desserts) */
+.menu-button {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Délai d'animation pour les plats */
+.menu-button:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.menu-button:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.menu-button:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Animation pour les boutons du menu au survol (hover effect) */
+.menu-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Animation pour le coeur au-dessus du titre */
+.heart-container {
+  display: inline-block;
+  animation: heart-beat 1s infinite alternate;
+}
+
 /* animations pour le coeur */
 @keyframes heart-beat {
   0% {
-    transform: scale(1); /* Taille originale */
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.2); /* Augmentation de la taille à 120% */
+    transform: scale(1.2);
   }
   100% {
-    transform: scale(1); /* Retour à la taille originale */
+    transform: scale(1);
   }
 }
 .heart-container {
   display: inline-block;
-  animation: heart-beat 1s 1 alternate;
+  animation: heart-beat 1s infinite alternate;
+}
+
+.heart:hover {
+  background: -webkit-linear-gradient(60deg, #ff79da, #9356dc);
 }
 
 .heart {
@@ -630,6 +698,26 @@ button .buttons-explorer {
   transition: transform 300ms ease-in-out;
 }
 
+.heart-animation .checkmark {
+  position: relative;
+  display: inline-block;
+  width: 2rem;
+}
+
+/* Effet de transition sur le bouton Commander */
+.order-button {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+.order-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Animations */
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
   .column {
@@ -643,6 +731,7 @@ button .buttons-explorer {
      object-fit: cover;
 }
 
+/* Styles des photos des restaurants */
 .header {
   size: 30px;
   font-size: 400;
@@ -650,6 +739,7 @@ button .buttons-explorer {
   text-align: center;
 }
 
+/* Header */
 .menu-item {
   position: relative;
   overflow: hidden;
@@ -657,9 +747,11 @@ button .buttons-explorer {
   animation: fadeIn 0.5s ease-out;
   animation-fill-mode: both;
 }
+
 .menu-item:hover {
   transform: translateY(-5px);
 }
+
 .menu-item .checkmark {
   position: absolute;
   top: 50%;
@@ -676,6 +768,7 @@ button .buttons-explorer {
   text-overflow: ellipsis;
 }
 
+/* Menu */
 body {
   font-family: "Roboto", sans-serif;
 }

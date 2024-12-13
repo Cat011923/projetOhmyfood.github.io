@@ -4,12 +4,13 @@
 /* Media query pour les écrans de 1000px à 1400px */
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
-}
+
+ 
 
 /* Media query pour les écrans de moins de 768px */
-@media screen and  (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
-   /* Section principale du menu */
+  /* Section principale du menu */
   .restaurant-menu__subtitle {
     border-bottom: 3px solid #99e2d0;
     font-weight: 300;
@@ -37,17 +38,15 @@
     font-size: 19px;
     font-family: "Roboto", sans-serif;
   }
-
-  .menu-section h3,
-  .menu-section span strong {
-    color: #000000;
-    font-size: 19px;
-    font-family: "Roboto", sans-serif;
-  }
-
+ .localisation-emplacement i {
+  background-color: #f6f6f6;
+  text-align: center; 
+ 
+ }
+  
   .card-menu-container {
     width: 100%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; 
   }
 
   /* Conteneur pour chaque plat */
@@ -84,7 +83,7 @@
     width: 4rem;
     border-radius: 0 1rem 1rem 0;
     position: relative;
-    opacity: 0; /* Caché par défaut */
+    opacity: 0;
     transition: opacity 300ms ease-in, transform 500ms ease-in-out;
   }
 
@@ -115,9 +114,6 @@
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
-    
-  }
-  
   }
 
   /* Titre de chaque section */
@@ -140,15 +136,10 @@
     height: 63px;
     box-sizing: border-box;
   }
-
-  /* Autres styles généraux pour le site */
-  .footer {
-    width: 375px;
-    height: 186px;
-    background-color: rgba(53, 53, 53, 1);
-    text-align: left;
-    color: #fff;
-  }
+  .main-container-buttons h2 {
+    font-size: 175%;
+    letter-spacing: -0.05rem;
+}
 
   /* Conteneur pour chaque carte de restaurant */
   .card {
@@ -169,7 +160,13 @@
     height: 11.75rem;
     width: 100%;
   }
-
+ /* Autres styles généraux pour le site */
+ .footer {
+  width: 375px;
+  height: 186px;
+  background-color: rgba(53, 53, 53, 1);
+  text-align: left;
+  color: #fff;
   /* Pied de page */
   .footer h3 {
     color: white;
@@ -195,5 +192,7 @@
   .footer li {
     height: 25px;
   }
-
+}
+}
+}
 

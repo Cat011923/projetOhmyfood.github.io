@@ -29,21 +29,99 @@
     height: 0px;
   }
 }
+/* Animation d'apparition du menu (pour masquer le menu au début et l'afficher progressivement) */
+@keyframes card-hide {
+  0% {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  1% {
+    transform: translateX(3000px);
+  }
+  100% {
+    transform: translateX(3000px);
+  }
+}
+@keyframes card-anim {
+  0% {
+    transform: translateX(3000px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.5;
+  }
+  99% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+/* Animation d'apparition progressive des éléments du menu */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Animation des boutons du menu (Entrées, Plats, Desserts) */
+.menu-button {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Délai d'animation pour les plats */
+.menu-button:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.menu-button:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.menu-button:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Animation pour les boutons du menu au survol (hover effect) */
+.menu-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Animation pour le coeur au-dessus du titre */
+.heart-container {
+  display: inline-block;
+  animation: heart-beat 1s infinite alternate;
+}
+
 /* animations pour le coeur */
 @keyframes heart-beat {
   0% {
-    transform: scale(1); /* Taille originale */
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.2); /* Augmentation de la taille à 120% */
+    transform: scale(1.2);
   }
   100% {
-    transform: scale(1); /* Retour à la taille originale */
+    transform: scale(1);
   }
 }
 .heart-container {
   display: inline-block;
-  animation: heart-beat 1s 1 alternate;
+  animation: heart-beat 1s infinite alternate;
+}
+
+.heart:hover {
+  background: -webkit-linear-gradient(60deg, #ff79da, #9356dc);
 }
 
 .heart {
@@ -84,4 +162,23 @@
   color: transparent;
   transform: scale(0);
   transition: transform 300ms ease-in-out;
+}
+
+.heart-animation .checkmark {
+  position: relative;
+  display: inline-block;
+  width: 2rem;
+}
+
+/* Effet de transition sur le bouton Commander */
+.order-button {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+.order-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }/*# sourceMappingURL=animations.css.map */
