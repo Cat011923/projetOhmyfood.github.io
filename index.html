@@ -4,27 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
-   
-   <!-- Lien vers les fichiers de style CSS dans un ordre optimisé -->
-   <link rel="stylesheet" href="src/css/main.css">
-
-<link rel="stylesheet" href="src/css/variable.css"> <!-- Variables globales -->
-<link rel="stylesheet" href="src/css/mixins.css">   <!-- Mixins -->
-<link rel="stylesheet" href="src/css/style.css">    <!-- Styles globaux -->
-<link rel="stylesheet" href="src/css/header.css">   <!-- Composants : Header -->
-<link rel="stylesheet" href="src/css/buttons.css">  <!-- Composants : Boutons -->
-<link rel="stylesheet" href="src/css/loader.css">   <!-- Composants : Loader -->
-<link rel="stylesheet" href="src/css/restaurantsphotos.css"> <!-- Styles spécifiques -->
-<link rel="stylesheet" href="src/css/menu.css">     <!-- Composants : Menu -->
-<link rel="stylesheet" href="src/css/animations.css"> <!-- Animations -->
-
-    <!-- Lien vers les icônes Font awesome et feuille de style -->
+    
+    <!-- Lien vers les fichiers de style CSS dans un ordre optimisé -->
+    <link rel="stylesheet" href="src/scss/main.css">
+    
+    <!-- Lien vers les icônes Font Awesome et feuille de style -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-
     
     <!-- Lien vers les polices Shrikhand et Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:weight@400;700&family=Shrikhand&display=swap" rel="stylesheet">
-  
+    
     <!-- Icône du site et Manifest (fichier d'application web) -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
@@ -63,7 +52,7 @@
             <div class="main-container">
                 <h2>Fonctionnement</h2>
             </div>
-            
+
             <!-- Ajout des trois boutons -->
             <div class="container-buttons">
                 <div class="buttons-restaurant">
@@ -90,27 +79,22 @@
             </div>
 
             <!-- Section affichant la liste des restaurants avec les cartes -->
-
             <section class="restaurants">
-                
                 <!-- carte restaurant La palette du gout -->
                 <article class="card">
                     <span class="card-nouveau">Nouveau</span>
                     <a href="restaurants/Lapalettedugout.html">
                         <img src="/assets-images/logo/restaurantsphotos/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat 'Le délice des sens'">
                     </a>
-            
                     <h3>La palette du goût</h3>
                     <p>Ménilmontant</p>
-            
                     <!-- Animation du cœur -->
-                         <div class="heart-container">
-            <i class="far fa-heart heart heart--card"></i>
-           <i class="fas fa-heart heart-full"></i>
-        </div>
+                    <div class="heart-container">
+                        <i class="far fa-heart heart heart--card"></i>
+                        <i class="fas fa-heart heart-full"></i>
+                    </div>
                 </article>
-            </section>
-            
+
                 <!-- carte restaurant La note enchantée -->
                 <article class="card">
                     <span class="card-nouveau">Nouveau</span>
@@ -119,9 +103,7 @@
                     </a>
                     <h3>La note enchantée</h3>
                     <p>Charonne</p>
-
-                      <!-- Animation du cœur -->
-                      <div class="heart-container">
+                    <div class="heart-container">
                         <i class="far fa-heart heart heart--card"></i>
                         <i class="fas fa-heart heart--menu"></i>
                     </div>
@@ -134,7 +116,6 @@
                     </a>
                     <h3>À la française</h3>
                     <p>Cité Rouge</p>
-                    <!-- Animation du cœur -->
                     <div class="heart-container">
                         <i class="far fa-heart heart heart--menu"></i>
                         <i class="fas fa-heart heart-full"></i>
@@ -148,18 +129,16 @@
                     </a>
                     <h3>Le délice des sens</h3>
                     <p>Folie-Méricourt</p>
-
-             	<!-- Coeurs pour l'animation -->
-							<div class="menu-item heart-animation">
-								<span class="checkmark">
-								  <i class="far fa-heart heart"></i>
-								  <i class="fas fa-heart heart-full"></i>
-								</span>
-							  </div>
-
+                    <div class="menu-item heart-animation">
+                        <span class="checkmark">
+                            <i class="far fa-heart heart"></i>
+                            <i class="fas fa-heart heart-full"></i>
+                        </span>
+                    </div>
                 </article>
             </section>
-           </main>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer-container">
@@ -173,6 +152,8 @@
             </ul>
         </div>
     </footer>
-
 </body>
 </html>
+
+
+

@@ -10,16 +10,3 @@
 @import "./header";               /* Header */
 @import "./menu";                 /* Menu */
 
-// Importation des polices de Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
-
-// Utilisation des polices dans le CSS
-body {
-    font-family: 'Roboto', sans-serif; // Applique Roboto comme police principale
-}
-
-h1, h2, h3 {
-    font-family: 'Shrikhand', cursive; // Applique Shrikhand pour les titres
-}
-
-

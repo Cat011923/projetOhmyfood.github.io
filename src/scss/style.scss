@@ -4,142 +4,50 @@
 /* Media query pour les écrans de 1000px à 1400px */
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
+}
 
- 
+body {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #fff;
+}
+
+img {
+  width: 100%;
+  height: auto
+}
 
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
-
-  /* Section principale du menu */
-  .restaurant-menu__subtitle {
-    border-bottom: 3px solid #99e2d0;
-    font-weight: 300;
-    text-transform: uppercase;
-    width: 3rem;
-    margin: 1rem 0;
-    padding-bottom: 0.5rem;
-  }
-
-  .title-main-container {
-    display: flex;      
-    align-items: center; 
-    justify-content: space-between; 
-    position: relative;  
-  }
-
-  .menu-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 90%;
-    margin-bottom: 2rem;
-    color: #000000;
-    font-size: 19px;
-    font-family: "Roboto", sans-serif;
-  }
- .localisation-emplacement i {
-  background-color: #f6f6f6;
-  text-align: center; 
- 
- }
-  
-  .card-menu-container {
-    width: 100%;
-    margin-bottom: 1.5rem; 
-  }
-
-  /* Conteneur pour chaque plat */
-  .menu-buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem; /* Espace entre les boutons */
-  }
-
-  /* Conteneur de chaque bouton */
-  .menu-button {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Le check et son conteneur */
-  .card-menu__dish-price-check-container {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    right: -4rem;
-    height: 100%;
-    transform: translateY(-50%);
-    transition: transform 500ms ease-in-out;
-  }
-
-  .card-menu__check {
-    background-color: #99e2d0;
-    width: 4rem;
-    border-radius: 0 1rem 1rem 0;
-    position: relative;
-    opacity: 0;
-    transition: opacity 300ms ease-in, transform 500ms ease-in-out;
-  }
-
-  .card-menu__check .fa-check {
-    background-color: #fff;
-    border-radius: 50%;
-    color: #99e2d0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 0.25rem;
-    transform: translate(-50%, -50%);
-  }
-
-  /* Quand l'élément est coché, déplacer et afficher le check */
-  .menu-button-checkbox:checked + .card-menu__dish-price-check-container {
-    transform: translateX(100%); /* Déplace le check à droite */
-  }
-
-  .menu-button-checkbox:checked + .card-menu__dish-price-check-container .card-menu__check {
-    opacity: 1; /* Fait apparaître l'icône de check */
-  }
-
-  /* Style pour l'image */
-  .restaurantsphotos img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-
-  /* Titre de chaque section */
-  .restaurant-menu__subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: #333;
-    font-weight: 300;
-    text-transform: uppercase;
-    border-bottom: 3px solid #99e2d0;
-    width: 3rem;
-    margin: 1rem 0;
-    padding-bottom: 0.5rem;
-  }
-
-  /* Styles globaux pour le corps du document */
-  .main-container h1 {
-    background-color: white;
-    width: 375px;
-    height: 63px;
-    box-sizing: border-box;
+  h1 {
+    font-family: "Shrikhand", serif;
   }
   .main-container-buttons h2 {
-    font-size: 175%;
-    letter-spacing: -0.05rem;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+    width: 275px;
+    height: 68px;
+    top: 152px; 
+    right: -35px; 
+    gap: 0px;
+    opacity: 0px;
+    margin-top: 20px; 
+    text-align: center;
 }
+
+   .localisation-emplacement  {
+    background-color: #eaeaea;
+    padding: 1rem 0;
+    width: 375px;
+    height: 50px;
+    top: 62.5px;
+    left: -0.5px;
+    gap: 17px;
+    opacity: 0px;
+    }
 
   /* Conteneur pour chaque carte de restaurant */
   .card {
@@ -160,13 +68,16 @@
     height: 11.75rem;
     width: 100%;
   }
- /* Autres styles généraux pour le site */
- .footer {
-  width: 375px;
-  height: 186px;
-  background-color: rgba(53, 53, 53, 1);
-  text-align: left;
-  color: #fff;
+
+  /* Autres styles généraux pour le site */
+  .footer {
+    width: 375px;
+    height: 186px;
+    background-color: rgba(53, 53, 53, 1);
+    text-align: left;
+    color: #fff;
+  }
+
   /* Pied de page */
   .footer h3 {
     color: white;
@@ -193,6 +104,7 @@
     height: 25px;
   }
 }
-}
-}
+
+
+
 
