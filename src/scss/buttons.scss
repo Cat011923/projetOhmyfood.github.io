@@ -1,170 +1,194 @@
 // buttons.scss
-@import "variable"; //Importer les variables
-@import "mixins"; //Importer les mixins
-@import "style"; //Importer le style
+@import "variable"; // Importer les variables
+@import "mixins"; // Importer les mixins
+@import "style"; // Importer le style
 
 button {
-	@include primary-color; /* Appliquer la couleur principale*/
-	@include text-color; /* Appliquer la couleur du texte*/
-	border: none;
-	padding: 10px 20px;
-	border-radius: 20px;
-	font-size: 16px;
-	cursor: pointer;
-	transition: background-color 0.3s, box-shadow 0.3s;
+  @include primary-color; /* Applique la couleur principale */
+  @include text-color; /* Applique la couleur du texte */
 
-	&:hover {
-		@include button-hover-color(); // Utiliser la mixin button-hover-color
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	}
-  // Styles pour le bouton de Explorer
- 
-  .buttons-explorer {
-   
-    background: -webkit-linear-gradient(280deg, #ff79da, #9356dc);
-    background: -o-linear-gradient(280deg, #ff79da, #9356dc);
-    background: linear-gradient(170deg, #ff79da, #9356dc);
-    border: none;
-    outline: none;
-    font-size: 100%;
-    -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa;
-    box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa;
-    padding: 1rem 2rem;
-    border-radius: 1.5rem;
-    cursor: pointer;
-    -webkit-transition: opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
-    transition: opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
-    -o-transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
-    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
-    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out, -webkit-transform 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out
-}
-  
-   }
-     
-   .buttons-explorer:hover {
-    background-color: #8251b1;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
-    opacity: 0.8;
-    -webkit-transform: translateY(-0.1rem);
-    -ms-transform: translateY(-0.1rem);
-    transform: translateY(-0.1rem);
-    -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0 #5e5e5e;
-    box-shadow: 0.1rem 0.1rem 0.5rem 0 #5e5e5e
-   }
- 
- .buttons span {
-   display: flex;
-   flex-direction: row;
-   text-align: left;
-   font-size: 24px;
-   color: #000000;
- }
- 
- .buttons i {
-   display: flex;
-   flex-direction: row;
-   font-size: 32px;
-   color: #000000;
-   margin: 10px 0;
- }
- 
- .buttons p {
-   color: #000000;
-   display: flex;
-   flex-direction: row;
-   text-align: center;
-   font-size: 16px;
-   margin: 0;
- }
- 
- //Style pour chaque bouton à l'intérieur de container-buttons 
- .container-buttons .buttons-restaurant,
- .container-buttons .buttons-degustez,
- .container-buttons .buttons-menu {
-   
-     border-radius: 20px;
-     display: inline-flex;
-     justify-content: center;
-     flex-direction: row;
-     align-items: center;
-     font-size: 16px;
-     color: #000000;
-     border: 2px solid #e8e8e8;
-     margin-top: 10px;
-     margin-bottom: 10px;
-     background:#F5F5F5 ;
-     position: relative; //Pour positionner correctement l'élément ::after 
- }
- 
-  // Changement de couleur du texte au survol 
-   .container-buttons .buttons-restaurant:hover,
-   .container-buttons .buttons-degustez:hover,
-   .container-buttons .buttons-menu:hover {
-   color: #9356dc;
- }
- 
-  //Animation au survol 
-  .container-buttons .buttons-restaurant::after,
-  .container-buttons .buttons-degustez::after,
-  .container-buttons .buttons-menu::after {
-   content: "";
-   position: absolute;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   border-radius: 1rem;
-   background-color: rgba(147, 86, 220, 0.2);
-   opacity: 0;
-   transition: opacity 300ms ease-in-out;
- }
- 
- // Applique l'animation au survol 
- .container-buttons .buttons-restaurant:hover::after,
- .container-buttons .buttons-degustez:hover::after,
- .container-buttons .buttons-menu:hover::after {
-   opacity: 1;
- }
- 
- // Style des boutons 
- .menu-buttons {
-   display: flex;
-   justify-content: center;
-   gap: 15px; 
-   flex-wrap: wrap;
- }
- 
- //Style général des boutons 
- .buttons {
-   display: inline-block; 
-   padding: 10px 20px; 
-   color: #fff; 
-   text-decoration: none; 
-   border-radius: 25px; 
-   margin-top: 10px; 
-   transition: background-color 0.3s; //Transition pour changement de couleur 
-   font-size: 1rem; 
- // Couleur de fond pour les boutons de fonctionnement 
+  &:hover { // Utilisation de & pour cibler le bouton au survol
+    @include button-hover-color(); // Utiliser la mixin button-hover-color
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
- 
- .buttons-fonctionnement {
-   background-color:white; 
- }
- 
- // Styles pour les titres et le prix 
- .button-menu strong {
-   font-size: 1.2rem; 
-   color: black; 
- }
- 
- .button-menu price {
-   color: black; 
-   font-weight: bold; 
-   font-size: 1rem;
-     margin-top: 5px; 
- }
+}
 
- 
- 
+// Styles pour le conteneur principal des boutons
+.main-container-buttons {
+  display: flex;
+  justify-content: center; 
+  margin-top: 20px;
+}
+
+// Bouton Explorer
+.button-buttons-explorer {
+  width: 218px;
+  height: 50px;
+  opacity: 0; // Vous pourriez vouloir définir opacity dans un autre état
+}
+
+/* Bouton centré avec les styles */
+.buttons-explorer {
+  color: #fff; /* Texte en blanc */
+  background: linear-gradient(170deg, #ff79da, #9356dc); /* Dégradé de couleur */
+  border: none;
+  outline: none;
+  font-size: 100%;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa; /* Ombre du bouton */
+  padding: 1rem 2rem;
+  border-radius: 1.5rem; /* Bords arrondis */
+  cursor: pointer;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out; /* Transition fluide */
+  
+  &:hover {
+    opacity: 0.8; /* Diminution de l'opacité */
+    transform: translateY(-0.1rem); /* Légère élévation au survol */
+    box-shadow: 0.1rem 0.1rem 0.5rem 0 #5e5e5e; /* Ombre plus foncée */
+  }
+
+  &:active {
+    transform: translateY(0rem); /* Retour à la position initiale */
+    opacity: 1; /* Opacité normale lors du clic */
+  }
+}
+
+// Styles pour les textes des boutons
+.buttons span {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  font-size: 24px;
+  color: #000;
+}
+
+.buttons i {
+  display: flex;
+  flex-direction: row;
+  font-size: 32px;
+  color: #000; 
+  margin: 10px 0;
+}
+
+.buttons p {
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+}
+
+// Style pour chaque bouton à l'intérieur de container-buttons
+.container-buttons .buttons-restaurant,
+.container-buttons .buttons-degustez,
+.container-buttons .buttons-menu {
+  border-radius: 20px;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  color: #000;
+  border: 2px solid #e8e8e8;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #F5F5F5;
+  position: relative; // Pour positionner correctement l'élément ::after 
+}
+
+// Changement de couleur du texte au survol 
+.container-buttons .buttons-restaurant:hover,
+.container-buttons .buttons-degustez:hover,
+.container-buttons .buttons-menu:hover {
+  color: #9356dc;
+}
+
+// Animation au survol 
+.container-buttons .buttons-restaurant::after,
+.container-buttons .buttons-degustez::after,
+.container-buttons .buttons-menu::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 1rem;
+  background-color: rgba(147, 86, 220, 0.2);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+/* Applique l'animation au survol */
+.container-buttons .buttons-restaurant:hover::after,
+.container-buttons .buttons-degustez:hover::after,
+.container-buttons .buttons-menu:hover::after {
+  opacity: 1;
+}
+
+// Style des boutons 
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+  flex-wrap: wrap;
+}
+
+// Style général des boutons 
+.buttons {
+  display: inline-block; 
+  padding: 10px 20px; 
+  color: #fff; 
+  text-decoration: none; 
+  border-radius: 25px; 
+  margin-top: 10px; 
+  transition: background-color 0.3s; // Transition pour changement de couleur 
+  font-size: 1rem; 
+}
+
+// Couleur de fond pour les boutons de fonctionnement 
+.buttons-fonctionnement {
+  background-color: white; 
+}
+
+// Styles pour les titres et le prix 
+.button-menu strong {
+  font-size: 1.2rem; 
+  color: black; 
+}
+
+// Fix pour la balise <price>, qui devrait être <span> ou une autre balise valide
+.button-menu price {
+  color: black; 
+  font-weight: bold; 
+  font-size: 1rem;
+  margin-top: 5px; 
+}
+
+// Positionnement relatif pour les boutons
+.buttons-restaurant,
+.buttons-menu,
+.buttons-degustez {
+  position: absolute; 
+}
+
+// Ciblage des cercles dans chaque bouton 
+.buttons-restaurant span, 
+.buttons-menu span, 
+.buttons-degustez span {
+  background-color: #9356dc;  /* Couleur de fond du cercle */
+  border-radius: 50%;          /* Forme circulaire */
+  color: #fff;                 /* Couleur du texte */
+  font-size: 85%;              /* Taille du texte */
+  padding: 0.375rem 0.625rem;  /* Espacement intérieur du cercle */
+  position: absolute;          /* Positionnement absolu du cercle */
+  left: 50%;                   /* Centrer horizontalement par rapport au bouton parent */
+  bottom: 50%;                 /* Positionner le cercle au bas du bouton */
+  transform: translate(-50%, 50%);  /* Ajustement pour centrer le cercle en X et Y */
+  z-index: 1;                  /* Placer le cercle au-dessus des autres éléments */
+}
+
+
+
 
 

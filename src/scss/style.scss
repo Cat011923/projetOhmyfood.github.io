@@ -5,11 +5,12 @@
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
 }
-
+html {
+  width: 100%;
+}
 body {
   box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
+    margin: 0;
   background-color: #fff;
 }
 
@@ -21,7 +22,41 @@ img {
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
   h1 {
+   font-family: "Shrikhand", serif;
+   width: 197px;
+   height: 36px;
+   top: 14px;
+   left: 89px;
+   padding: 0px 19px 0px 16px;
+   
+   opacity: 0px;
+   display: flex;
+   justify-content: center;
+    }
+    h2 { 
+    width: 275px;
+    height: 31px;
+    top: 448px;
+    left: 20px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight:weight 700;
+    line-height: 28.13px;
+    text-align: left;
+}
+
+  .main-container h1 {
+    width: 375px;
+    height: 63px;
+    padding: 14px 89px 13px 89px;
+    gap: 10px;
     font-family: "Shrikhand", serif;
+  }
+  .main-container-buttons {
+    background-color: #f6f6f6;
+   
   }
   .main-container-buttons h2 {
     font-family: Roboto;
@@ -30,25 +65,60 @@ img {
     line-height: 28.13px;
     width: 275px;
     height: 68px;
-    top: 152px; 
-    right: -35px; 
-    gap: 0px;
-    opacity: 0px;
-    margin-top: 20px; 
-    text-align: center;
+    margin: 20px auto; /* Centre horizontalement avec auto */
+    text-align: center; /* Centre le texte à l'intérieur */
+    display: flex; /* Utilisation de flexbox pour un meilleur contrôle */
+    align-items: center; /* Centre verticalement le texte */
+    justify-content: center; /* Centre horizontalement le texte */
+    opacity: 1; /* Assure que l'élément est visible */
+   
+}
+.container-buttons {
+  display: flex;
+  flex-direction: column;
+ }
+.main-container-buttons p {
+  width: 315px;
+  height: 46px;
+  margin: 20px auto; /* Centrer horizontalement avec auto */
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21.09px;
+  text-align: center; /* Centre le texte à l'intérieur du paragraphe */
+  opacity: 1; /* Assure que l'élément est visible */
 }
 
-   .localisation-emplacement  {
-    background-color: #eaeaea;
-    padding: 1rem 0;
-    width: 375px;
-    height: 50px;
-    top: 62.5px;
-    left: -0.5px;
-    gap: 17px;
-    opacity: 0px;
-    }
 
+.localisation-emplacement {
+  background-color: #eaeaea; 
+  padding: 1rem; 
+  width: 100%; 
+  box-sizing: border-box;
+  display: flex;
+  align-items: center; /* Centre verticalement les éléments */
+  justify-content: center; /* Centre horizontalement les éléments */
+}
+
+.localisation-emplacement strong {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  opacity: 1;
+  margin: 0 0.5rem; /* Espace entre l'icône et le texte */
+}
+
+.localisation-emplacement i {
+  display: inline-block; 
+  width: 12px;
+  height: 16px;
+  background-size: contain; /* Assure que l'image s'adapte au conteneur */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Centre l'image dans l'élément */
+  margin-right: 0.5rem; /* Espace entre l'icône et le texte */
+}
+ 
   /* Conteneur pour chaque carte de restaurant */
   .card {
     position: relative;
@@ -104,7 +174,4 @@ img {
     height: 25px;
   }
 }
-
-
-
 

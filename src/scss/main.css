@@ -7,8 +7,11 @@
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
 }
+html {
+  width: 100%;
+}
+
 body {
-  box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   background-color: #fff;
@@ -23,6 +26,37 @@ img {
 @media screen and (max-width: 768px) {
   h1 {
     font-family: "Shrikhand", serif;
+    width: 197px;
+    height: 36px;
+    top: 14px;
+    left: 89px;
+    padding: 0px 19px 0px 16px;
+    opacity: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  h2 {
+    width: 275px;
+    height: 31px;
+    top: 448px;
+    left: 20px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: weight 700;
+    line-height: 28.13px;
+    text-align: left;
+  }
+  .main-container h1 {
+    width: 375px;
+    height: 63px;
+    padding: 14px 89px 13px 89px;
+    gap: 10px;
+    font-family: "Shrikhand", serif;
+  }
+  .main-container-buttons {
+    background-color: #f6f6f6;
   }
   .main-container-buttons h2 {
     font-family: Roboto;
@@ -31,22 +65,53 @@ img {
     line-height: 28.13px;
     width: 275px;
     height: 68px;
-    top: 152px;
-    right: -35px;
-    gap: 0px;
-    opacity: 0px;
-    margin-top: 20px;
-    text-align: center;
+    margin: 20px auto; /* Centre horizontalement avec auto */
+    text-align: center; /* Centre le texte à l'intérieur */
+    display: flex; /* Utilisation de flexbox pour un meilleur contrôle */
+    align-items: center; /* Centre verticalement le texte */
+    justify-content: center; /* Centre horizontalement le texte */
+    opacity: 1; /* Assure que l'élément est visible */
+  }
+  .container-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-container-buttons p {
+    width: 315px;
+    height: 46px;
+    margin: 20px auto; /* Centrer horizontalement avec auto */
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.09px;
+    text-align: center; /* Centre le texte à l'intérieur du paragraphe */
+    opacity: 1; /* Assure que l'élément est visible */
   }
   .localisation-emplacement {
     background-color: #eaeaea;
-    padding: 1rem 0;
-    width: 375px;
-    height: 50px;
-    top: 62.5px;
-    left: -0.5px;
-    gap: 17px;
-    opacity: 0px;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center; /* Centre verticalement les éléments */
+    justify-content: center; /* Centre horizontalement les éléments */
+  }
+  .localisation-emplacement strong {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    opacity: 1;
+    margin: 0 0.5rem; /* Espace entre l'icône et le texte */
+  }
+  .localisation-emplacement i {
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+    background-size: contain; /* Assure que l'image s'adapte au conteneur */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center; /* Centre l'image dans l'élément */
+    margin-right: 0.5rem; /* Espace entre l'icône et le texte */
   }
   /* Conteneur pour chaque carte de restaurant */
   .card {
@@ -104,8 +169,11 @@ img {
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
 }
+html {
+  width: 100%;
+}
+
 body {
-  box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   background-color: #fff;
@@ -120,6 +188,37 @@ img {
 @media screen and (max-width: 768px) {
   h1 {
     font-family: "Shrikhand", serif;
+    width: 197px;
+    height: 36px;
+    top: 14px;
+    left: 89px;
+    padding: 0px 19px 0px 16px;
+    opacity: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  h2 {
+    width: 275px;
+    height: 31px;
+    top: 448px;
+    left: 20px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: weight 700;
+    line-height: 28.13px;
+    text-align: left;
+  }
+  .main-container h1 {
+    width: 375px;
+    height: 63px;
+    padding: 14px 89px 13px 89px;
+    gap: 10px;
+    font-family: "Shrikhand", serif;
+  }
+  .main-container-buttons {
+    background-color: #f6f6f6;
   }
   .main-container-buttons h2 {
     font-family: Roboto;
@@ -128,22 +227,53 @@ img {
     line-height: 28.13px;
     width: 275px;
     height: 68px;
-    top: 152px;
-    right: -35px;
-    gap: 0px;
-    opacity: 0px;
-    margin-top: 20px;
-    text-align: center;
+    margin: 20px auto; /* Centre horizontalement avec auto */
+    text-align: center; /* Centre le texte à l'intérieur */
+    display: flex; /* Utilisation de flexbox pour un meilleur contrôle */
+    align-items: center; /* Centre verticalement le texte */
+    justify-content: center; /* Centre horizontalement le texte */
+    opacity: 1; /* Assure que l'élément est visible */
+  }
+  .container-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-container-buttons p {
+    width: 315px;
+    height: 46px;
+    margin: 20px auto; /* Centrer horizontalement avec auto */
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.09px;
+    text-align: center; /* Centre le texte à l'intérieur du paragraphe */
+    opacity: 1; /* Assure que l'élément est visible */
   }
   .localisation-emplacement {
     background-color: #eaeaea;
-    padding: 1rem 0;
-    width: 375px;
-    height: 50px;
-    top: 62.5px;
-    left: -0.5px;
-    gap: 17px;
-    opacity: 0px;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center; /* Centre verticalement les éléments */
+    justify-content: center; /* Centre horizontalement les éléments */
+  }
+  .localisation-emplacement strong {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    opacity: 1;
+    margin: 0 0.5rem; /* Espace entre l'icône et le texte */
+  }
+  .localisation-emplacement i {
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+    background-size: contain; /* Assure que l'image s'adapte au conteneur */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center; /* Centre l'image dans l'élément */
+    margin-right: 0.5rem; /* Espace entre l'icône et le texte */
   }
   /* Conteneur pour chaque carte de restaurant */
   .card {
@@ -196,39 +326,49 @@ img {
 }
 button {
   background-color: #9356DC;
-  /* Appliquer la couleur principale*/
+  /* Applique la couleur principale */
   color: #FFFFFF;
-  /* Appliquer la couleur du texte*/
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  /* Applique la couleur du texte */
 }
 button:hover {
   background-color: #ae80e5;
   color: #FFFFFF;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-button .buttons-explorer {
-  background: linear-gradient(170deg, #ff79da, #9356dc);
+
+.main-container-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-buttons-explorer {
+  width: 218px;
+  height: 50px;
+  opacity: 0;
+}
+
+/* Bouton centré avec les styles */
+.buttons-explorer {
+  color: #fff; /* Texte en blanc */
+  background: linear-gradient(170deg, #ff79da, #9356dc); /* Dégradé de couleur */
   border: none;
   outline: none;
   font-size: 100%;
-  box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa; /* Ombre du bouton */
   padding: 1rem 2rem;
-  border-radius: 1.5rem;
+  border-radius: 1.5rem; /* Bords arrondis */
   cursor: pointer;
-  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out; /* Transition fluide */
 }
-
 .buttons-explorer:hover {
-  background-color: #8251b1;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
-  opacity: 0.8;
-  transform: translateY(-0.1rem);
-  box-shadow: 0.1rem 0.1rem 0.5rem 0 #5e5e5e;
+  opacity: 0.8; /* Diminution de l'opacité */
+  transform: translateY(-0.1rem); /* Légère élévation au survol */
+  box-shadow: 0.1rem 0.1rem 0.5rem 0 #5e5e5e; /* Ombre plus foncée */
+}
+.buttons-explorer:active {
+  transform: translateY(0rem); /* Retour à la position initiale */
+  opacity: 1; /* Opacité normale lors du clic */
 }
 
 .buttons span {
@@ -236,19 +376,19 @@ button .buttons-explorer {
   flex-direction: row;
   text-align: left;
   font-size: 24px;
-  color: #000000;
+  color: #000;
 }
 
 .buttons i {
   display: flex;
   flex-direction: row;
   font-size: 32px;
-  color: #000000;
+  color: #000;
   margin: 10px 0;
 }
 
 .buttons p {
-  color: #000000;
+  color: #000;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -265,7 +405,7 @@ button .buttons-explorer {
   flex-direction: row;
   align-items: center;
   font-size: 16px;
-  color: #000000;
+  color: #000;
   border: 2px solid #e8e8e8;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -294,6 +434,7 @@ button .buttons-explorer {
   transition: opacity 300ms ease-in-out;
 }
 
+/* Applique l'animation au survol */
 .container-buttons .buttons-restaurant:hover::after,
 .container-buttons .buttons-degustez:hover::after,
 .container-buttons .buttons-menu:hover::after {
@@ -332,6 +473,27 @@ button .buttons-explorer {
   font-weight: bold;
   font-size: 1rem;
   margin-top: 5px;
+}
+
+.buttons-restaurant,
+.buttons-menu,
+.buttons-degustez {
+  position: absolute;
+}
+
+.buttons-restaurant span,
+.buttons-menu span,
+.buttons-degustez span {
+  background-color: #9356dc; /* Couleur de fond du cercle */
+  border-radius: 50%; /* Forme circulaire */
+  color: #fff; /* Couleur du texte */
+  font-size: 85%; /* Taille du texte */
+  padding: 0.375rem 0.625rem; /* Espacement intérieur du cercle */
+  position: absolute; /* Positionnement absolu du cercle */
+  left: 50%; /* Centrer horizontalement par rapport au bouton parent */
+  bottom: 50%; /* Positionner le cercle au bas du bouton */
+  transform: translate(-50%, 50%); /* Ajustement pour centrer le cercle en X et Y */
+  z-index: 1; /* Placer le cercle au-dessus des autres éléments */
 }
 
 /* Styles des boutons */
