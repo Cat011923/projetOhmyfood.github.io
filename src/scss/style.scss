@@ -1,62 +1,115 @@
 /* Import de chaque police de Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
 
-/* Media query pour les écrans de 1000px à 1400px */
-@media screen and (min-width: 1000px) and (max-width: 1400px) {
-  /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
-}
+/* Styles de base */
 html {
-  width: 100%;
+  font-family: "Roboto", serif;
+  font-size: 48px; /* Corrigez l'espace ici */
 }
+
 body {
   box-sizing: border-box;
-    margin: 0;
+  margin: 0;
   background-color: #fff;
 }
 
 img {
   width: 100%;
-  height: auto
+  height: auto;
+}
+
+/* Contenu principal et cartes */
+.card {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  height: 251px;
+  border-radius: 15px;
+  margin-top: -17px;
+}
+.card img {
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  height: 11.75rem;
+  width: 100%;
+}
+
+.card-nouveau {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #99e2d0;
+  color: #278870;
+  font-weight: bold;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.125rem;
+}
+
+/* Autres styles généraux pour le site */
+.footer {
+  width: 375px;
+  height: 186px;
+  background-color: rgba(53, 53, 53, 1);
+  text-align: left;
+  color: #fff;
+}
+
+.footer h3 {
+  color: white;
+  font-family: "Roboto", italic;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.footer i {
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+.footer a {
+  color: #fff;
+}
+
+.footer ul {
+  padding-left: 0px;
+}
+
+.footer li {
+  height: 25px;
 }
 
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
-  h1 {
-   font-family: "Shrikhand", serif;
-   width: 197px;
-   height: 36px;
-   top: 14px;
-   left: 89px;
-   padding: 0px 19px 0px 16px;
-   
-   opacity: 0px;
-   display: flex;
-   justify-content: center;
-    }
-    h2 { 
-    width: 275px;
-    height: 31px;
-    top: 448px;
-    left: 20px;
-    gap: 0px;
-    opacity: 0px;
-    font-family: Roboto;
-    font-size: 24px;
-    font-weight:weight 700;
-    line-height: 28.13px;
-    text-align: left;
-}
+  html {
+    font-size: 32px;
+  }
 
-  .main-container h1 {
-    width: 375px;
-    height: 63px;
-    padding: 14px 89px 13px 89px;
-    gap: 10px;
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-title h1 {
     font-family: "Shrikhand", serif;
+    width: auto;
+    height: auto;
+    opacity: 1;
   }
   .main-container-buttons {
     background-color: #f6f6f6;
-   
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
   }
   .main-container-buttons h2 {
     font-family: Roboto;
@@ -65,113 +118,72 @@ img {
     line-height: 28.13px;
     width: 275px;
     height: 68px;
-    margin: 20px auto; /* Centre horizontalement avec auto */
-    text-align: center; /* Centre le texte à l'intérieur */
-    display: flex; /* Utilisation de flexbox pour un meilleur contrôle */
-    align-items: center; /* Centre verticalement le texte */
-    justify-content: center; /* Centre horizontalement le texte */
-    opacity: 1; /* Assure que l'élément est visible */
-   
-}
-.container-buttons {
-  display: flex;
-  flex-direction: column;
- }
-.main-container-buttons p {
-  width: 315px;
-  height: 46px;
-  margin: 20px auto; /* Centrer horizontalement avec auto */
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 21.09px;
-  text-align: center; /* Centre le texte à l'intérieur du paragraphe */
-  opacity: 1; /* Assure que l'élément est visible */
-}
-
-
-.localisation-emplacement {
-  background-color: #eaeaea; 
-  padding: 1rem; 
-  width: 100%; 
-  box-sizing: border-box;
-  display: flex;
-  align-items: center; /* Centre verticalement les éléments */
-  justify-content: center; /* Centre horizontalement les éléments */
-}
-
-.localisation-emplacement strong {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.75px;
-  opacity: 1;
-  margin: 0 0.5rem; /* Espace entre l'icône et le texte */
-}
-
-.localisation-emplacement i {
-  display: inline-block; 
-  width: 12px;
-  height: 16px;
-  background-size: contain; /* Assure que l'image s'adapte au conteneur */
-  background-repeat: no-repeat; /* Empêche la répétition de l'image */
-  background-position: center; /* Centre l'image dans l'élément */
-  margin-right: 0.5rem; /* Espace entre l'icône et le texte */
-}
- 
-  /* Conteneur pour chaque carte de restaurant */
-  .card {
-    position: relative;
-    margin-bottom: 30px;
+    margin: 20px auto;
+    text-align: center;
     display: flex;
-    flex-direction: column;
-    width: 340px;
-    height: 251px;
-    border-radius: 15px;
-    margin-top: -17px;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+  .container-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
   }
 
-  /* Styles pour les images des cartes */
-  .card img {
-    object-fit: cover;
-    border-radius: 1rem 1rem 0 0;
-    height: 11.75rem;
+  .container-buttons .buttons-restaurant,
+  .container-buttons .buttons-degustez,
+  .container-buttons .buttons-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .main-container-buttons p {
+    width: 315px;
+    height: 46px;
+    margin: 20px auto;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.09px;
+    text-align: center;
+    opacity: 1;
+  }
+  .localisation-emplacement {
+    background-color: #eaeaea;
+    padding: 1rem;
     width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
-  /* Autres styles généraux pour le site */
-  .footer {
-    width: 375px;
-    height: 186px;
-    background-color: rgba(53, 53, 53, 1);
-    text-align: left;
-    color: #fff;
-  }
-
-  /* Pied de page */
-  .footer h3 {
-    color: white;
-    font-family: "Roboto", italic;
-    font-weight: 700;
+  .localisation-emplacement strong {
+    font-family: Roboto;
     font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+    opacity: 1;
+    margin: 0 0.5rem;
+  }
+  .localisation-emplacement i {
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 0.5rem;
   }
 
-  .footer i {
-    color: #fff;
-    margin-right: 10px;
-    margin-bottom: 15px;
+  .buttons-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
-  .footer a {
-    color: #fff;
-  }
-
-  .footer ul {
-    padding-left: 0px;
-  }
-
-  .footer li {
-    height: 25px;
+  .fas {
+    font-size: 20px;
+    color: #333;
   }
 }
-

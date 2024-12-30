@@ -7,12 +7,14 @@
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
 }
+
 html {
   width: 100%;
 }
 
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   background-color: #fff;
 }
@@ -32,8 +34,12 @@ img {
     left: 89px;
     padding: 0px 19px 0px 16px;
     opacity: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   h2 {
     width: 275px;
@@ -65,36 +71,65 @@ img {
     line-height: 28.13px;
     width: 275px;
     height: 68px;
-    margin: 20px auto; /* Centre horizontalement avec auto */
-    text-align: center; /* Centre le texte à l'intérieur */
-    display: flex; /* Utilisation de flexbox pour un meilleur contrôle */
-    align-items: center; /* Centre verticalement le texte */
-    justify-content: center; /* Centre horizontalement le texte */
-    opacity: 1; /* Assure que l'élément est visible */
+    margin: 20px auto;
+    /* Centre horizontalement avec auto */
+    text-align: center;
+    /* Centre le texte à l'intérieur */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Utilisation de flexbox pour un meilleur contrôle */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Centre verticalement le texte */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* Centre horizontalement le texte */
+    opacity: 1;
+    /* Assure que l'élément est visible */
   }
   .container-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .main-container-buttons p {
     width: 315px;
     height: 46px;
-    margin: 20px auto; /* Centrer horizontalement avec auto */
+    margin: 20px auto;
+    /* Centrer horizontalement avec auto */
     font-family: Roboto;
     font-size: 18px;
     font-weight: 300;
     line-height: 21.09px;
-    text-align: center; /* Centre le texte à l'intérieur du paragraphe */
-    opacity: 1; /* Assure que l'élément est visible */
+    text-align: center;
+    /* Centre le texte à l'intérieur du paragraphe */
+    opacity: 1;
+    /* Assure que l'élément est visible */
   }
   .localisation-emplacement {
     background-color: #eaeaea;
     padding: 1rem;
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center; /* Centre verticalement les éléments */
-    justify-content: center; /* Centre horizontalement les éléments */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Centre verticalement les éléments */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* Centre horizontalement les éléments */
   }
   .localisation-emplacement strong {
     font-family: Roboto;
@@ -102,66 +137,138 @@ img {
     font-weight: 500;
     line-height: 18.75px;
     opacity: 1;
-    margin: 0 0.5rem; /* Espace entre l'icône et le texte */
+    margin: 0 0.5rem;
+    /* Espace entre l'icône et le texte */
   }
   .localisation-emplacement i {
     display: inline-block;
     width: 12px;
     height: 16px;
-    background-size: contain; /* Assure que l'image s'adapte au conteneur */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    background-position: center; /* Centre l'image dans l'élément */
-    margin-right: 0.5rem; /* Espace entre l'icône et le texte */
+    background-size: contain;
+    /* Assure que l'image s'adapte au conteneur */
+    background-repeat: no-repeat;
+    /* Empêche la répétition de l'image */
+    background-position: center;
+    /* Centre l'image dans l'élément */
+    margin-right: 0.5rem;
+    /* Espace entre l'icône et le texte */
   }
-  /* Conteneur pour chaque carte de restaurant */
-  .card {
-    position: relative;
-    margin-bottom: 30px;
+  .buttons-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    width: 340px;
-    height: 251px;
-    border-radius: 15px;
-    margin-top: -17px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Centre les éléments verticalement */
+    gap: 10px;
+    /* Ajoute un espacement entre le cercle et l'icône */
   }
-  /* Styles pour les images des cartes */
-  .card img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 1rem 1rem 0 0;
-    height: 11.75rem;
-    width: 100%;
+  .buttons-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Centre verticalement les éléments */
+    gap: 10px;
+    /* Espacement entre le cercle et l'icône */
   }
-  /* Autres styles généraux pour le site */
-  .footer {
-    width: 375px;
-    height: 186px;
-    background-color: rgb(53, 53, 53);
-    text-align: left;
-    color: #fff;
+  .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Aligne verticalement les éléments */
   }
-  /* Pied de page */
-  .footer h3 {
-    color: white;
-    font-family: "Roboto", italic;
-    font-weight: 700;
-    font-size: 16px;
-  }
-  .footer i {
-    color: #fff;
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blue;
+    float: left;
+    /* Positionne le cercle à gauche */
     margin-right: 10px;
-    margin-bottom: 15px;
+    /* Espace entre le cercle et le bouton */
   }
-  .footer a {
-    color: #fff;
+  .fas {
+    font-size: 20px;
+    /* Taille de l'icône */
+    color: #333;
+    /* Couleur de l'icône */
   }
-  .footer ul {
-    padding-left: 0px;
-  }
-  .footer li {
-    height: 25px;
+  .fas {
+    font-size: 20px;
+    /* Taille de l'icône */
+    color: #333;
+    /* Couleur de l'icône */
   }
 }
+
+/* Conteneur pour chaque carte de restaurant */
+.card {
+  position: relative;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 340px;
+  height: 251px;
+  border-radius: 15px;
+  margin-top: -17px;
+}
+
+/* Styles pour les images des cartes */
+.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  height: 11.75rem;
+  width: 100%;
+}
+
+/* Autres styles généraux pour le site */
+.footer {
+  width: 375px;
+  height: 186px;
+  background-color: #353535;
+  text-align: left;
+  color: #fff;
+}
+
+/* Pied de page */
+.footer h3 {
+  color: white;
+  font-family: "Roboto", italic;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.footer i {
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer ul {
+  padding-left: 0px;
+}
+
+.footer li {
+  height: 25px;
+}
+
 /* Styles globaux */
 /* Mixins */
 /* Import de chaque police de Google Fonts */
@@ -169,12 +276,14 @@ img {
 @media screen and (min-width: 1000px) and (max-width: 1400px) {
   /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
 }
+
 html {
   width: 100%;
 }
 
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   background-color: #fff;
 }
@@ -194,8 +303,12 @@ img {
     left: 89px;
     padding: 0px 19px 0px 16px;
     opacity: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   h2 {
     width: 275px;
@@ -227,36 +340,65 @@ img {
     line-height: 28.13px;
     width: 275px;
     height: 68px;
-    margin: 20px auto; /* Centre horizontalement avec auto */
-    text-align: center; /* Centre le texte à l'intérieur */
-    display: flex; /* Utilisation de flexbox pour un meilleur contrôle */
-    align-items: center; /* Centre verticalement le texte */
-    justify-content: center; /* Centre horizontalement le texte */
-    opacity: 1; /* Assure que l'élément est visible */
+    margin: 20px auto;
+    /* Centre horizontalement avec auto */
+    text-align: center;
+    /* Centre le texte à l'intérieur */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* Utilisation de flexbox pour un meilleur contrôle */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Centre verticalement le texte */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* Centre horizontalement le texte */
+    opacity: 1;
+    /* Assure que l'élément est visible */
   }
   .container-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .main-container-buttons p {
     width: 315px;
     height: 46px;
-    margin: 20px auto; /* Centrer horizontalement avec auto */
+    margin: 20px auto;
+    /* Centrer horizontalement avec auto */
     font-family: Roboto;
     font-size: 18px;
     font-weight: 300;
     line-height: 21.09px;
-    text-align: center; /* Centre le texte à l'intérieur du paragraphe */
-    opacity: 1; /* Assure que l'élément est visible */
+    text-align: center;
+    /* Centre le texte à l'intérieur du paragraphe */
+    opacity: 1;
+    /* Assure que l'élément est visible */
   }
   .localisation-emplacement {
     background-color: #eaeaea;
     padding: 1rem;
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center; /* Centre verticalement les éléments */
-    justify-content: center; /* Centre horizontalement les éléments */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Centre verticalement les éléments */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* Centre horizontalement les éléments */
   }
   .localisation-emplacement strong {
     font-family: Roboto;
@@ -264,124 +406,236 @@ img {
     font-weight: 500;
     line-height: 18.75px;
     opacity: 1;
-    margin: 0 0.5rem; /* Espace entre l'icône et le texte */
+    margin: 0 0.5rem;
+    /* Espace entre l'icône et le texte */
   }
   .localisation-emplacement i {
     display: inline-block;
     width: 12px;
     height: 16px;
-    background-size: contain; /* Assure que l'image s'adapte au conteneur */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    background-position: center; /* Centre l'image dans l'élément */
-    margin-right: 0.5rem; /* Espace entre l'icône et le texte */
+    background-size: contain;
+    /* Assure que l'image s'adapte au conteneur */
+    background-repeat: no-repeat;
+    /* Empêche la répétition de l'image */
+    background-position: center;
+    /* Centre l'image dans l'élément */
+    margin-right: 0.5rem;
+    /* Espace entre l'icône et le texte */
   }
-  /* Conteneur pour chaque carte de restaurant */
-  .card {
-    position: relative;
-    margin-bottom: 30px;
+  .buttons-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    width: 340px;
-    height: 251px;
-    border-radius: 15px;
-    margin-top: -17px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Centre les éléments verticalement */
+    gap: 10px;
+    /* Ajoute un espacement entre le cercle et l'icône */
   }
-  /* Styles pour les images des cartes */
-  .card img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 1rem 1rem 0 0;
-    height: 11.75rem;
-    width: 100%;
+  .buttons-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Centre verticalement les éléments */
+    gap: 10px;
+    /* Espacement entre le cercle et l'icône */
   }
-  /* Autres styles généraux pour le site */
-  .footer {
-    width: 375px;
-    height: 186px;
-    background-color: rgb(53, 53, 53);
-    text-align: left;
-    color: #fff;
+  .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Aligne verticalement les éléments */
   }
-  /* Pied de page */
-  .footer h3 {
-    color: white;
-    font-family: "Roboto", italic;
-    font-weight: 700;
-    font-size: 16px;
-  }
-  .footer i {
-    color: #fff;
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blue;
+    float: left;
+    /* Positionne le cercle à gauche */
     margin-right: 10px;
-    margin-bottom: 15px;
+    /* Espace entre le cercle et le bouton */
   }
-  .footer a {
-    color: #fff;
+  .fas {
+    font-size: 20px;
+    /* Taille de l'icône */
+    color: #333;
+    /* Couleur de l'icône */
   }
-  .footer ul {
-    padding-left: 0px;
-  }
-  .footer li {
-    height: 25px;
+  .fas {
+    font-size: 20px;
+    /* Taille de l'icône */
+    color: #333;
+    /* Couleur de l'icône */
   }
 }
+
+/* Conteneur pour chaque carte de restaurant */
+.card {
+  position: relative;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 340px;
+  height: 251px;
+  border-radius: 15px;
+  margin-top: -17px;
+}
+
+/* Styles pour les images des cartes */
+.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  height: 11.75rem;
+  width: 100%;
+}
+
+/* Autres styles généraux pour le site */
+.footer {
+  width: 375px;
+  height: 186px;
+  background-color: #353535;
+  text-align: left;
+  color: #fff;
+}
+
+/* Pied de page */
+.footer h3 {
+  color: white;
+  font-family: "Roboto", italic;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.footer i {
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer ul {
+  padding-left: 0px;
+}
+
+.footer li {
+  height: 25px;
+}
+
 button {
   background-color: #9356DC;
   /* Applique la couleur principale */
   color: #FFFFFF;
   /* Applique la couleur du texte */
 }
+
 button:hover {
   background-color: #ae80e5;
   color: #FFFFFF;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .main-container-buttons {
-  display: flex;
-  justify-content: center;
+  background-color: #F6F6F6;
   margin-top: 20px;
+  width: 100%;
 }
 
-.button-buttons-explorer {
+.buttons-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button .buttons-explorer {
   width: 218px;
   height: 50px;
   opacity: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* Bouton centré avec les styles */
 .buttons-explorer {
-  color: #fff; /* Texte en blanc */
-  background: linear-gradient(170deg, #ff79da, #9356dc); /* Dégradé de couleur */
+  color: #fff;
+  /* Texte en blanc */
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  /* Dégradé de couleur */
   border: none;
   outline: none;
   font-size: 100%;
-  box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa; /* Ombre du bouton */
+  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa;
+          box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa;
+  /* Ombre du bouton */
   padding: 1rem 2rem;
-  border-radius: 1.5rem; /* Bords arrondis */
+  border-radius: 1.5rem;
+  /* Bords arrondis */
   cursor: pointer;
-  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out; /* Transition fluide */
+  -webkit-transition: opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out, -webkit-transform 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
+  /* Transition fluide */
 }
+
 .buttons-explorer:hover {
-  opacity: 0.8; /* Diminution de l'opacité */
-  transform: translateY(-0.1rem); /* Légère élévation au survol */
-  box-shadow: 0.1rem 0.1rem 0.5rem 0 #5e5e5e; /* Ombre plus foncée */
+  opacity: 0.8;
+  -webkit-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem 0 #5E5E5E;
+          box-shadow: 0.1rem 0.1rem 0.5rem 0 #5E5E5E;
+  /* Ombre plus foncée */
 }
+
 .buttons-explorer:active {
-  transform: translateY(0rem); /* Retour à la position initiale */
-  opacity: 1; /* Opacité normale lors du clic */
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+  opacity: 1;
 }
 
 .buttons span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   text-align: left;
   font-size: 24px;
   color: #000;
 }
 
 .buttons i {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-size: 32px;
   color: #000;
   margin: 10px 0;
@@ -389,8 +643,13 @@ button:hover {
 
 .buttons p {
   color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   text-align: center;
   font-size: 16px;
   margin: 0;
@@ -400,10 +659,19 @@ button:hover {
 .container-buttons .buttons-degustez,
 .container-buttons .buttons-menu {
   border-radius: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 16px;
   color: #000;
   border: 2px solid #e8e8e8;
@@ -431,6 +699,7 @@ button:hover {
   border-radius: 1rem;
   background-color: rgba(147, 86, 220, 0.2);
   opacity: 0;
+  -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
 }
 
@@ -442,10 +711,15 @@ button:hover {
 }
 
 .menu-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 15px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .buttons {
@@ -455,6 +729,7 @@ button:hover {
   text-decoration: none;
   border-radius: 25px;
   margin-top: 10px;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   font-size: 1rem;
 }
@@ -484,16 +759,27 @@ button:hover {
 .buttons-restaurant span,
 .buttons-menu span,
 .buttons-degustez span {
-  background-color: #9356dc; /* Couleur de fond du cercle */
-  border-radius: 50%; /* Forme circulaire */
-  color: #fff; /* Couleur du texte */
-  font-size: 85%; /* Taille du texte */
-  padding: 0.375rem 0.625rem; /* Espacement intérieur du cercle */
-  position: absolute; /* Positionnement absolu du cercle */
-  left: 50%; /* Centrer horizontalement par rapport au bouton parent */
-  bottom: 50%; /* Positionner le cercle au bas du bouton */
-  transform: translate(-50%, 50%); /* Ajustement pour centrer le cercle en X et Y */
-  z-index: 1; /* Placer le cercle au-dessus des autres éléments */
+  background-color: #9356dc;
+  /* Couleur de fond du cercle */
+  border-radius: 50%;
+  /* Forme circulaire */
+  color: #fff;
+  /* Couleur du texte */
+  font-size: 85%;
+  /* Taille du texte */
+  padding: 0.375rem 0.625rem;
+  /* Espacement intérieur du cercle */
+  position: absolute;
+  /* Positionnement absolu du cercle */
+  left: 50%;
+  /* Centrer horizontalement par rapport au bouton parent */
+  bottom: 50%;
+  /* Positionner le cercle au bas du bouton */
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  /* Ajustement pour centrer le cercle en X et Y */
+  z-index: 1;
+  /* Placer le cercle au-dessus des autres éléments */
 }
 
 /* Styles des boutons */
@@ -503,31 +789,70 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(147, 86, 220, 0.3); /* Fond semi-transparent */
+  background-color: rgba(147, 86, 220, 0.3);
+  /* Fond semi-transparent */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: loaderFadeOut 1s ease-out forwards;
-  z-index: 9999; /* Pour s'assurer que le loader est au-dessus */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: loaderFadeOut 1s ease-out forwards;
+          animation: loaderFadeOut 1s ease-out forwards;
+  z-index: 9999;
+  /* Pour s'assurer que le loader est au-dessus */
 }
 
 .loader-section .loader {
-  border: 16px solid rgba(255, 121, 218, 0.6); /* Bordure externe semi-transparente */
-  border-top: 16px solid #9356DC; /* Bordure supérieure */
-  border-radius: 50%; /* Cercle */
-  width: 350px; /* Taille augmentée */
+  border: 16px solid rgba(255, 121, 218, 0.6);
+  /* Bordure externe semi-transparente */
+  border-top: 16px solid #9356DC;
+  /* Bordure supérieure */
+  border-radius: 50%;
+  /* Cercle */
+  width: 350px;
+  /* Taille augmentée */
   height: 350px;
-  animation: spin 1s linear infinite; /* Animation de rotation */
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  /* Animation de rotation */
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
+
+@-webkit-keyframes loaderFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 @keyframes loaderFadeOut {
   0% {
     opacity: 1;
@@ -537,17 +862,51 @@ button:hover {
     visibility: hidden;
   }
 }
+
 /* Loader */
 /* Animation de rotation du cercle du loader */
-@keyframes rotation {
+@-webkit-keyframes rotation {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 /* Animation d'apparition du loader */
+@-webkit-keyframes anim-loader {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    width: 100vw;
+    height: 100vh;
+  }
+  100% {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+  }
+}
 @keyframes anim-loader {
   0% {
     opacity: 1;
@@ -568,22 +927,43 @@ button:hover {
     height: 0px;
   }
 }
+
 /* Animation d'apparition du menu (pour masquer le menu au début et l'afficher progressivement) */
-@keyframes card-hide {
+@-webkit-keyframes card-hide {
   0% {
-    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
     opacity: 0;
   }
   1% {
-    transform: translateX(3000px);
+    -webkit-transform: translateX(3000px);
+            transform: translateX(3000px);
   }
   100% {
-    transform: translateX(3000px);
+    -webkit-transform: translateX(3000px);
+            transform: translateX(3000px);
   }
 }
-@keyframes card-anim {
+@keyframes card-hide {
   0% {
-    transform: translateX(3000px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 0;
+  }
+  1% {
+    -webkit-transform: translateX(3000px);
+            transform: translateX(3000px);
+  }
+  100% {
+    -webkit-transform: translateX(3000px);
+            transform: translateX(3000px);
+  }
+}
+
+@-webkit-keyframes card-anim {
+  0% {
+    -webkit-transform: translateX(3000px);
+            transform: translateX(3000px);
     opacity: 0;
   }
   50% {
@@ -593,70 +973,139 @@ button:hover {
     opacity: 0.5;
   }
   99% {
-    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
   }
   100% {
-    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
     opacity: 1;
   }
 }
+
+@keyframes card-anim {
+  0% {
+    -webkit-transform: translateX(3000px);
+            transform: translateX(3000px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0.5;
+  }
+  99% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 /* Animation d'apparition progressive des éléments du menu */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
+
 /* Animation des boutons du menu (Entrées, Plats, Desserts) */
 .menu-button {
   opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
+  -webkit-animation: fadeIn 1s ease-out forwards;
+          animation: fadeIn 1s ease-out forwards;
 }
 
 /* Délai d'animation pour les plats */
 .menu-button:nth-child(1) {
-  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .menu-button:nth-child(2) {
-  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .menu-button:nth-child(3) {
-  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 /* Animation pour les boutons du menu au survol (hover effect) */
 .menu-button:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 /* Animation pour le coeur au-dessus du titre */
 .heart-container {
   display: inline-block;
-  animation: heart-beat 1s infinite alternate;
+  -webkit-animation: heart-beat 1s infinite alternate;
+          animation: heart-beat 1s infinite alternate;
 }
 
 /* animations pour le coeur */
-@keyframes heart-beat {
+@-webkit-keyframes heart-beat {
   0% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
+@keyframes heart-beat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .heart-container {
   display: inline-block;
-  animation: heart-beat 1s infinite alternate;
+  -webkit-animation: heart-beat 1s infinite alternate;
+          animation: heart-beat 1s infinite alternate;
 }
 
 .heart:hover {
@@ -681,13 +1130,13 @@ button:hover {
 
 .heart:hover {
   background: linear-gradient(30deg, #ff79da, #9356dc);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
   -webkit-text-stroke: 0;
 }
 
 .heart:hover + .heart-full {
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
@@ -696,11 +1145,14 @@ button:hover {
   top: 0;
   right: 0;
   background: linear-gradient(30deg, #ff79da, #9356dc);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
+  -webkit-transform: scale(0);
   transform: scale(0);
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
 .heart-animation .checkmark {
@@ -712,23 +1164,32 @@ button:hover {
 /* Effet de transition sur le bouton Commander */
 .order-button {
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.5s ease-out forwards;
-  animation-delay: 1.2s;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-animation: fadeIn 0.5s ease-out forwards;
+          animation: fadeIn 0.5s ease-out forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 .order-button:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 /* Animations */
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
   .column {
-    width: 100%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
+    width: 100%;
+    /* Pour les petites écrans, les colonnes occupent toute la largeur */
   }
 }
+
 .restaurants-photo img {
   width: 346px !important;
   height: 231px !important;
@@ -748,20 +1209,27 @@ button:hover {
 .menu-item {
   position: relative;
   overflow: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  animation: fadeIn 0.5s ease-out;
-  animation-fill-mode: both;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-animation: fadeIn 0.5s ease-out;
+          animation: fadeIn 0.5s ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .menu-item:hover {
-  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .menu-item .checkmark {
   position: absolute;
   top: 50%;
   right: -20px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 30px;
   height: 30px;
   visibility: hidden;
@@ -773,4 +1241,5 @@ button:hover {
   text-overflow: ellipsis;
 }
 
-/* Menu *//*# sourceMappingURL=main.css.map */
+/* Menu */
+/*# sourceMappingURL=main.css.map */
