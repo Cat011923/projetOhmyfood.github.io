@@ -1,27 +1,20 @@
 .menu-item {
   position: relative;
   overflow: hidden;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-  -webkit-animation: fadeIn 0.5s ease-out;
-          animation: fadeIn 0.5s ease-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation: fadeIn 0.5s ease-out;
+  animation-fill-mode: both;
 }
 
 .menu-item:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .menu-item .checkmark {
   position: absolute;
   top: 50%;
   right: -20px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 30px;
   height: 30px;
   visibility: hidden;
@@ -31,5 +24,4 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-/*# sourceMappingURL=menu.css.map */
+}/*# sourceMappingURL=menu.css.map */

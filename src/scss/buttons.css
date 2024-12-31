@@ -1,26 +1,118 @@
 @charset "UTF-8";
 /* Import de chaque police de Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Shrikhand&display=swap");
-/* Media query pour les écrans de 1000px à 1400px */
-@media screen and (min-width: 1000px) and (max-width: 1400px) {
-  /* Ajoutez ici les styles spécifiques à cette plage de taille d'écran */
-}
+/* Styles de base */
 html {
   font-family: "Roboto", serif;
-  font-size: 48 px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 body {
-  box-sizing: border-box;
-  margin: 0;
   background-color: #fff;
 }
 
-img {
-  width: 100%;
-  height: auto;
+.restaurants section {
+  width: 340px;
+  height: 1058px;
+  top: 942px;
+  left: 17px;
+  gap: 18px;
+  opacity: 0px;
 }
 
+.card-img img {
+  width: 346px;
+  height: 231px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: -57px;
+  left: -3px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+/* Media query pour les écrans de plus de 768px */
+@media screen and (max-width: 1440px) {
+  .main-container-buttons {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  /* Contenu principal et cartes */
+  .card {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 251px;
+    border-radius: 15px;
+    margin-top: -17px;
+  }
+  .card img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+    height: 11.75rem;
+    width: 100%;
+  }
+  .card-nouveau {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #99e2d0;
+    color: #278870;
+    font-weight: bold;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.125rem;
+  }
+  .card-nouveau span {
+    width: 80px;
+    height: 29px;
+    top: 13px;
+    left: 248px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  /* Autres styles généraux pour le site */
+  .footer {
+    width: 100%;
+    height: auto;
+    background-color: rgb(53, 53, 53);
+    text-align: left;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .footer h3 {
+    color: white;
+    font-family: "Roboto", italic;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .footer i {
+    color: #fff;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+  .footer a {
+    color: #fff;
+  }
+  .footer ul {
+    padding-left: 0px;
+  }
+  .footer li {
+    height: 25px;
+  }
+}
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
   html {
@@ -39,11 +131,14 @@ img {
   }
   .main-title h1 {
     font-family: "Shrikhand", serif;
+    font-size: 32px;
     width: auto;
     height: auto;
     opacity: 1;
   }
   .main-container-buttons {
+    display: flex;
+    flex-direction: column;
     background-color: #f6f6f6;
     border: none;
     padding: 10px 20px;
@@ -56,35 +151,35 @@ img {
     line-height: 28.13px;
     width: 275px;
     height: 68px;
-    margin: 20px auto; /* Centre horizontalement avec auto */
-    text-align: center; /* Centre le texte à l'intérieur */
-    display: flex; /* Utilisation de flexbox pour un meilleur contrôle */
-    align-items: center; /* Centre verticalement le texte */
-    justify-content: center; /* Centre horizontalement le texte */
-    opacity: 1; /* Assure que l'élément est visible */
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
   }
   .container-buttons {
     display: flex;
-    gap: 1rem; /* Espacement entre les boutons */
-    justify-content: center; /* Centrer les boutons horizontalement */
+    flex-direction: column;
+    gap: 1rem;
   }
   .container-buttons .buttons-restaurant,
   .container-buttons .buttons-degustez,
   .container-buttons .buttons-menu {
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Espacement entre les éléments */
+    gap: 0.5rem;
   }
   .main-container-buttons p {
     width: 315px;
     height: 46px;
-    margin: 20px auto; /* Centrer horizontalement avec auto */
+    margin: 20px auto;
     font-family: Roboto;
     font-size: 18px;
     font-weight: 300;
     line-height: 21.09px;
-    text-align: center; /* Centre le texte à l'intérieur du paragraphe */
-    opacity: 1; /* Assure que l'élément est visible */
+    text-align: center;
+    opacity: 1;
   }
   .localisation-emplacement {
     background-color: #eaeaea;
@@ -92,8 +187,8 @@ img {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    align-items: center; /* Centre verticalement les éléments */
-    justify-content: center; /* Centre horizontalement les éléments */
+    align-items: center;
+    justify-content: center;
   }
   .localisation-emplacement strong {
     font-family: Roboto;
@@ -101,81 +196,35 @@ img {
     font-weight: 500;
     line-height: 18.75px;
     opacity: 1;
-    margin: 0 0.5rem; /* Espace entre l'icône et le texte */
+    margin: 0 0.5rem;
   }
   .localisation-emplacement i {
     display: inline-block;
     width: 12px;
     height: 16px;
-    background-size: contain; /* Assure que l'image s'adapte au conteneur */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    background-position: center; /* Centre l'image dans l'élément */
-    margin-right: 0.5rem; /* Espace entre l'icône et le texte */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 0.5rem;
   }
   .buttons-menu {
     display: flex;
-    align-items: center; /* Centre les éléments verticalement */
-    gap: 10px; /* Ajoute un espacement entre le cercle et l'icône */
+    align-items: center;
+    gap: 10px;
   }
   .fas {
-    font-size: 20px; /* Taille de l'icône */
-    color: #333; /* Couleur de l'icône */
+    font-size: 20px;
+    color: #333;
   }
 }
-/* Conteneur pour chaque carte de restaurant */
-.card {
-  position: relative;
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  width: 340px;
-  height: 251px;
-  border-radius: 15px;
-  margin-top: -17px;
-}
-
-/* Styles pour les images des cartes */
-.card img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 1rem 1rem 0 0;
-  height: 11.75rem;
-  width: 100%;
-}
-
-/* Autres styles généraux pour le site */
 .footer {
-  width: 375px;
-  height: 186px;
+  width: 100%;
+  height: auto;
   background-color: rgb(53, 53, 53);
   text-align: left;
   color: #fff;
-}
-
-/* Pied de page */
-.footer h3 {
-  color: white;
-  font-family: "Roboto", italic;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.footer i {
-  color: #fff;
-  margin-right: 10px;
-  margin-bottom: 15px;
-}
-
-.footer a {
-  color: #fff;
-}
-
-.footer ul {
-  padding-left: 0px;
-}
-
-.footer li {
-  height: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 button {
@@ -185,13 +234,12 @@ button {
   /* Applique la couleur du texte */
 }
 button:hover {
-  background-color: #ae80e5;
-  color: #FFFFFF;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.main-container-buttons {
-  background-color: #F6F6F6;
+/* Styles pour le conteneur principal des boutons */
+.container-buttons {
+  background-color: #f6f6f6;
   margin: 20px auto;
   width: 100%;
   text-align: center;
@@ -201,8 +249,11 @@ button:hover {
 
 /* Bouton centré avec les styles */
 .buttons-explorer {
-  color: #fff; /* Texte en blanc */
-  background: linear-gradient(170deg, #FF79DA, #9356DC); /* Dégradé de couleur */
+  width: 218px;
+  height: 50px;
+  gap: 0;
+  opacity: 1; /* Assurez-vous qu'il est visible */
+  color: #fff;
   border: none;
   outline: none;
   font-size: 100%;
@@ -210,7 +261,7 @@ button:hover {
   padding: 1rem 2rem;
   border-radius: 1.5rem; /* Bords arrondis */
   cursor: pointer;
-  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out; /* Transition fluide */
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 .buttons-explorer:hover {
   opacity: 0.8;
@@ -218,10 +269,10 @@ button:hover {
   box-shadow: 0.1rem 0.1rem 0.5rem 0 #5E5E5E; /* Ombre plus foncée */
 }
 .buttons-explorer:active {
-  transform: translateY(0rem);
-  opacity: 1;
+  transform: translateY(0);
 }
 
+/* Styles pour les textes des boutons */
 .buttons span {
   display: flex;
   flex-direction: row;
@@ -247,6 +298,7 @@ button:hover {
   margin: 0;
 }
 
+/* Styles pour les boutons spécifiques */
 .container-buttons .buttons-restaurant,
 .container-buttons .buttons-degustez,
 .container-buttons .buttons-menu {
@@ -258,18 +310,19 @@ button:hover {
   font-size: 16px;
   color: #000;
   border: 2px solid #e8e8e8;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background: #F5F5F5;
+  background: #f5f5f5;
   position: relative;
 }
-
 .container-buttons .buttons-restaurant:hover,
 .container-buttons .buttons-degustez:hover,
 .container-buttons .buttons-menu:hover {
   color: #9356dc;
 }
-
+.container-buttons .buttons-restaurant:hover::after,
+.container-buttons .buttons-degustez:hover::after,
+.container-buttons .buttons-menu:hover::after {
+  opacity: 1;
+}
 .container-buttons .buttons-restaurant::after,
 .container-buttons .buttons-degustez::after,
 .container-buttons .buttons-menu::after {
@@ -292,6 +345,7 @@ button:hover {
   opacity: 1;
 }
 
+/* Style des boutons */
 .menu-buttons {
   display: flex;
   justify-content: center;
@@ -307,14 +361,6 @@ button:hover {
   border-radius: 25px;
   margin-top: 10px;
   transition: background-color 0.3s;
-  font-size: 1rem;
-}
-
-/* Positionnement relatif pour les boutons */
-.buttons-restaurant,
-.buttons-menu,
-.buttons-degustez {
-  position: relative; /* Nécessaire pour positionner les cercles en absolu */
 }
 
 /* Ciblage des cercles dans chaque bouton */
@@ -329,25 +375,43 @@ button:hover {
   height: 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centrer le texte dans le cercle */
+  justify-content: center;
   position: absolute;
   left: -2rem; /* Positionnement à gauche du bouton */
   top: 50%;
-  transform: translateY(-50%); /* Centrage vertical */
+  transform: translateY(-50%);
 }
 
+/* Couleur de fond pour les boutons de fonctionnement */
 .buttons-fonctionnement {
-  background-color: white;
+  background-color: #f5f5f5;
 }
 
+/* Style pour le texte des boutons */
 .button-menu strong {
   font-size: 1.2rem;
   color: black;
 }
 
-.button-menu price {
+.button-menu .price {
   color: black;
-  font-weight: bold;
   font-size: 1rem;
   margin-top: 5px;
+}
+
+/* Media Query pour écrans de moins de 768px */
+@media screen and (max-width: 768px) {
+  button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  .main-container-buttons {
+    flex-direction: column;
+  }
+  .menu-buttons {
+    gap: 10px;
+  }
+  .buttons-explorer {
+    width: 30%;
+  }
 }/*# sourceMappingURL=buttons.css.map */
