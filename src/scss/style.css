@@ -118,12 +118,6 @@ body {
   html {
     font-size: 32px;
   }
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-  }
   .main-container {
     display: flex;
     justify-content: center;

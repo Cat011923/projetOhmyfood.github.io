@@ -238,38 +238,45 @@ button:hover {
 }
 
 /* Styles pour le conteneur principal des boutons */
-.container-buttons {
+.main-container-buttons {
   background-color: #f6f6f6;
   margin: 20px auto;
-  width: 100%;
+  width: 375px;
+  height: 440px;
   text-align: center;
   display: flex;
   justify-content: center;
 }
 
-/* Bouton centré avec les styles */
 .buttons-explorer {
   width: 218px;
   height: 50px;
-  gap: 0;
-  opacity: 1; /* Assurez-vous qu'il est visible */
   color: #fff;
+  background: linear-gradient(170deg, #ff79da, #9356dc);
   border: none;
   outline: none;
   font-size: 100%;
-  box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa; /* Ombre du bouton */
+  box-shadow: 0.1rem 0.1rem 0.5rem 0 #aaa;
   padding: 1rem 2rem;
-  border-radius: 1.5rem; /* Bords arrondis */
+  border-radius: 1.5rem;
   cursor: pointer;
   transition: opacity 300ms ease-in-out, transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
+
 .buttons-explorer:hover {
   opacity: 0.8;
   transform: translateY(-0.1rem);
-  box-shadow: 0.1rem 0.1rem 0.5rem 0 #5E5E5E; /* Ombre plus foncée */
+  box-shadow: 0.1rem 0.1rem 0.5rem 0 #5e5e5e;
 }
+
 .buttons-explorer:active {
-  transform: translateY(0);
+  transform: translateY(0rem);
+  opacity: 1;
+}
+
+.buttons-explorer:focus {
+  outline: 2px solid #9356dc;
+  outline-offset: 2px;
 }
 
 /* Styles pour les textes des boutons */
