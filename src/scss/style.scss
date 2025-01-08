@@ -127,9 +127,15 @@ body {
   
   
   .main-container {
+    width: 375px;
+    height: 63px;
+    padding: 14px 89px 13px 89px;
+    gap: 10px;
+    opacity: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+  
   }
 
   .main-title h1 {
@@ -138,7 +144,9 @@ body {
     width: auto;
     height: auto;
     opacity: 1;
+   
   }
+
   .main-container-buttons {
     display: flex;
     flex-direction: column;
@@ -189,7 +197,10 @@ body {
   .localisation-emplacement {
     background-color: #eaeaea;
     padding: 1rem;
-    width: 100%;
+    width: 375px;
+    height: 50px;
+    gap: 0px;
+    opacity: 0px;
     box-sizing: border-box;
     display: flex;
     align-items: center;

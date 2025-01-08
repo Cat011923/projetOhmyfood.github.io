@@ -1,13 +1,25 @@
-// buttons.scss
 @import "variable"; // Importer les variables
 @import "mixins"; // Importer les mixins
 @import "style"; // Importer le style
 
-button {
-  @include primary-color; /* Applique la couleur principale */
-  @include text-color; /* Applique la couleur du texte */
+@include primary-color; /* Applique la couleur principale */
+@include text-color; /* Applique la couleur du texte */
 
-  &:hover {
+/* Media Query pour écrans de moins de 768px */
+@media screen and (max-width: 768px) {
+  .main-container-buttons {
+    flex-direction: column;
+  }
+
+  .menu-buttons {
+    gap: 10px;
+  }
+
+  .buttons-explorer {
+    width: 30%;
+  }
+
+  .buttons-explorer:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 }
@@ -15,15 +27,11 @@ button {
 /* Styles pour le conteneur principal des boutons */
 .main-container-buttons {
   background-color: #f6f6f6;
-  margin: 20px auto;
   width: 375px;
-  height: 440px;
   text-align: center;
   display: flex;
   justify-content: center;
-
 }
-
 
 .buttons-explorer {
   width: 218px;
@@ -56,7 +64,6 @@ button {
   outline-offset: 2px;
 }
 
-
 /* Styles pour les textes des boutons */
 .buttons span {
   display: flex;
@@ -70,14 +77,14 @@ button {
   display: flex;
   flex-direction: row;
   font-size: 32px;
-  color: #000; 
+  color: #000;
   margin: 10px 0;
 }
 
 .buttons p {
   color: #000;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   text-align: center;
   font-size: 16px;
   margin: 0;
@@ -131,11 +138,11 @@ button {
 .menu-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px; 
+  gap: 15px;
   flex-wrap: wrap;
 }
 
-// Style général des boutons 
+/* Style général des boutons */
 .buttons {
   display: inline-block;
   padding: 10px 20px;
@@ -148,7 +155,7 @@ button {
 
 /* Ciblage des cercles dans chaque bouton */
 .buttons-restaurant .circle,
-.buttons-menu .circle, 
+.buttons-menu .circle,
 .buttons-degustez .circle {
   background-color: #9356dc;
   border-radius: 50%;
@@ -172,32 +179,17 @@ button {
 
 /* Style pour le texte des boutons */
 .button-menu strong {
-  font-size: 1.2rem; 
-  color: black; 
+  font-size: 1.2rem;
+  color: black;
 }
 
 .button-menu .price {
   color: black;
   font-size: 1rem;
-  margin-top: 5px; 
+  margin-top: 5px;
 }
 
-/* Media Query pour écrans de moins de 768px */
-@media screen and (max-width: 768px) {
-  button {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  .main-container-buttons {
-    flex-direction: column;
-  }
-
-  .menu-buttons {
-    gap: 10px;
-  }
-
-  .buttons-explorer {
-    width: 30%;
-  }
+button {
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
 }
