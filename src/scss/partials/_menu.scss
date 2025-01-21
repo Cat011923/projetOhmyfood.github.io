@@ -1,0 +1,39 @@
+/* Styles pour chaque plat dans le menu */
+.menu-button {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.menu-button:hover {
+  transform: translateY(-5px);
+}
+
+/* Icône de validation (checkmark) */
+.card-menu__check {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  visibility: hidden;
+}
+
+/* Montre l'icône lorsque le bouton est actif */
+.menu-button:active .card-menu__check,
+.menu-button:focus .card-menu__check {
+  visibility: visible;
+}
+
+/* Gestion du titre de chaque plat */
+.menu-button strong {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2em;
+  font-weight: bold;
+}

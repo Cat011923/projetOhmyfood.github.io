@@ -1,2 +1,0 @@
-.menu-item{position:relative;overflow:hidden;transition:transform .3s;-webkit-animation:fadeIn .5s ease-out;animation:fadeIn .5s ease-out;-webkit-animation-fill-mode:both;animation-fill-mode:both}.menu-item:hover{transform:translateY(-5px)}.menu-item .checkmark{position:absolute;top:50%;right:-20px;transform:translateY(-50%);width:30px;height:30px;visibility:hidden}.menu-item-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-/*# sourceMappingURL=menu.min.css.map */

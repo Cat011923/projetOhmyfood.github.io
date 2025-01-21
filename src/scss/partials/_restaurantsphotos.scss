@@ -5,12 +5,13 @@
 		width: 100%; /* Pour les petites écrans, les colonnes occupent toute la largeur */
 	}
 }
-.restaurants-photo img {
-	width: 346px !important;
-	height: 231px !important;
-	object-fit: cover;
+
+
+.card-img  {
+	width: 340px !important;
+	height: 251px !important;
+	border-radius: 15px;
+	
 }
-
-
 
 

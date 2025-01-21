@@ -1,12 +1,10 @@
 // Importation pour les fichiers
-
-@import "./variable";             /* Variables globales */
-@import "./style";                /* Styles globaux */
-@import "./mixins";               /* Mixins */
-@import "./buttons";              /* Styles des boutons */
-@import "./loader";               /* Loader */
-@import "./animations";           /* Animations */
-@import "./restaurantsphotos";    /* Styles des photos des restaurants */
-@import "./header";               /* Header */
-@import "./menu";                 /* Menu */
-
+@import "partials/variable"; /* Variables globales */
+@import "partials/style"; /* Styles globaux */
+@import "partials/mixins"; /* Mixins */
+@import "partials/buttons"; /* Styles des boutons */
+@import "partials/loader"; /* Loader */
+@import "partials/animations"; /* Animations */
+@import "partials/restaurantsphotos"; /* Styles des photos des restaurants */
+@import "partials/header"; /* Header */
+@import "partials/menu";
