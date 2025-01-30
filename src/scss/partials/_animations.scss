@@ -20,8 +20,8 @@
 		opacity: 1;
 	}
 	99% {
-		width: 100vw;
-		height: 100vh;
+		width: 50vw;
+		height: 50vh;
 	}
 	100% {
 		opacity: 0;
@@ -93,58 +93,39 @@
 	transform: scale(1.05);
 	transition: transform 0.3s ease-in-out;
 }
+.heart-container {
+    position: relative;
+    display: inline-block;
+}
+
 .heart {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0; 
+    right: 0;  
     cursor: pointer;
-    z-index: 1
+    z-index: 1; /* Assure que l'icône vide est visible en premier */
 }
 
-.heart-container {
-    position: relative
+.heart__card {
+    -webkit-text-stroke: 0.05rem #fff;
 }
 
-.heart--card {
-    -webkit-text-stroke: 0.05rem #fff
-}
-
-.heart--menu {
-    -webkit-text-stroke: 0.05rem #f6f6f6
-}
-
-.heart:hover {
-    background: -webkit-linear-gradient(60deg, #ff79da, #9356dc);
-    background: -o-linear-gradient(60deg, #ff79da, #9356dc);
-    background: linear-gradient(30deg, #ff79da, #9356dc);
-    background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: 0
-}
-
-.heart:hover+.heart-full {
-    transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1)
-}
-
-.heart-full {
+.heart__full {
     position: absolute;
-    top: 0;
-    right: 0;
-    background: -webkit-linear-gradient(60deg, #ff79da, #9356dc);
-    background: -o-linear-gradient(60deg, #ff79da, #9356dc);
+    top: 0; 
+    right:0; 
     background: linear-gradient(30deg, #ff79da, #9356dc);
     background-clip: text;
     color: transparent;
     transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-    transition: -webkit-transform 300ms ease-in-out;
-    transition: -webkit-transform 300ms ease-in-out;
-    -o-transition: transform 300ms ease-in-out;
-    transition: transform 300ms ease-in-out;
-    transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out
+    transition: transform 300ms ease-in-out, z-index 300ms ease-in-out; /* Ajout de la transition pour z-index */
+    z-index: 1; /* Caché sous l'icône vide */
+}
+
+/* Quand on ajoute la classe 'active', le cœur se remplit */
+.heart__full.active {
+    transform: scale(1);
+    z-index: 2;
 }
 
 
