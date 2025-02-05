@@ -29,7 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 340px;
-    height: 251px;
+    height: 320px;
     border-radius: 15px;
     margin-top: -17px;
   }
@@ -66,16 +66,7 @@ body {
   html {
     font-size: 32px;
   }
-  .main-container {
-    width: 375px;
-    height: 63px;
-    gap: 10px;
-    opacity: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .main-title {
+  .main-title h1 {
     font-family: "Shrikhand", serif;
     font-size: 32px;
     width: auto;
@@ -83,12 +74,20 @@ body {
     opacity: 1;
     color: black;
   }
+  .card-menu-container {
+    margin-bottom: 2.25rem;
+  }
+  .card-menu__dish-title-container {
+    padding: 0.5rem 0.5rem 0.75rem 0.5rem;
+    width: 80%;
+    transition: width 500ms 100ms ease-in-out;
+  }
   .main-container-buttons {
     display: flex;
     flex-direction: column;
     background-color: #f6f6f6;
     border: none;
-    padding: 10px 20px;
+    margin: 0;
     cursor: pointer;
   }
   .main-container-buttons h2 {
@@ -134,6 +133,25 @@ body {
     text-align: center;
     opacity: 1;
   }
+  .circle {
+    background-color: rgb(147, 86, 220);
+    gap: 0px;
+    opacity: 0px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 85%;
+    padding: 0.375rem 0.625rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    font-weight: bold;
+  }
   .localisation-emplacement {
     background-color: #eaeaea;
     width: 375px;
@@ -173,7 +191,7 @@ body {
   }
   .card-img {
     width: 346px;
-    height: 200px;
+    height: 231px;
     top: -57px;
     left: -3px;
     border-radius: 15px;
@@ -193,6 +211,73 @@ body {
     margin: 1rem 0;
     padding-bottom: 0.5rem;
   }
+  .main-title {
+    width: 162px;
+    height: 44px;
+    left: 16px;
+  }
+  .main-title h1 {
+    gap: 0px;
+    opacity: 0px;
+    font-family: Shrikhand;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 43.74px;
+    text-align: center;
+    text-underline-position: from-font;
+    -webkit-text-decoration-skip-ink: none;
+            text-decoration-skip-ink: none;
+  }
+  .card-img {
+    width: 375px;
+    height: 255px;
+    top: 63px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  .title-restaurant-menu-title {
+    width: 341px;
+    height: 29px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Shrikhand;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 40.82px;
+    text-align: left;
+    text-underline-position: from-font;
+    -webkit-text-decoration-skip-ink: none;
+            text-decoration-skip-ink: none;
+  }
+  .restaurant-menu__subtitle {
+    width: 275px;
+    height: 27px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18.75px;
+    text-align: left;
+    text-underline-position: from-font;
+    -webkit-text-decoration-skip-ink: none;
+            text-decoration-skip-ink: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 3px solid #99e2d0;
+    width: 3rem;
+    margin: 1rem 0;
+    padding-bottom: 0.5rem;
+  }
+  .restaurant-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 1440px) {
   .card-text-container h3 {
     font-family: Roboto;
     font-size: 18px;
@@ -332,7 +417,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 340px;
-    height: 251px;
+    height: 320px;
     border-radius: 15px;
     margin-top: -17px;
   }
@@ -369,16 +454,7 @@ body {
   html {
     font-size: 32px;
   }
-  .main-container {
-    width: 375px;
-    height: 63px;
-    gap: 10px;
-    opacity: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .main-title {
+  .main-title h1 {
     font-family: "Shrikhand", serif;
     font-size: 32px;
     width: auto;
@@ -386,12 +462,20 @@ body {
     opacity: 1;
     color: black;
   }
+  .card-menu-container {
+    margin-bottom: 2.25rem;
+  }
+  .card-menu__dish-title-container {
+    padding: 0.5rem 0.5rem 0.75rem 0.5rem;
+    width: 80%;
+    transition: width 500ms 100ms ease-in-out;
+  }
   .main-container-buttons {
     display: flex;
     flex-direction: column;
     background-color: #f6f6f6;
     border: none;
-    padding: 10px 20px;
+    margin: 0;
     cursor: pointer;
   }
   .main-container-buttons h2 {
@@ -437,6 +521,25 @@ body {
     text-align: center;
     opacity: 1;
   }
+  .circle {
+    background-color: rgb(147, 86, 220);
+    gap: 0px;
+    opacity: 0px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 85%;
+    padding: 0.375rem 0.625rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    font-weight: bold;
+  }
   .localisation-emplacement {
     background-color: #eaeaea;
     width: 375px;
@@ -476,7 +579,7 @@ body {
   }
   .card-img {
     width: 346px;
-    height: 200px;
+    height: 231px;
     top: -57px;
     left: -3px;
     border-radius: 15px;
@@ -496,6 +599,73 @@ body {
     margin: 1rem 0;
     padding-bottom: 0.5rem;
   }
+  .main-title {
+    width: 162px;
+    height: 44px;
+    left: 16px;
+  }
+  .main-title h1 {
+    gap: 0px;
+    opacity: 0px;
+    font-family: Shrikhand;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 43.74px;
+    text-align: center;
+    text-underline-position: from-font;
+    -webkit-text-decoration-skip-ink: none;
+            text-decoration-skip-ink: none;
+  }
+  .card-img {
+    width: 375px;
+    height: 255px;
+    top: 63px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  .title-restaurant-menu-title {
+    width: 341px;
+    height: 29px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Shrikhand;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 40.82px;
+    text-align: left;
+    text-underline-position: from-font;
+    -webkit-text-decoration-skip-ink: none;
+            text-decoration-skip-ink: none;
+  }
+  .restaurant-menu__subtitle {
+    width: 275px;
+    height: 27px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18.75px;
+    text-align: left;
+    text-underline-position: from-font;
+    -webkit-text-decoration-skip-ink: none;
+            text-decoration-skip-ink: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 3px solid #99e2d0;
+    width: 3rem;
+    margin: 1rem 0;
+    padding-bottom: 0.5rem;
+  }
+  .restaurant-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 1440px) {
   .card-text-container h3 {
     font-family: Roboto;
     font-size: 18px;
@@ -627,7 +797,6 @@ body {
 /* Styles pour le conteneur principal des boutons */
 .main-container-buttons {
   background-color: #f6f6f6;
-  width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -718,14 +887,14 @@ body {
   /* Couleur de fond pour les boutons de fonctionnement */
   /* Style pour le texte des boutons */
 }
-.container-buttons .buttons-restaurant:hover,
-.container-buttons .buttons-degustez:hover,
-.container-buttons .buttons-menu:hover {
+.container-buttons .buttons-restaurant:hover i,
+.container-buttons .buttons-degustez:hover i,
+.container-buttons .buttons-menu:hover i {
   color: #9356dc;
 }
-.container-buttons .buttons-restaurant:hover::after,
-.container-buttons .buttons-degustez:hover::after,
-.container-buttons .buttons-menu:hover::after {
+.container-buttons .buttons-restaurant:hover i::after,
+.container-buttons .buttons-degustez:hover i::after,
+.container-buttons .buttons-menu:hover i::after {
   content: "";
   position: absolute;
   top: 0;
@@ -787,6 +956,26 @@ body {
 .container-buttons .buttons-degustez .buttons-fonctionnement,
 .container-buttons .buttons-menu .buttons-fonctionnement {
   background-color: #f5f5f5;
+}
+.container-buttons .buttons-restaurant .buttons-buttom-fonctionnement,
+.container-buttons .buttons-degustez .buttons-buttom-fonctionnement,
+.container-buttons .buttons-menu .buttons-buttom-fonctionnement {
+  width: 349px;
+  height: 69px;
+  gap: 0px;
+  border-radius: 15.04px 0px 0px 0px;
+  opacity: 0px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  background-color: yellow;
 }
 .container-buttons .buttons-restaurant .button-menu strong,
 .container-buttons .buttons-degustez .button-menu strong,
@@ -948,26 +1137,21 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-.heart-container {
-  position: relative;
-  display: inline-block;
-}
-
 .heart {
   position: absolute;
-  top: 0;
+  bottom: 50px;
   right: 0;
   cursor: pointer;
-  z-index: 1; /* Assure que l'icône vide est visible en premier */
+  z-index: 10; /* Assure que l'icône vide est visible en premier */
 }
 
 .heart__card {
   -webkit-text-stroke: 0.05rem #fff;
 }
 
-.heart__full {
+.heart__full:hover {
   position: absolute;
-  top: 0;
+  bottom: 50px;
   right: 0;
   background: linear-gradient(30deg, #ff79da, #9356dc);
   -webkit-background-clip: text;
@@ -975,13 +1159,21 @@ body {
   color: transparent;
   transform: scale(0);
   transition: transform 300ms ease-in-out, z-index 300ms ease-in-out; /* Ajout de la transition pour z-index */
-  z-index: 1; /* Caché sous l'icône vide */
+  z-index: 20; /* Caché sous l'icône vide */
 }
 
 /* Quand on ajoute la classe 'active', le cœur se remplit */
 .heart__full.active {
   transform: scale(1);
   z-index: 2;
+}
+
+/* Effet de transition sur le bouton Commander */
+.order-button {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-delay: 1.2s;
 }
 
 /* Effet de transition sur le bouton Commander */

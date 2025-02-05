@@ -93,41 +93,44 @@
 	transform: scale(1.05);
 	transition: transform 0.3s ease-in-out;
 }
-.heart-container {
-    position: relative;
-    display: inline-block;
-}
 
 .heart {
-    position: absolute;
-    top: 0; 
-    right: 0;  
-    cursor: pointer;
-    z-index: 1; /* Assure que l'icône vide est visible en premier */
+	position: absolute;
+	bottom: 50px;
+	right: 0;
+	cursor: pointer;
+	z-index: 10; /* Assure que l'icône vide est visible en premier */
 }
 
 .heart__card {
-    -webkit-text-stroke: 0.05rem #fff;
+	-webkit-text-stroke: 0.05rem #fff;
 }
 
-.heart__full {
-    position: absolute;
-    top: 0; 
-    right:0; 
-    background: linear-gradient(30deg, #ff79da, #9356dc);
-    background-clip: text;
-    color: transparent;
-    transform: scale(0);
-    transition: transform 300ms ease-in-out, z-index 300ms ease-in-out; /* Ajout de la transition pour z-index */
-    z-index: 1; /* Caché sous l'icône vide */
+.heart__full:hover {
+	position: absolute;
+	bottom: 50px;
+	right: 0;
+	background: linear-gradient(30deg, #ff79da, #9356dc);
+	background-clip: text;
+	color: transparent;
+	transform: scale(0);
+	transition: transform 300ms ease-in-out, z-index 300ms ease-in-out; /* Ajout de la transition pour z-index */
+	z-index: 20; /* Caché sous l'icône vide */
 }
 
 /* Quand on ajoute la classe 'active', le cœur se remplit */
 .heart__full.active {
-    transform: scale(1);
-    z-index: 2;
+	transform: scale(1);
+	z-index: 2;
 }
 
+/* Effet de transition sur le bouton Commander */
+.order-button {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeIn 0.5s ease-out forwards;
+	animation-delay: 1.2s;
+}
 
 /* Effet de transition sur le bouton Commander */
 .order-button {

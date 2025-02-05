@@ -30,7 +30,6 @@
 /* Styles pour le conteneur principal des boutons */
 .main-container-buttons {
 	background-color: #f6f6f6;
-	width: 100%;
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -118,7 +117,7 @@
 	background: #f5f5f5;
 	position: relative;
 	
-	&:hover {
+	&:hover i{
 		color: #9356dc;
 	&::after {
 		content: "";
@@ -177,7 +176,23 @@
 .buttons-fonctionnement {
 	background-color: #f5f5f5;
 }
+.buttons-buttom-fonctionnement  {
+	width: 349px;
+	height: 69px;
+	gap: 0px;
+	border-radius: 15.04px 0px 0px 0px;
+	opacity: 0px;
+	gap: 0px;
+	opacity: 0px;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 21.09px;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none; background-color: yellow;
 
+}
 /* Style pour le texte des boutons */
 .button-menu strong {
 	font-size: 1.2rem;

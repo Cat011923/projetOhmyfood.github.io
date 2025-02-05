@@ -28,7 +28,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		width: 340px;
-		height: 251px;
+		height: 320px;
 		border-radius: 15px;
 		margin-top: -17px;
 	}
@@ -68,17 +68,8 @@ body {
 		font-size: 32px;
 	}
 
-	.main-container {
-		width: 375px;
-		height: 63px;
-		gap: 10px;
-		opacity: 0px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.main-title {
+	
+	.main-title h1 {
 		font-family: "Shrikhand", serif;
 		font-size: 32px;
 		width: auto;
@@ -86,13 +77,24 @@ body {
 		opacity: 1;
 		color: black;
 	}
-
+	.card-menu-container {
+		margin-bottom: 2.25rem
+	}
+	
+	.card-menu__dish-title-container {
+		padding: 0.5rem 0.5rem 0.75rem 0.5rem;
+		width: 80%;
+		-webkit-transition: width 500ms 100ms ease-in-out;
+		-o-transition: width 500ms 100ms ease-in-out;
+		transition: width 500ms 100ms ease-in-out
+	}
+	
 	.main-container-buttons {
 		display: flex;
 		flex-direction: column;
 		background-color: #f6f6f6;
 		border: none;
-		padding: 10px 20px;
+		margin: 0;
 		cursor: pointer;
 	}
 	.main-container-buttons h2 {
@@ -142,6 +144,26 @@ body {
 		text-align: center;
 		opacity: 1;
 	}
+	.circle  {
+		background-color: rgba(147, 86, 220, 1);
+	    gap: 0px;
+		opacity: 0px;
+		border-radius: 50%;
+		color: #fff;
+		font-size: 85%;
+		padding: 0.375rem 0.625rem;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 24px;
+		height: 24px;
+		font-weight: bold; 
+	}
+	
 	.localisation-emplacement {
 		background-color: #eaeaea;
 		width: 375px;
@@ -182,14 +204,14 @@ body {
 		font-size: 20px;
 		color: #333;
 	}
+
 	.card-img  {
 		width: 346px;
-		height: 200px;
+		height: 231px;
 		top:-57px;
 		left:-3px;
 		border-radius: 15px;
 	}
-	
 	.title-restaurant-menu-title h2{
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -209,7 +231,81 @@ body {
 		margin: 1rem 0;
 		padding-bottom: 0.5rem
 	}
+	.main-title {
+		width: 162px;
+		height: 44px;
+		left: 16px;
+		
+	}	
+	.main-title h1 {
+		gap: 0px;
+		opacity: 0px;
+		font-family: Shrikhand;
+		font-size: 30px;
+		font-style: italic;
+		font-weight: 400;
+		line-height: 43.74px;
+		text-align: center;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+
+	}
+	.card-img {
+		width: 375px;
+		height: 255px;
+		top: 63px;
+		gap: 0px;
+		opacity: 0px;
+		
+	}
+
+	.title-restaurant-menu-title  {
+		width: 341px;
+		height: 29px;
+		gap: 0px;
+		opacity: 0px;
+		font-family: Shrikhand;
+		font-size: 28px;
+		font-style: italic;
+		font-weight: 400;
+		line-height: 40.82px;
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+
+	}
+	.restaurant-menu__subtitle  {
+		width: 275px;
+		height: 27px;
+		gap: 0px;
+		opacity: 0px;
+		font-family: Roboto;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 18.75px;
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		font-weight: 300;
+		text-transform: uppercase;
+		border-bottom: 3px solid #99e2d0;
+		width: 3rem;
+		margin: 1rem 0;
+		padding-bottom: 0.5rem;
+	}
 	
+		.restaurant-menu-container {
+			display:-webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between
+		}
+	}
+
 	.card-text-container h3 {
 		font-family: Roboto;
 		font-size: 18px;
@@ -351,4 +447,4 @@ body {
 	}
  }
 	
-	}
+	
