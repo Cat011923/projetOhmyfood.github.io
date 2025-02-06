@@ -13,6 +13,21 @@ body {
 
 /* Media query pour les écrans de plus de 768px */
 @media screen and (max-width: 1440px) {
+	 h1 {
+		width: 162px;
+		height: 44px;
+		left: 16px;
+		gap: 0px;
+		opacity: 0px;
+		font-family: Shrikhand;
+		font-size: 30px;
+		font-style: italic;
+		font-weight: 400;
+		line-height: 43.74px;
+		text-align: center;
+		width: 100%;
+	}
+		
 	.main-container-buttons {
 		display: flex;
 		flex-direction: column;
@@ -67,20 +82,13 @@ body {
 	html {
 		font-size: 32px;
 	}
-
-	
-	.main-title h1 {
-		font-family: "Shrikhand", serif;
-		font-size: 32px;
-		width: auto;
-		height: auto;
-		opacity: 1;
-		color: black;
+    .card-menu-entrees  .card-menu-plats .card-menu-desserts{
+		width: 349px;
+		height: 270px;
+		gap: 12px;
+		opacity: 0px;
 	}
-	.card-menu-container {
-		margin-bottom: 2.25rem
-	}
-	
+		
 	.card-menu__dish-title-container {
 		padding: 0.5rem 0.5rem 0.75rem 0.5rem;
 		width: 80%;
@@ -231,25 +239,8 @@ body {
 		margin: 1rem 0;
 		padding-bottom: 0.5rem
 	}
-	.main-title {
-		width: 162px;
-		height: 44px;
-		left: 16px;
-		
-	}	
-	.main-title h1 {
-		gap: 0px;
-		opacity: 0px;
-		font-family: Shrikhand;
-		font-size: 30px;
-		font-style: italic;
-		font-weight: 400;
-		line-height: 43.74px;
-		text-align: center;
-		text-underline-position: from-font;
-		text-decoration-skip-ink: none;
-
-	}
+	
+	
 	.card-img {
 		width: 375px;
 		height: 255px;
@@ -305,7 +296,7 @@ body {
 			justify-content: space-between
 		}
 	}
-
+        
 	.card-text-container h3 {
 		font-family: Roboto;
 		font-size: 18px;
@@ -431,7 +422,6 @@ body {
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 18.75px;
-		
 		text-align: left;
 		text-underline-position: from-font;
 		text-decoration-skip-ink: none;

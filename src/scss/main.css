@@ -14,6 +14,20 @@ body {
 
 /* Media query pour les écrans de plus de 768px */
 @media screen and (max-width: 1440px) {
+  h1 {
+    width: 162px;
+    height: 44px;
+    left: 16px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Shrikhand;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 43.74px;
+    text-align: center;
+    width: 100%;
+  }
   .main-container-buttons {
     display: flex;
     flex-direction: column;
@@ -66,16 +80,11 @@ body {
   html {
     font-size: 32px;
   }
-  .main-title h1 {
-    font-family: "Shrikhand", serif;
-    font-size: 32px;
-    width: auto;
-    height: auto;
-    opacity: 1;
-    color: black;
-  }
-  .card-menu-container {
-    margin-bottom: 2.25rem;
+  .card-menu-entrees .card-menu-plats .card-menu-desserts {
+    width: 349px;
+    height: 270px;
+    gap: 12px;
+    opacity: 0px;
   }
   .card-menu__dish-title-container {
     padding: 0.5rem 0.5rem 0.75rem 0.5rem;
@@ -210,24 +219,6 @@ body {
     width: 3rem;
     margin: 1rem 0;
     padding-bottom: 0.5rem;
-  }
-  .main-title {
-    width: 162px;
-    height: 44px;
-    left: 16px;
-  }
-  .main-title h1 {
-    gap: 0px;
-    opacity: 0px;
-    font-family: Shrikhand;
-    font-size: 30px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 43.74px;
-    text-align: center;
-    text-underline-position: from-font;
-    -webkit-text-decoration-skip-ink: none;
-            text-decoration-skip-ink: none;
   }
   .card-img {
     width: 375px;
@@ -402,6 +393,20 @@ body {
 
 /* Media query pour les écrans de plus de 768px */
 @media screen and (max-width: 1440px) {
+  h1 {
+    width: 162px;
+    height: 44px;
+    left: 16px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Shrikhand;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 43.74px;
+    text-align: center;
+    width: 100%;
+  }
   .main-container-buttons {
     display: flex;
     flex-direction: column;
@@ -454,16 +459,11 @@ body {
   html {
     font-size: 32px;
   }
-  .main-title h1 {
-    font-family: "Shrikhand", serif;
-    font-size: 32px;
-    width: auto;
-    height: auto;
-    opacity: 1;
-    color: black;
-  }
-  .card-menu-container {
-    margin-bottom: 2.25rem;
+  .card-menu-entrees .card-menu-plats .card-menu-desserts {
+    width: 349px;
+    height: 270px;
+    gap: 12px;
+    opacity: 0px;
   }
   .card-menu__dish-title-container {
     padding: 0.5rem 0.5rem 0.75rem 0.5rem;
@@ -598,24 +598,6 @@ body {
     width: 3rem;
     margin: 1rem 0;
     padding-bottom: 0.5rem;
-  }
-  .main-title {
-    width: 162px;
-    height: 44px;
-    left: 16px;
-  }
-  .main-title h1 {
-    gap: 0px;
-    opacity: 0px;
-    font-family: Shrikhand;
-    font-size: 30px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 43.74px;
-    text-align: center;
-    text-underline-position: from-font;
-    -webkit-text-decoration-skip-ink: none;
-            text-decoration-skip-ink: none;
   }
   .card-img {
     width: 375px;
@@ -975,7 +957,6 @@ body {
   text-underline-position: from-font;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
-  background-color: yellow;
 }
 .container-buttons .buttons-restaurant .button-menu strong,
 .container-buttons .buttons-degustez .button-menu strong,
