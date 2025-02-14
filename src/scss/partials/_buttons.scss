@@ -9,6 +9,7 @@
 @media screen and (max-width: 768px) {
 	.main-container-buttons {
 		flex-direction: column;
+		
 	}
 
 	.menu-buttons {
@@ -16,10 +17,10 @@
 	}
 
 	.buttons-explorer {
-	 width: 180.49px;
+	 width: 180px;
      height: 24px;
      top: 13px;
-     left: 18.75px;
+     left: 18.75px; 
 }
 
 	.buttons-explorer:hover {
@@ -33,6 +34,7 @@
 	text-align: center;
 	display: flex;
 	justify-content: center;
+
 }
 
 .buttons-explorer {
@@ -98,14 +100,13 @@
 	margin: 0;
 }
 
-
   
 /* Styles pour les boutons spécifiques */
 .container-buttons .buttons-restaurant,
 .container-buttons .buttons-degustez,
 .container-buttons .buttons-menu {
-	width: 335px;
-	height: 72.38px;
+	width: 322px;
+	height: 72px;
 	border-radius: 20px;
 	display: inline-flex;
 	justify-content: center;
@@ -151,14 +152,13 @@
 /* Style général des boutons */
 .buttons {
 	display: inline-block;
-	width: 335px;
-	height:72.38px;
-	padding: 10px 20px;
+	width: 322px;
+	height:72px;
 	color: #fff;
 	text-decoration: none;
 	border-radius: 25px;
 	margin-top: 10px;
-	transition: background-color 0.3s;
+	transition: background-color 0.3s; 
 }
 
 /* Ciblage des cercles dans chaque bouton */
@@ -166,7 +166,7 @@
 .buttons-menu .circle,
 .buttons-degustez .circle {
    position: relative;
-  left: -2rem; /* Positionnement à gauche */
+  left: -2rem; 
   top: 50%;
   transform: translateY(-50%);
 }
@@ -174,7 +174,7 @@
 
 /* Couleur de fond pour les boutons de fonctionnement */
 .buttons-fonctionnement {
-	background-color: #f5f5f5;
+	background-color: white;
 }
 .buttons-buttom-fonctionnement  {
 	width: 349px;
@@ -190,22 +190,8 @@
 	line-height: 21.09px;
 	text-align: left;
 	text-underline-position: from-font;
-	text-decoration-skip-ink: none; 
-}
-/* Style pour le texte des boutons */
-.button-menu strong {
-	font-size: 1.2rem;
-	color: black;
+	text-decoration-skip-ink: none;
+	
 }
 
-.button-menu .price {
-	color: black;
-	font-size: 1rem;
-	margin-top: 5px;
-}
-
-button {
-	padding: 0.8rem 1.5rem;
-	font-size: 0.9rem;
-  }  
 }

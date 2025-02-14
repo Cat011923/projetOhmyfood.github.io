@@ -294,7 +294,7 @@ body {
     object-fit: cover;
     border-radius: 1rem 1rem 0 0;
     height: 11.75rem;
-    width: 100%;
+    max-width: 768px;
   }
   .card-nouveau {
     position: absolute;

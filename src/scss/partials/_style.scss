@@ -15,7 +15,7 @@ body {
 /* Media query pour les écrans de plus de 768px */
 @media screen and (max-width: 1440px) {
 	
-	}
+}
 	
 	/* Contenu principal et cartes */
 	.card {
@@ -61,24 +61,47 @@ body {
 
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
-	html {
-		font-size: 32px;
-	}
+
 	h1 {
-		width: 100%;
-		height: 44px;
-		gap: 0px;
-		opacity: 0px;
+		width: 197px;
+		height: 36;
+		top: 14px;
+		left: 89px;
+		gap: 20px;
 		font-family: Shrikhand;
 		font-size: 30px;
 		font-style: italic;
 		font-weight: 400;
-		line-height: 43.74px;
 		display: flex;
        justify-content: center;
-		align-items: center;
-   }
 		
+   }
+   
+   .no-puce {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+    .fa-arrow-left:before {
+		content: "\f060";
+		width: 30px;
+		height: 30px;
+		top: 17px;
+		left: 17px;
+
+}
+	.restaurant-menu-title-container {
+		background-color: #f6f6f6;
+		position: relative;
+		margin-bottom: 300px;
+		border-top-left-radius: 40px;
+		border-top-right-radius:40px;
+		padding: 2rem 0.75rem 4rem 1.25rem;
+		-webkit-box-shadow: 0.8rem 0 0.8rem -1rem #aaa,-0.8rem 0 0.8rem -1rem #aaa;
+		box-shadow: 0.8rem 0 0.8rem -1rem #aaa,-0.8rem 0 0.8rem -1rem #aaa;
+	}
+	
+	}	
     .card-menu-entrees  .card-menu-plats .card-menu-desserts{
 		width: 349px;
 		height: 270px;
@@ -91,7 +114,7 @@ body {
 		width: 80%;
 		-webkit-transition: width 500ms 100ms ease-in-out;
 		-o-transition: width 500ms 100ms ease-in-out;
-		transition: width 500ms 100ms ease-in-out
+		transition: width 500ms 100ms ease-in-out;
 	}
 	
 	.main-container-buttons {
@@ -106,9 +129,8 @@ body {
 		font-family: Roboto;
 		font-size: 24px;
 		font-weight: 700;
-		line-height: 28.13px;
 		width: 275px;
-		height: 31px;
+		height: 68px;
 		margin-right: 1.25rem;
 		margin-left: 1.25rem; 
 		
@@ -117,7 +139,7 @@ body {
 	.main-container h2 {
 		font-family: Roboto;
 		font-size: 24px;
-		font-weight: 700;
+		font-weight: 700; 
 	   
 	}
 
@@ -205,45 +227,39 @@ body {
 	.card-img  {
 		//Mobile
 		width: 100%;
-		height: 231px;
-		top:-57px;
+		margin-top:60px;		
 		left:-3px;
-		border-radius: 15px;//
 		object-fit: cover;
 	}
 	h2 {
 		font-weight: 300;
-		text-transform: uppercase;
 		border-bottom: 3px solid #99e2d0;
-		width: 24px;
+		width: 16px;
 		margin: 1rem 0;
 		padding-bottom: 0.5rem;
 	}
 
-	.restaurants-title h2 {
+	.title-restaurant-menu-title h2 {
+		width: 341;
+		height: 27;
+		left: 17px;
+		font-family: Shrikhand;
+		font-weight: 400;
+		font-style: italic;
+		font-size: 28px;
 		
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-		justify-content: space-between;
-		margin-right: 1.5rem;
-		margin-bottom: 2rem;
-		letter-spacing: 0.05rem;
-			
-	}  
-	
-	.restaurants-menu__subtitle {
-		font-weight: 300;
-		text-transform: uppercase;
-		border-bottom: 3px solid #99e2d0;
-		width: 3rem;
-		margin: 1rem 0;
-		padding-bottom: 0.5rem
 	}
 	
-	.restaurants__subtitle  {
+	.restaurant-menu__subtitle {
+		font-weight: 300;
+		border-bottom: 3px solid #99e2d0;
+		width: 40px;
+	    margin-top: 27px;
+		padding-bottom: 8px; 
+	}
+	
+	
+	.restaurant__subtitle  {
 		width: 275px;
 		height: 27px;
 		gap: 0px;
@@ -256,14 +272,13 @@ body {
 		text-underline-position: from-font;
 		text-decoration-skip-ink: none;
 		font-weight: 300;
-		text-transform: uppercase;
 		border-bottom: 3px solid #99e2d0;
 		width: 3rem;
 		margin: 1rem 0;
 		padding-bottom: 0.5rem;
 	}
 	
-	.restaurants-container {
+	.restaurant-container {
 			display:-webkit-box;
 			display: -ms-flexbox;
 			display: flex;
@@ -271,9 +286,10 @@ body {
 			flex-wrap: wrap;
 			-webkit-box-pack: justify;
 			-ms-flex-pack: justify;
-			justify-content: space-between
+			justify-content: space-between; background-color: yellow;
+			
 		}
-	}
+	
         
 	.card-text-container h3 {
 		font-family: Roboto;
@@ -291,14 +307,15 @@ body {
 	}
 	.card-menu {
 		overflow: hidden;
-		margin-bottom: 1rem
+		margin-bottom: 1rem;
+		
 	}
 	.card-menu__dish-price-check-container {
 		padding: 0.5rem 0.5rem 0.75rem 0.5rem;
 		width: 80%;
 		-webkit-transition: width 500ms 100ms ease-in-out;
 		-o-transition: width 500ms 100ms ease-in-out;
-		transition: width 500ms 100ms ease-in-out
+		transition: width 500ms 100ms ease-in-out;
 	}
 	.card-menu__title {
 		font-size: 125%;
@@ -306,15 +323,15 @@ body {
 		overflow: hidden;
 		white-space: nowrap;
 		-o-text-overflow: ellipsis;
-		text-overflow: ellipsis
+		text-overflow: ellipsis;
 	}
 
-	.card-menu__subtitle {
+	.card-menu__subtitle  {
 		overflow: hidden;
 		white-space: nowrap;
 		-o-text-overflow: ellipsis;
-		text-overflow: ellipsis;
-		margin: 0
+		text-overflow: ellipsis; 
+		margin: 0;
 	}
 
 	.card-menu__dish-price {
@@ -327,7 +344,7 @@ body {
 		font-size: 100%;
 		font-weight: bold;
 		margin-bottom: 1rem;
-		margin-right: 1rem
+		margin-right: 1rem;
 	}
 
 	.card-menu__dish-price-check-container {
@@ -413,6 +430,7 @@ body {
 	.footer li {
 		height: 25px;
 	}
+	
  
 
 	
