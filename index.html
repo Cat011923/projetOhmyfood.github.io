@@ -45,13 +45,13 @@
 
 		<main>
 			<!-- Section du loader (animation de chargement) -->
-			<section class="loader-section">
+			
 				<div class="loader"></div>
-			</section>
+			
 
 			<!-- Section localisation -->
-			<section class="localisation">
-				<div class="localisation-container">
+			<section class="localisation-main">
+				<div class="localisation-name-container">
 					<i class="fas fa-map-marker-alt"></i>
 					<strong>Paris, Belleville</strong>
 				</div>
@@ -66,40 +66,43 @@
 
 			<!-- Section expliquant comment fonctionne le service -->
 			<section class="fonctionnement-service">
-				<div class="main-container">
+				<div class="fonctionnement-name">
 					<h2>Fonctionnement</h2>
 				</div>
 
 				<!-- Ajout des trois boutons -->
-				<div class="container-buttons">
-					<div class="buttons-restaurant">
+				<div class="fonctionnement-buttons">
+					<div class="fonctionnement-buttons-restaurants">
 						<span class="circle">1</span>
 						<i class="fas fa-mobile-alt"></i>
 						<p>Choisissez un restaurant</p>
 					</div>
-					<div class="buttons-menu">
+					
+					<div class="fonctionnement-buttons-menu">
 						<span class="circle">2</span>
 						<i class="fas fa-list-ul"></i>
 						<p>Composez votre menu</p>
 					</div>
-					<div class="buttons-degustez">
+					
+					<div class="fonctionnement-buttons-degustez">
 						<span class="circle">3</span>
 						<i class="fas fa-store"></i>
 						<p>Dégustez au restaurant</p>
 					</div>
 				</div>
+			
 			</section>
 
-			<section class="restaurant">
-				<div class="restaurant-container">
-					<h2 class="restaurant-title">Restaurants</h2>
+			
+				<div class="restaurants-container">
+					<h2 class="restaurants-title">Restaurants</h2>
 				</div>
 
 				<!-- Section affichant la liste des restaurants avec les cartes -->
-				<section class="restaurant-list">
+				<section class="restaurants-list">
 
 					<!-- carte restaurant La Palette du Goût -->
-					<article class="card">
+					<article class="restaurants-card">
 						<span class="card-nouveau">Nouveau</span>
 						<a href="restaurants/Lapalettedugout.html">
 							<img
@@ -107,7 +110,7 @@
 								src="/assets-images/logo/restaurantsphotos/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
 								alt="Plat 'Le délice des sens'"
 							/>
-							<div class="card-text-container">
+							<div class="restaurants-card-text">
 								<h3>La Palette du Goût</h3>
 								<p>Ménilmontant</p>
 								<i class="far fa-heart heart heart__card"></i>
@@ -125,8 +128,8 @@
 
 
 					<!-- carte restaurant La note enchantée -->
-					<article class="card">
-						<span class="card-nouveau">Nouveau</span>
+					<article class="restaurants-card">
+						<span class="restaurants-card-nouveau">Nouveau</span>
 						<a href="restaurants/Lanoteenchantee.html">
 							<img
 								class="card-img"
@@ -135,7 +138,7 @@
 							/>
 						</a>
 
-						<div class="card-text-container">
+						<div class="restaurants-title">
 							<h3>La note enchantée</h3>
 							<p>Charonne</p>
 						</div>
@@ -151,7 +154,7 @@
 
 					<!-- carte restaurant À la française -->
 
-					<article class="card">
+					<article class="restaurants-card">
 						<a href="restaurants/Alafrançaise.html">
 							<img
 								class="card-img"
@@ -159,7 +162,7 @@
 								alt="Plat 'À la française'"
 							/>
 						</a>
-						<div class="card-text-container">
+						<div class="restaurants-card-text">
 							<h3>À la française</h3>
 							<p>Cité Rouge</p>
 						</div>
@@ -177,7 +180,7 @@
 
 					<!-- carte restaurant Le délice des sens -->
 
-					<article class="card">
+					<article class="restaurants-card">
 						<a href="restaurants/Ledelicedessens.html">
 							<img
 								class="card-img"
@@ -186,7 +189,7 @@
 							/>
 						</a>
 
-						<div class="card-text-container">
+						<div class="restaurants-card-text">
 							<h3>Le délice des sens</h3>
 							<p>Folie-Méricourt</p>
 						</div>

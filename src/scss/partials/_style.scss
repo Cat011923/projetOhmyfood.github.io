@@ -18,7 +18,7 @@ body {
 }
 	
 	/* Contenu principal et cartes */
-	.card {
+	.restaurants-card  {
 		position: relative;
 		margin-bottom: 30px;
 		display: flex;
@@ -31,18 +31,17 @@ body {
 	}
 	
 
-	.card-nouveau {
+	.restaurants-card-nouveau  {
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
 		font-size: 14px;
-		background-color: #99e2d0;
 		color: #278870;
 		font-weight: bold;
 		padding: 0.375rem 0.75rem;
 		border-radius: 0.125rem;
 	}
-	.card-nouveau span {
+	.restaurants-card-nouveau span {
 		width: 61.37px;
 		height: 16px;
 		top: 7px;
@@ -62,7 +61,7 @@ body {
 /* Media query pour les écrans de moins de 768px */
 @media screen and (max-width: 768px) {
 
-	h1 {
+	 h1 {
 		width: 197px;
 		height: 36;
 		top: 14px;
@@ -74,14 +73,16 @@ body {
 		font-weight: 400;
 		display: flex;
        justify-content: center;
-		
    }
-   
-   .no-puce {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+   .header-title h1 {
+	  display: flex;
+       justify-content: center;
+   }
+	.no-puce {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
     .fa-arrow-left:before {
 		content: "\f060";
 		width: 30px;
@@ -90,7 +91,7 @@ body {
 		left: 17px;
 
 }
-	.restaurant-menu-title-container {
+	.restaurants-menu-title-container {
 		background-color: #f6f6f6;
 		position: relative;
 		margin-bottom: 300px;
@@ -136,14 +137,14 @@ body {
 		
 	}
 
-	.main-container h2 {
+	.localisation-main-container h2 {
 		font-family: Roboto;
 		font-size: 24px;
-		font-weight: 700; 
-	   
+		font-weight: 700;
+		
 	}
 
-	.container-buttons {
+	.main-container-buttons {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -151,7 +152,7 @@ body {
 		margin-left: 20px;	
 	}
 
-	.container-buttons .buttons-restaurant,
+	.container-buttons .buttons-restaurants,
 	.container-buttons .buttons-degustez,
 	.container-buttons .buttons-menu {
 		display: flex;
@@ -184,7 +185,7 @@ body {
 	
 	}
 	
-	.localisation-container {
+	.localisation-name-container {
 		background-color: #eaeaea;
 		height: 50px;
 		gap: 0px;
@@ -195,22 +196,24 @@ body {
 		align-items: center;
         
 	}
-	.localisation-container strong {
+	.localisation-mane-container strong {
 		font-family: Roboto;
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 18.75px;
 		opacity: 1;
 		margin: 0 0.5rem;
+		
+	   
 	}
-	.localisation-container i {
+	.localisation-name-container i {
 		display: inline-block;
 		width: 12px;
 		height: 16px;
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
-		margin-right: 0.5rem;
+		margin-right: 0.5rem;  
 	}
 
 	.buttons-menu {
@@ -222,6 +225,8 @@ body {
 	.fas  {
 		font-size: 20px;
 		color: #333;
+		margin-right: 20px;
+		
 	}
 
 	.card-img  {
@@ -231,7 +236,7 @@ body {
 		left:-3px;
 		object-fit: cover;
 	}
-	h2 {
+	.title-restaurant-menu-title h2 {
 		font-weight: 300;
 		border-bottom: 3px solid #99e2d0;
 		width: 16px;
@@ -239,7 +244,7 @@ body {
 		padding-bottom: 0.5rem;
 	}
 
-	.title-restaurant-menu-title h2 {
+	.title-restaurant-menu-title  {
 		width: 341;
 		height: 27;
 		left: 17px;
@@ -278,7 +283,7 @@ body {
 		padding-bottom: 0.5rem;
 	}
 	
-	.restaurant-container {
+	.restaurants-container {
 			display:-webkit-box;
 			display: -ms-flexbox;
 			display: flex;
@@ -286,17 +291,16 @@ body {
 			flex-wrap: wrap;
 			-webkit-box-pack: justify;
 			-ms-flex-pack: justify;
-			justify-content: space-between; background-color: yellow;
-			
+			justify-content: space-between; 
 		}
 	
         
-	.card-text-container h3 {
+	.restaurants-card-text h3 {
 		font-family: Roboto;
 		font-size: 18px;
 		font-weight: 700;
 	}
-	.card-text-container p{
+	.restaurants-card-text p{
 		font-family: Roboto;
 		font-size: 17px;
 		font-weight: 300;
