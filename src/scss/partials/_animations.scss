@@ -93,37 +93,65 @@
 	transform: scale(1.05);
 	transition: transform 0.3s ease-in-out;
 }
-
 .heart {
-	position: absolute;
-	bottom: 50px;
-	right: 0;
-	cursor: pointer;
-	z-index: 10; /* Assure que l'icône vide est visible en premier */
+    width: 22px;
+    height: 21px;
+    position: relative; /* Bien positionner le cœur */
+    top: 197px; /* Position de l'élément */
+    left: 293px; /* Position de l'élément */
+    cursor: pointer; /* Ajout d'un curseur en pointeur */
+    z-index: 10; /* Assure que l'icône vide est visible en premier */
+    background-color: transparent; /* Fond transparent */
 }
 
-.heart__card {
-	-webkit-text-stroke: 0.05rem #fff;
+.heart--card {
+    -webkit-text-stroke: 0.05rem #fff; /* Pour l'ombre du texte */
 }
 
-.heart__full:hover {
-	position: absolute;
-	bottom: 50px;
-	right: 0;
-	background: linear-gradient(30deg, #ff79da, #9356dc);
-	background-clip: text;
-	color: transparent;
-	transform: scale(0);
-	transition: transform 300ms ease-in-out, z-index 300ms ease-in-out; /* Ajout de la transition pour z-index */
-	z-index: 20; /* Caché sous l'icône vide */
+.heart--full {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    width: 22px; 
+    height: 21px; 
+    background: linear-gradient(60deg, #ff79da, #9356dc); /* Gardez le dégradé ici */
+    transform: scale(0);
+    transition: transform 300ms ease-in-out; /* Transition appliquée au remplissage */
+}
+.heart:hover {
+    background: linear-gradient(60deg, #ff79da, #9356dc); /* Dégradé au survol */
+    color: inherit; /* Utilisez la couleur héritée pour le texte ou le coeur */
+}
+
+.heart:hover .heart--full {
+    transform: scale(1); /* Afficher le cœur rempli au survol */
+}
+
+.heart--full:hover {
+    background: linear-gradient(30deg, #ff79da, #9356dc);
+    background-clip: text; /* Nécessaire pour le contour de texte sur hover */
+    color: transparent; /* Texte transparent */
+    transition: transform 300ms ease-in-out; /* Transition spécifique */
+    z-index: 20; /* Assurez-vous de la superposition correcte */
 }
 
 /* Quand on ajoute la classe 'active', le cœur se remplit */
-.heart__full.active {
-	transform: scale(1);
-	z-index: 2;
+.heart--full.active {
+    transform: scale(1);
+    z-index: 2;
 }
-
+	.restaurants-menu-title-container {
+		background-color: #f6f6f6;
+		position: relative;
+		margin-bottom: 300px;
+		border-top-left-radius: 40px;
+		border-top-right-radius:40px;
+		padding: 2rem 0.75rem 4rem 1.25rem;
+		-webkit-box-shadow: 0.8rem 0 0.8rem -1rem #aaa,-0.8rem 0 0.8rem -1rem #aaa;
+		box-shadow: 0.8rem 0 0.8rem -1rem #aaa,-0.8rem 0 0.8rem -1rem #aaa;
+	}
+	
+	
 /* Effet de transition sur le bouton Commander */
 .order-button {
 	opacity: 0;

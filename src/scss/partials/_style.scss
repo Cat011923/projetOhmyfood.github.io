@@ -104,96 +104,21 @@ body {
 		left: 1.25rem;			
 
 }
-.heart {
-	width: 22px;
-	height:21px;
-	top:197px;
-	left:293px;
-}
-.heart-container {
-	position: relative;
-	   
-}
-
-.heart-container i {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    cursor: pointer;
-    z-index: 1
-}
-
-.heart--card {
-    -webkit-text-stroke: 0.05rem #fff
-}
-
-
-}
-
-.heart:hover {
-	
-    background: -webkit-linear-gradient(60deg, #ff79da, #9356dc);
-    background: -o-linear-gradient(60deg, #ff79da, #9356dc);
-    background: linear-gradient(30deg, #ff79da, #9356dc);
-    background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: 0
-}
-
-.heart:hover+.heart--full {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1)
-}
-
-.heart--full {
-	width: 22px;
-	height:21px;
-	top:197px;
-	left:293px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: -webkit-linear-gradient(60deg, #ff79da, #9356dc);
-    background: -o-linear-gradient(60deg, #ff79da, #9356dc);
-    background: linear-gradient(30deg, #ff79da, #9356dc);
-    background-clip: text;
-    color: transparent;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: -webkit-transform 300ms ease-in-out;
-    transition: -webkit-transform 300ms ease-in-out;
-    -o-transition: transform 300ms ease-in-out;
-    transition: transform 300ms ease-in-out;
-    transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out
-}
-
-	.restaurants-menu-title-container {
-		background-color: #f6f6f6;
-		position: relative;
-		margin-bottom: 300px;
-		border-top-left-radius: 40px;
-		border-top-right-radius:40px;
-		padding: 2rem 0.75rem 4rem 1.25rem;
-		-webkit-box-shadow: 0.8rem 0 0.8rem -1rem #aaa,-0.8rem 0 0.8rem -1rem #aaa;
-		box-shadow: 0.8rem 0 0.8rem -1rem #aaa,-0.8rem 0 0.8rem -1rem #aaa;
-	}
-	
-	
 	.fonctionnement-service {
 		margin-right: 20px;
 		margin-left: 20px;
 		padding: 26px 0 24px;
 	}
 
-    .card-menu-entrees  .card-menu-plats .card-menu-desserts{
+    .card-menu-entrees .card-menu-plats .card-menu-desserts  {
 		width: 349px;
 		height: 270px;
 		gap: 12px;
 		opacity: 0px;
+		background-color: white;
 	}
-		
+	
+    	
 	.card-menu__dish-title-container {
 		padding: 0.5rem 0.5rem 0.75rem 0.5rem;
 		width: 80%;
@@ -316,8 +241,7 @@ body {
 		
 	}
       
-	
-	  
+		  
 	.card-img  {
 		//Mobile
 		width: 100%;
@@ -339,7 +263,7 @@ body {
 		padding-bottom: 0.5rem;
 	}
 
-	.title-restaurant-menu-title  {
+	  .title-restaurant-menu-title  {
 		width: 341;
 		height: 27;
 		left: 17px;
@@ -350,14 +274,23 @@ body {
 		
 	}
 	
-	.restaurant-menu__subtitle {
+	.restaurant-menu__subtitle strong {
 		font-weight: 300;
 		border-bottom: 3px solid #99e2d0;
 		width: 40px;
 	    margin-top: 27px;
 		padding-bottom: 8px; 
+		background-color: white;
 	}
-	
+	/* A CORRIGER/*
+	.menu-button strong,
+    .menu-button span {
+    background-color: white;
+    
+}
+    .price-container {
+		background-color: white;
+	}
 	
 	.restaurant__subtitle  {
 		width: 275px;
@@ -410,7 +343,6 @@ body {
 				
 	}
   
-	
 	
 	.card-menu__dish-price-check-container {
 		padding: 0.5rem 0.5rem 0.75rem 0.5rem;
@@ -548,7 +480,7 @@ body {
 		height: 25px;
 	}
 	
- 
+    }
 
 	
 	
